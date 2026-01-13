@@ -19,8 +19,160 @@
   }
 }
 
+/* Prevent scroll on mobile devices only */
+@media (max-width: 768px) {
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+  
+  /* Mobile - scale content to fit screen */
+  .mobile-fit-screen {
+    height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile browsers */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mobile-fit-screen > * {
+    flex-shrink: 1;
+  }
+  
+  /* Allow scroll within specific containers if needed */
+  .mobile-scroll-container {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+  }
+}
+
+/* Desktop - allow normal scrolling */
+@media (min-width: 769px) {
+  html, body {
+    overflow: auto;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 3D flip card effects */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Chrome ring treatment for bubble-style elements */
+.chrome-shell {
+  position: relative;
+  isolation: isolate;
+  border: 2px solid transparent;
+  border-radius: 9999px;
+  background-clip: padding-box;
+  transition: box-shadow 180ms ease-out, transform 180ms ease-out, background-color 180ms ease-out, color 180ms ease-out;
+  filter: saturate(1.05) contrast(1.05);
+}
+
+.chrome-shell::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  padding: 2px;
+  border-radius: inherit;
+  background:
+    linear-gradient(120deg,
+      #ffffff 0%,
+      #f5f5f5 10%,
+      #e8e8e8 24%,
+      #d9dfe6 36%,
+      #c0c0c0 48%,
+      #e0e4e9 62%,
+      #ffffff 82%,
+      #d0d7de 100%),
+    linear-gradient(95deg,
+      rgba(74, 144, 226, 0.55) 0%,
+      rgba(74, 144, 226, 0.15) 26%,
+      rgba(74, 144, 226, 0) 48%,
+      rgba(74, 144, 226, 0.35) 68%,
+      rgba(74, 144, 226, 0) 86%),
+    conic-gradient(from 180deg at 50% 50%,
+      rgba(255, 255, 255, 0.95) 0deg,
+      rgba(255, 255, 255, 0) 70deg,
+      rgba(255, 255, 255, 0.88) 135deg,
+      rgba(255, 255, 255, 0.1) 210deg,
+      rgba(255, 255, 255, 0.9) 300deg,
+      rgba(255, 255, 255, 0.95) 360deg),
+    linear-gradient(60deg,
+      rgba(255,255,255,0.9) 0%,
+      rgba(255,255,255,0) 32%,
+      rgba(255,255,255,0.82) 48%,
+      rgba(255,255,255,0) 64%,
+      rgba(255,255,255,0.7) 100%);
+  background-size: 200% 200%, 180% 180%, 200% 200%, 160% 160%;
+  background-position: 0% 50%, 100% 45%, 50% 50%, 110% 50%;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: var(--chrome-strength, 0.82);
+  pointer-events: none;
+}
+
+.chrome-shell::after {
+  content: "";
+  position: absolute;
+  inset: 2px 14px auto 14px;
+  height: 42%;
+  border-radius: inherit;
+  background: linear-gradient(180deg,
+    rgba(245, 245, 245, 0.82),
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0));
+  opacity: var(--chrome-highlight, 0);
+  pointer-events: none;
+}
+
+.chrome-shell-strong {
+  --chrome-strength: 1.35;
+  --chrome-highlight: 0.48;
+  box-shadow:
+    0 3px 16px rgba(0, 0, 0, 0.16),
+    0 0 0 2.4px rgba(255, 255, 255, 0.97),
+    0 0 26px rgba(176, 196, 235, 0.65),
+    inset 0 0 0 1.4px rgba(160, 160, 160, 0.48),
+    inset 0 0 0 0.9px rgba(255, 255, 255, 0.82);
+  animation: chrome-glint 3.2s ease-in-out infinite;
+}
+
+@keyframes chrome-glint {
+  0% {
+    background-position: 0% 50%, 100% 45%, 50% 50%, 110% 50%;
+  }
+  50% {
+    background-position: 140% 35%, -30% 65%, 46% 46%, 60% 54%;
+  }
+  100% {
+    background-position: 0% 50%, 100% 45%, 50% 50%, 110% 50%;
+  }
 }

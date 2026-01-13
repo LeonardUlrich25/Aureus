@@ -1,301 +1,457 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import WordPill from "../components/WordPill";
-
-type Cluster = {
-  id: string;
-  emoji: string;
-  name: string;
-  words: string[];
-};
-
-const ALL_CLUSTERS: Cluster[] = [
-  {
-    id: "work",
-    emoji: "💼",
-    name: "Work",
-    words: [
-      "synergy",
-      "delegate",
-      "strategic",
-      "deliverable",
-    ],
-  },
-  {
-    id: "school",
-    emoji: "📚",
-    name: "School",
-    words: [
-      "pedagogy",
-      "analytical",
-      "synthesis",
-      "heuristic",
-    ],
-  },
-  {
-    id: "daily",
-    emoji: "🏙️",
-    name: "Daily Life",
-    words: [
-      "mundane",
-      "attuned",
-      "habituate",
-      "ritual",
-    ],
-  },
-  {
-    id: "culture",
-    emoji: "🎭",
-    name: "Culture",
-    words: [
-      "canonical",
-      "subtext",
-      "vernacular",
-      "nuance",
-    ],
-  },
-  {
-    id: "history",
-    emoji: "🏺",
-    name: "History",
-    words: [
-      "chronicle",
-      "epochal",
-      "antecedent",
-      "retrospect",
-    ],
-  },
-];
-
-const MODES = [
-  "Contrast",
-  "Persona",
-  "Hierarchy",
-  "Scenario",
-  "Rewrite",
-  "Anchor",
-] as const;
+import { useEffect, useState } from "react";
+import { UserProfileManager } from '@/lib/userProfile';
+import { BehaviorTracker } from '@/lib/behaviorTracker';
+import { FloatingWordPill } from "../components/FloatingWordPill";
+import TransitionScreen from "../components/session/TransitionScreen";
+import InteractionRouter from "../components/session/InteractionRouter";
+import WordContentDisplay from "../components/session/WordContentDisplay";
+import JourneyAnalytics from "../components/session/JourneyAnalytics";
+import SessionSummary from "../components/session/SessionSummary";
+import { ResetJourneyButton } from "@/components/ResetJourneyButton";
+import { SavedWordsModal } from "@/components/SavedWordsModal";
+import { useAdaptiveSession, getWordContent } from "@/hooks/useAdaptiveSession";
+import { WordContent, wordDatabase } from "@/data/wordContent";
+import { SessionFlow } from "@/components/SessionFlow";
+import { vocabularyClusters, Cluster, Word } from "@/data/vocabulary";
+import { getRandomizedClusters } from "@/utils/randomizeWords";
 
 export default function Home() {
   const [clusters, setClusters] = useState<Cluster[]>([]);
-  const [selected, setSelected] = useState<{ word: string; cluster: string }[]>(
-    []
-  );
-  const [phase, setPhase] = useState<
-    "pick" | "transition" | "session"
-  >("pick");
-  const [loadPercent, setLoadPercent] = useState(0);
-  const [sessionIndex, setSessionIndex] = useState(0);
+  const [selected, setSelected] = useState<Word[]>([]);
+  const [phase, setPhase] = useState<"pick" | "transition" | "sessionFlow" | "summary" | "analytics">("pick");
+  const [showSavedWords, setShowSavedWords] = useState(false);
+  const [clusterSides, setClusterSides] = useState<Record<string, 'left' | 'right'>>({});
+
+  const [userId] = useState(() => {
+    if (typeof window === 'undefined') return '';
+    let id = localStorage.getItem('userId');
+    if (!id) {
+      id = 'user_' + Math.random().toString(36).substr(2, 9);
+      localStorage.setItem('userId', id);
+    }
+    return id;
+  });
+
+  const [userProfile, setUserProfile] = useState<any>(null);
+
+  // Adaptive session hook (now accepts optional profile)
+  const {
+    currentInteraction,
+    progress,
+    advance,
+    isComplete,
+    metrics,
+    isLoading,
+    error
+  } = useAdaptiveSession(selected, userProfile);
+
+  // Handle session completion - only show analytics if interactions were completed
+  useEffect(() => {
+    console.log('📊 Session completion check:', {
+      isComplete,
+      phase,
+      completedInteractions: progress.completedInteractions
+    });
+    
+    if (isComplete && phase === "sessionFlow" && progress.completedInteractions > 0) {
+      console.log('✅ Moving to analytics phase');
+      setPhase("analytics");
+    }
+  }, [isComplete, phase, progress.completedInteractions]);
+
+  // Helper: Select 3 clusters ensuring no duplicate colors
+  const getUniqueColorClusters = () => {
+    const CLUSTER_COLORS: Record<string, string> = {
+      work: "#B87B9E",
+      school: "#6B9BD1",
+      daily: "#F4A987",
+      culture: "#E57B7B",
+      history: "#84BFE0",
+      literary: "#7BA882",
+      conflict: "#8B5F5F",
+      "nuance-traps": "#8BA7B8",
+      "precision-verbs": "#6BA5C4",
+      "abstract-adjectives": "#9DAA7E",
+      science: "#5B9FD6",
+      psychology: "#7CBAC5",
+      ethics: "#C9A86A",
+      nature: "#6FA87D",
+      society: "#9B8DC5",
+      rhetoric: "#D4915D",
+    };
+    const shuffled = [...vocabularyClusters].sort(() => Math.random() - 0.5);
+    const selected: Cluster[] = [];
+    const usedColors = new Set<string>();
+    for (const cluster of shuffled) {
+      const color = CLUSTER_COLORS[cluster.id];
+      if (!usedColors.has(color)) {
+        selected.push(cluster);
+        usedColors.add(color);
+        if (selected.length === 3) break;
+      }
+    }
+    return selected;
+  };
 
   useEffect(() => {
-    // pick 3 random clusters
-    const shuffled = [...ALL_CLUSTERS].sort(() => Math.random() - 0.5);
-    setClusters(shuffled.slice(0, 3));
+    // pick 3 random clusters with unique colors and randomize 4 words from each
+    const selectedClusters = getUniqueColorClusters();
+    // Mobile header sides: two clusters on one side and one on the other.
+    // Randomly mirror between left–right–left and right–left–right.
+    const sides: Record<string, 'left' | 'right'> = {};
+    const mirror = Math.random() < 0.5; // false => L-R-L, true => R-L-R
+    if (selectedClusters[0]) sides[selectedClusters[0].id] = mirror ? 'right' : 'left';   // top
+    if (selectedClusters[1]) sides[selectedClusters[1].id] = mirror ? 'left'  : 'right';  // middle
+    if (selectedClusters[2]) sides[selectedClusters[2].id] = mirror ? 'right' : 'left';   // bottom
+    setClusterSides(sides);
+    setClusters(getRandomizedClusters(selectedClusters, 4));
   }, []);
 
-  const toggleWord = (word: string, cluster: string) => {
-    const exists = selected.find((s) => s.word === word);
+  useEffect(() => {
+    const loadProfile = async () => {
+      if (!userId) return;
+      try {
+        const profile = await UserProfileManager.getOrCreateProfile(userId);
+        setUserProfile(profile);
+        console.log('📊 User profile loaded for personalization');
+      } catch (err) {
+        console.error('Failed to load user profile', err);
+      }
+    };
+    loadProfile();
+  }, [userId]);
+
+  const toggleWord = (wordObj: Word, cluster: string) => {
+    const exists = selected.find((s) => s.word === wordObj.word);
     if (exists) {
-      setSelected(selected.filter((s) => s.word !== word));
+      setSelected(selected.filter((s) => s.word !== wordObj.word));
     } else {
-      if (selected.length >= 6) return; // limit to 6 so each can get unique mode
-      setSelected([...selected, { word, cluster }]);
+      if (selected.length >= 12) return; // limit to 12
+      setSelected([...selected, wordObj]);
     }
   };
 
   const startSession = () => {
     if (selected.length < 3) return;
+    console.log('🎬 Starting session with', selected.length, 'words');
+    console.log('Selected words:', selected);
+    
+    // SILENT BACKGROUND TRACKING of selection
+    (async () => {
+      try {
+        await BehaviorTracker.trackWordSelection(userId, selected, []);
+        console.log('✅ Selection tracked silently');
+      } catch (err) {
+        console.error('Tracking failed (non-critical):', err);
+      }
+    })();
+
+    // store for session and mark start time
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('selected_words', JSON.stringify(selected.map(s => s.word)));
+      sessionStorage.setItem('userId', userId);
+      sessionStorage.setItem('session_start_time', Date.now().toString());
+    }
+
     setPhase("transition");
-    setLoadPercent(8);
-    const t1 = setTimeout(() => setLoadPercent(38), 250);
-    const t2 = setTimeout(() => setLoadPercent(72), 550);
-    const t3 = setTimeout(() => {
-      setLoadPercent(100);
-      setPhase("session");
-    }, 800);
-    return () => {
-      clearTimeout(t1);
-      clearTimeout(t2);
-      clearTimeout(t3);
-    };
+    
+    // Automatically advance to SessionFlow after transition
+    setTimeout(() => {
+      console.log('⏭️ Advancing from transition to SessionFlow');
+      setPhase("sessionFlow");
+    }, 2000);
   };
 
-  const modeFor = (idx: number) => MODES[idx % MODES.length];
+  const handleSessionRestart = () => {
+    setSelected([]);
+    setPhase("pick");
+    // Randomize clusters again with unique colors
+    const selectedClusters = getUniqueColorClusters();
+    setClusters(getRandomizedClusters(selectedClusters, 4));
+    // Randomize mobile headline sides with mirrored pattern
+    const sides: Record<string, 'left' | 'right'> = {};
+    const mirror = Math.random() < 0.5; // false => L-R-L, true => R-L-R
+    if (selectedClusters[0]) sides[selectedClusters[0].id] = mirror ? 'right' : 'left';
+    if (selectedClusters[1]) sides[selectedClusters[1].id] = mirror ? 'left'  : 'right';
+    if (selectedClusters[2]) sides[selectedClusters[2].id] = mirror ? 'right' : 'left';
+    setClusterSides(sides);
 
-  const sessionItems = useMemo(() => selected, [selected]);
+    if (typeof window !== 'undefined') {
+      sessionStorage.removeItem('session_start_time');
+    }
+  };
 
-  const current = sessionItems[sessionIndex];
+  const handleResetJourney = () => {
+    // Clear all selections
+    setSelected([]);
+    setPhase("pick");
+    
+    // Clear any stored session data
+    if (typeof window !== 'undefined') {
+      sessionStorage.removeItem('selected_words');
+      sessionStorage.removeItem('session_progress');
+    }
+    
+    // Randomize clusters again with unique colors
+    const selectedClusters = getUniqueColorClusters();
+    setClusters(getRandomizedClusters(selectedClusters, 4));
+    // Randomize mobile headline sides with mirrored pattern
+    const sides: Record<string, 'left' | 'right'> = {};
+    const mirror = Math.random() < 0.5; // false => L-R-L, true => R-L-R
+    if (selectedClusters[0]) sides[selectedClusters[0].id] = mirror ? 'right' : 'left';
+    if (selectedClusters[1]) sides[selectedClusters[1].id] = mirror ? 'left'  : 'right';
+    if (selectedClusters[2]) sides[selectedClusters[2].id] = mirror ? 'right' : 'left';
+    setClusterSides(sides);
+  };
+
+  function colorForClusterName(name: string) {
+    const map: Record<string, string> = {
+      Work: "#B87B9E",
+      School: "#6B9BD1",
+      "Daily Life": "#F4A987",
+      Daily: "#F4A987",
+      Culture: "#E57B7B",
+      History: "#84BFE0",
+      Literary: "#7BA882",
+      Conflict: "#8B5F5F",
+      "Nuance Traps": "#8BA7B8",
+      "Precision Verbs": "#6BA5C4",
+      "Abstract Adjectives": "#9DAA7E",
+      Science: "#5B9FD6",
+      Psychology: "#7CBAC5",
+      Ethics: "#C9A86A",
+      Nature: "#6FA87D",
+      Society: "#9B8DC5",
+      Rhetoric: "#D4915D",
+    };
+    return map[name] || "#C0B3E0";
+  }
 
   return (
-    <div className="min-h-screen font-sans bg-[--bg,#F8F7F5] text-[#2D2D2D]">
-      <header className="py-6 border-b border-[#eee]">
-        <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">
-          <div>
-            <h1 className="m-0 text-lg font-medium">Aureus — Language Mentor</h1>
-            <p className="m-0 text-sm text-[#8A8A8A]">Minimalist sessions for advanced vocabulary.</p>
+    <div className={`h-screen overflow-hidden font-sans text-[#2D2D2D] relative ${["sessionFlow", "summary"].includes(phase) ? "md:overflow-hidden" : "md:min-h-screen md:overflow-auto"}`}
+      style={phase === "pick" ? {
+        backgroundImage: 'url(/uk-flag-background.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      } : { backgroundColor: '#F8F7F5' }}
+    >
+      {/* Background overlay for readability on pick phase */}
+      {phase === "pick" && (
+        <div className="absolute inset-0 bg-white/60 pointer-events-none" style={{ zIndex: 0 }} />
+      )}
+      
+      {/* Reset button - top left corner, only shown during pick phase */}
+      {phase === "pick" && (
+        <>
+          <div className="absolute top-6 left-6 z-10">
+            <ResetJourneyButton onReset={handleResetJourney} />
           </div>
-          <div>
-            <div
-              className="text-sm font-medium"
-              style={{ color: selected.length >= 3 ? "#5FA897" : "#8A8A8A" }}
+          
+          {/* Saved words button - top right corner */}
+          <div className="absolute top-6 right-6 z-10">
+            <button
+              onClick={() => setShowSavedWords(true)}
+              className="group relative inline-flex items-center gap-2 md:px-3 px-2 py-1.5 
+                         md:border-2 md:border-yellow-500 md:rounded-full
+                         transition-all duration-200
+                         focus:outline-none md:hover:bg-yellow-50 md:focus:ring-2 md:focus:ring-yellow-500 md:focus:ring-offset-2"
+              aria-label="View saved words"
             >
-              {selected.length}/{Math.max(3, selected.length)} words
-            </div>
+              <svg className="w-6 h-6 md:w-4 md:h-4 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+              </svg>
+              <span className="text-sm font-medium text-black hidden md:inline">Saved words</span>
+            </button>
+          </div>
+        </>
+      )}
+
+      <header className="py-4 md:py-6 flex-shrink-0" style={{ position: 'relative', zIndex: 1 }}>
+        <div className="max-w-4xl mx-auto px-4 md:px-6 flex items-center justify-center">
+          <div style={{ textAlign: "center" }}>
+            <h1 className="m-0 font-medium text-xl md:text-2xl" style={{ color: "#2D2D2D", letterSpacing: "0.05em" }}>
+              Neat!
+            </h1>
           </div>
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto px-6 py-8">
+      <main className={`max-w-4xl mx-auto px-4 md:px-6 py-4 md:py-8 flex-1 ${["sessionFlow", "summary"].includes(phase) ? "md:overflow-hidden" : "overflow-y-auto"}`} style={{ position: 'relative', zIndex: 1 }}>
         {phase === "pick" && (
           <section>
-            <p style={{ marginTop: 0 }}>
-              Choose 3–6 words to explore. Click a word to select it.
-            </p>
-            <div className="flex flex-col md:flex-row gap-6 mt-6">
-              {clusters.map((c) => (
-                <div key={c.id} className="flex-1 border border-[#e6e6e6] rounded-lg p-4">
-                  <div className="text-base mb-3">
-                    <span className="mr-2">{c.emoji}</span>
-                    <span className="text-sm font-medium text-[#2D2D2D]">{c.name}</span>
+            <h2 className="text-base md:text-lg font-medium mx-auto mb-4 md:mb-6" style={{ color: "#2D2D2D", marginTop: 0, textAlign: 'center', letterSpacing: "0.02em" }}>
+              Select 3+ expressions to refine
+            </h2>
+            <div className="flex flex-col md:flex-row gap-3 md:gap-6 mt-3 md:mt-6">
+              {clusters.map((c, idx) => {
+                const mobileOffsetClass = idx === 1 ? "-mt-20 md:mt-0" : idx === 2 ? "-mt-40 md:mt-0" : "";
+                return (
+                <div key={c.id} className={`flex-1 ${mobileOffsetClass}`}>
+                  {/* Mobile header - headline larger than bubbles */}
+                  <div className={`mb-2 md:mb-4 flex ${clusterSides[c.id] === 'right' ? 'justify-end pr-3' : 'justify-start pl-3'} md:justify-start md:pl-0 md:pr-0`}>
+                    <div className="inline-flex items-center gap-2">
+                      <span className="text-xl md:text-2xl">{c.emoji}</span>
+                      {/* Mobile header text larger than bubble text; desktop unchanged */}
+                      <span className="text-base md:text-xl" style={{ fontWeight: 600, color: colorForClusterName(c.name) }}>{c.name}</span>
+                    </div>
                   </div>
-                  <div className="flex flex-wrap gap-3">
-                    {c.words.map((w) => {
-                      const active = !!selected.find((s) => s.word === w);
+                  {/* Mobile: vertical staggered bubble layout - no horizontal adjacency */}
+                  <div className="md:hidden relative" style={{ minHeight: `${c.words.length * 48}px`, paddingTop: '44px' }}>
+                    {c.words.map((wordObj, idx) => {
+                      const active = !!selected.find((s) => s.word === wordObj.word);
                       const CLUSTER_COLORS: Record<string, string> = {
-                        work: "#9B7EBD",
+                        work: "#B87B9E",
                         school: "#6B9BD1",
                         daily: "#F4A987",
-                        culture: "#7FC8A9",
-                        history: "#D4E7F7",
+                        culture: "#E57B7B",
+                        history: "#84BFE0",
+                        literary: "#7BA882",
+                        conflict: "#8B5F5F",
+                        "nuance-traps": "#8BA7B8",
+                        "precision-verbs": "#6BA5C4",
+                        "abstract-adjectives": "#9DAA7E",
+                        science: "#5B9FD6",
+                        psychology: "#7CBAC5",
+                        ethics: "#C9A86A",
+                        nature: "#6FA87D",
+                        society: "#9B8DC5",
+                        rhetoric: "#D4915D",
+                        rhetoric: "#D4915D",
                       };
                       const color = CLUSTER_COLORS[c.id] || "#C0B3E0";
+                      const selIndex = selected.findIndex((s) => s.word === wordObj.word);
+                      // Deterministic alternating horizontal offset for stagger effect
+                      const horizontalOffset = idx % 2 === 0 ? 0 : 56;
+                      const randomVariation = (wordObj.word.length * 7 + idx * 13) % 28 - 14; // ±14px variation
+                      const finalOffset = horizontalOffset + randomVariation;
+                      const anchor = clusterSides[c.id] || 'left';
+                      const centerInset = 12; // Slight inset on mobile
+                      const positionStyle =
+                        anchor === 'right'
+                          ? { top: `${idx * 48}px`, right: `${Math.max(0, finalOffset) + centerInset}px` }
+                          : { top: `${idx * 48}px`, left: `${Math.max(0, finalOffset) + centerInset}px` };
                       return (
-                        <WordPill
-                          key={w}
-                          word={w}
-                          selected={active}
-                          clusterColor={color}
-                          onToggle={() => toggleWord(w, c.name)}
-                        />
+                        <div
+                          key={wordObj.word}
+                          className="absolute"
+                          style={{ ...positionStyle, zIndex: 10 }}
+                        >
+                          <FloatingWordPill
+                            word={wordObj.word}
+                            clusterColor={color}
+                            isSelected={active}
+                            selectionIndex={selIndex >= 0 ? selIndex : null}
+                            totalSelected={selected.length}
+                            wordIndex={idx}
+                            onClick={() => toggleWord(wordObj, c.name)}
+                          />
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  {/* Desktop: keep existing 2-column grid */}
+                  <div className="hidden md:grid md:grid-cols-2 md:gap-3">
+                    {c.words.map((wordObj) => {
+                      const active = !!selected.find((s) => s.word === wordObj.word);
+                      const CLUSTER_COLORS: Record<string, string> = {
+                        work: "#B87B9E",
+                        school: "#6B9BD1",
+                        daily: "#F4A987",
+                        culture: "#E57B7B",
+                        history: "#84BFE0",
+                        literary: "#7BA882",
+                        conflict: "#8B5F5F",
+                        "nuance-traps": "#8BA7B8",
+                        "precision-verbs": "#6BA5C4",
+                        "abstract-adjectives": "#9DAA7E",
+                        science: "#5B9FD6",
+                        psychology: "#7CBAC5",
+                        ethics: "#C9A86A",                        nature: "#6FA87D",
+                        society: "#9B8DC5",                      };
+                      const color = CLUSTER_COLORS[c.id] || "#C0B3E0";
+                      const selIndex = selected.findIndex((s) => s.word === wordObj.word);
+                      return (
+                        <div key={wordObj.word} className="flex items-center justify-center">
+                          <FloatingWordPill
+                            word={wordObj.word}
+                            clusterColor={color}
+                            isSelected={active}
+                            selectionIndex={selIndex >= 0 ? selIndex : null}
+                            totalSelected={selected.length}
+                            onClick={() => toggleWord(wordObj, c.name)}
+                          />
+                        </div>
                       );
                     })}
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
 
-            <div className="mt-6">
-              <div className="text-sm text-[#444]">Selected: {selected.length} (min 3 • max 6)</div>
-              <div className="flex flex-wrap gap-2 mt-3">
-                {selected.map((s) => (
-                  <div key={s.word} className="px-3 py-1 border rounded-full text-sm border-[#eee]">
-                    {s.word} <small className="text-[#888]">· {s.cluster}</small>
-                  </div>
-                ))}
+            <div className={`mt-4 md:mt-8 text-center ${selected.length >= 3 ? '-mt-16 md:mt-8' : 'md:mt-8'}`}>
+              <div
+                className="text-base md:text-lg font-medium"
+                style={{ color: selected.length >= 3 ? "#5FA897" : "#2D2D2D" }}
+              >
+                {selected.length}/3 words
               </div>
             </div>
+            <div className="md:hidden h-24" />
           </section>
         )}
 
         {phase === "transition" && (
-          <section style={{ textAlign: "center", paddingTop: 40 }}>
-            <div style={{ fontSize: 18, marginBottom: 8 }}>
-              You chose {selected.length} words:
-            </div>
-            <div style={{ color: "#222", marginBottom: 10 }}>
-              {selected.map((s) => (
-                <span key={s.word} style={{ marginRight: 10 }}>
-                  {s.word} <small style={{ color: "#777" }}>({s.cluster})</small>
-                </span>
-              ))}
-            </div>
-            <div style={{ color: "#555", fontStyle: "italic", marginBottom: 12 }}>
-              Words that sharpen tone, authority and subtlety in conversation.
-            </div>
-            <div style={{ marginBottom: 12 }}>Wait for personalised session</div>
-            <div style={{ marginTop: 8 }}>{loadPercent}% loaded</div>
-          </section>
+          <TransitionScreen
+            selectedWords={selected.map((s) => s.word)}
+            clusters={clusters.map((c) => ({
+              name: c.name,
+              emoji: c.emoji,
+              words: c.words.map(w => w.word)
+            }))}
+            duration={2000}
+            clusterColors={{ work: "#B87B9E", school: "#6B9BD1", daily: "#F4A987", culture: "#E57B7B", history: "#84BFE0", literary: "#7BA882", conflict: "#8B5F5F", "nuance-traps": "#8BA7B8", "precision-verbs": "#6BA5C4", "abstract-adjectives": "#9DAA7E", science: "#5B9FD6", psychology: "#7CBAC5", ethics: "#C9A86A", nature: "#6FA87D", society: "#9B8DC5", rhetoric: "#D4915D" }}
+            onComplete={() => setPhase("sessionFlow")}
+          />
         )}
 
-        {phase === "session" && current && (
-          <section style={{ marginTop: 18 }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <div>
-                <div style={{ fontSize: 12, color: "#666" }}>{current.cluster}</div>
-                <h2 style={{ margin: "6px 0" }}>{current.word}</h2>
-                <div style={{ fontSize: 13, color: "#444" }}>
-                  Mode: {modeFor(sessionIndex)}
-                </div>
-              </div>
+        {phase === "sessionFlow" && (
+          <SessionFlow
+            selectedWordNames={selected.map((s) => s.word)}
+            onComplete={() => setPhase("summary")}
+          />
+        )}
 
-              <div>
-                <div style={{ color: "#666" }}>Session {sessionIndex + 1} / {sessionItems.length}</div>
-              </div>
-            </div>
+        {phase === "summary" && (
+          <SessionSummary
+            words={selected.map((s) => s.word)}
+            clusters={clusters.map((c) => ({ name: c.name, emoji: c.emoji, words: c.words.map(w => w.word) }))}
+            onHome={handleSessionRestart}
+          />
+        )}
 
-            <div style={{ marginTop: 14, padding: 14, border: "1px solid #eee", borderRadius: 8 }}>
-              {/* Quick Definition */}
-              <div style={{ marginBottom: 12 }}>
-                <strong>Quick definition</strong>
-                <div style={{ marginTop: 6, color: "#333" }}>
-                  {quickDef(current.word)}
-                </div>
-              </div>
-
-              {/* Core Exploration (mode-specific) */}
-              <div style={{ marginBottom: 12 }}>
-                <strong>Core exploration — {modeFor(sessionIndex)}</strong>
-                <div style={{ marginTop: 8 }}>{renderMode(current.word, modeFor(sessionIndex))}</div>
-              </div>
-
-              {/* Personal Anchor */}
-              <div>
-                <strong>Personal anchor</strong>
-                <div style={{ marginTop: 8 }}>{personalAnchorPrompt(current.word)}</div>
-              </div>
-            </div>
-
-            <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
-              <button
-                onClick={() => setSessionIndex((i) => Math.max(0, i - 1))}
-                disabled={sessionIndex === 0}
-                style={{ padding: "8px 10px" }}
-              >
-                Previous
-              </button>
-              <button
-                onClick={() => setSessionIndex((i) => Math.min(sessionItems.length - 1, i + 1))}
-                disabled={sessionIndex >= sessionItems.length - 1}
-                style={{ padding: "8px 10px" }}
-              >
-                Next
-              </button>
-              <button
-                onClick={() => {
-                  setPhase("pick");
-                  setSelected([]);
-                  setSessionIndex(0);
-                }}
-                style={{ marginLeft: "auto", padding: "8px 10px" }}
-              >
-                Done
-              </button>
-            </div>
-          </section>
+        {phase === "analytics" && metrics && progress.completedInteractions > 0 && (
+          <JourneyAnalytics
+            metrics={metrics}
+            onContinue={handleSessionRestart}
+          />
         )}
       </main>
 
       {/* Start button fixed bottom center per design system */}
       {phase === "pick" && selected.length >= 3 && (
-        <div className="fixed left-0 right-0 bottom-6 flex justify-center pointer-events-none">
+        <div className="fixed left-0 right-0 bottom-4 md:bottom-6 flex justify-center pointer-events-none flex-shrink-0">
           <div className="pointer-events-auto">
             <button
               onClick={startSession}
-              className="text-white text-base font-medium"
+              className="text-white text-sm md:text-base font-medium"
               style={{
                 background: "#5FA897",
-                padding: "14px 40px",
+                padding: "12px 32px",
                 borderRadius: 16,
                 boxShadow: "0 8px 24px rgba(95,168,151,0.25)",
                 border: "none",
@@ -306,159 +462,13 @@ export default function Home() {
           </div>
         </div>
       )}
+      
+      {/* Saved words modal */}
+      <SavedWordsModal
+        isOpen={showSavedWords}
+        onClose={() => setShowSavedWords(false)}
+        userId={userId}
+      />
     </div>
   );
 }
-
-function quickDef(word: string) {
-  const map: Record<string, string> = {
-    synergy: "Joint actions that produce an effect greater than individual efforts.",
-    delegate: "To assign responsibility while retaining accountability.",
-    strategic: "Intentionally aligned with long-term aims, not just immediate gains.",
-    deliverable: "A concrete output that marks progress in a project.",
-    pedagogy: "The considered approach to guiding how people learn and think.",
-    analytical: "Focused on reasoned break-down and evidence rather than intuition.",
-    synthesis: "Combining elements to form a clearer whole or argument.",
-    heuristic: "A practical rule-of-thumb that speeds judgment without guaranteeing correctness.",
-    mundane: "Ordinary in surface form, often masking deeper habit or meaning.",
-    attuned: "Sensitive and responsive to subtle cues or contexts.",
-    habituate: "To make a practice routine, so it requires less conscious effort.",
-    ritual: "A repeated action that shapes identity or belonging.",
-    canonical: "Widely recognized as a standard or authoritative example.",
-    subtext: "What is implied beneath what is said; the quiet story.",
-    vernacular: "The everyday language or style of a community.",
-    nuance: "A fine distinction that changes tone or implication.",
-    chronicle: "A factual account arranged in sequence; history as narrative.",
-    epochal: "Marked by significance that reshapes expectations.",
-    antecedent: "Something that precedes and informs what follows.",
-    retrospect: "Looking back to reframe meaning or motive.",
-  };
-  return map[word] || "A useful, context-sensitive term worth exploring.";
-}
-
-function renderMode(word: string, mode: (typeof MODES)[number]) {
-  switch (mode) {
-    case "Contrast": {
-      const pair = contrastPair(word);
-      return (
-        <div>
-          <div style={{ marginBottom: 8 }}>
-            Which fits better in a formal report about a team outcome?
-          </div>
-          <div style={{ display: "flex", gap: 8 }}>
-            <button style={{ padding: 8 }}>{pair[0]}</button>
-            <button style={{ padding: 8 }}>{pair[1]}</button>
-          </div>
-          <div style={{ marginTop: 8, color: "#666" }}>
-            Choose quickly; then reflect how each shifts perceived responsibility.
-          </div>
-        </div>
-      );
-    }
-    case "Persona": {
-      return (
-        <div>
-          <div style={{ marginBottom: 8 }}>
-            How would you phrase one line about this topic to different listeners?
-          </div>
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-            <label style={{ display: "flex", gap: 6, alignItems: "center" }}>
-              <input type="radio" name="p1" /> Intern — cautious, humble
-            </label>
-            <label style={{ display: "flex", gap: 6, alignItems: "center" }}>
-              <input type="radio" name="p1" /> Manager — diplomatic, outcome-focused
-            </label>
-            <label style={{ display: "flex", gap: 6, alignItems: "center" }}>
-              <input type="radio" name="p1" /> Peer — direct, collaborative
-            </label>
-          </div>
-        </div>
-      );
-    }
-    case "Hierarchy": {
-      return (
-        <div>
-          <div style={{ marginBottom: 8 }}>Rank these by professional impact (1–3):</div>
-          <div style={{ display: "flex", gap: 8 }}>
-            <div style={{ padding: 8, border: "1px solid #eee" }}>clarity</div>
-            <div style={{ padding: 8, border: "1px solid #eee" }}>precision</div>
-            <div style={{ padding: 8, border: "1px solid #eee" }}>persuasion</div>
-          </div>
-        </div>
-      );
-    }
-    case "Scenario": {
-      return (
-        <div>
-          <div style={{ marginBottom: 8 }}>
-            Short scene: you have one minute in a meeting to introduce this concept.
-          </div>
-          <div style={{ marginBottom: 8 }}>
-            Option A: give a concise definition. Option B: give an example that shows value.
-          </div>
-          <div style={{ display: "flex", gap: 8 }}>
-            <button style={{ padding: 8 }}>A — Definition</button>
-            <button style={{ padding: 8 }}>B — Example</button>
-          </div>
-        </div>
-      );
-    }
-    case "Rewrite": {
-      return (
-        <div>
-          <div style={{ marginBottom: 8 }}>Rewrite this line to sound more precise:</div>
-          <div style={{ marginBottom: 8 }}><em>"We need to improve our synergy."</em></div>
-          <div>
-            <input placeholder="Your concise rewrite" style={{ width: "100%", padding: 8 }} />
-          </div>
-        </div>
-      );
-    }
-    case "Anchor": {
-      return (
-        <div>
-          <div style={{ marginBottom: 8 }}>Reflect briefly (one line):</div>
-          <div style={{ marginBottom: 8 }}>
-            When last did this word describe how you acted or were perceived?
-          </div>
-          <div>
-            <input placeholder="One-line reflection" style={{ width: "100%", padding: 8 }} />
-          </div>
-        </div>
-      );
-    }
-    default:
-      return null;
-  }
-}
-
-function contrastPair(word: string) {
-  // simple heuristic pairs
-  const pairs: Record<string, [string, string]> = {
-    nuance: ["subtlety", "clarity"],
-    synergy: ["collaboration", "coordination"],
-    cordial: ["warm", "formal"],
-    analytical: ["analytic", "intuitive"],
-  };
-  return pairs[word] || [word, "alternative"];
-}
-
-function personalAnchorPrompt(word: string) {
-  return (
-    <div style={{ color: "#333" }}>
-      {(() => {
-        switch (word) {
-          case "synergy":
-            return "When did describing a result as ‘synergy’ shift others’ credit?";
-          case "nuance":
-            return "Which past remark needed more nuance to avoid misreading?";
-          case "pedagogy":
-            return "Which approach to teaching changed how someone understood you?";
-          default:
-            return `How might using ‘${word}’ alter how others hear you?`;
-        }
-      })()}
-    </div>
-  );
-}
-

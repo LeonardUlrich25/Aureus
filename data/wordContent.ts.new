@@ -1,0 +1,683 @@
+export interface WordContent {
+  word: string;
+  cluster: string;
+  definition: string;
+  exercise: {
+    question: string;
+    options: Array<{ id: string; text: string }>;
+    correctAnswer: string;
+    explanation?: string;
+  };
+  anchor: {
+    prompt: string;
+    categories: string[];
+  };
+}
+
+export const wordDatabase: WordContent[] = [
+  // WORK CLUSTER
+  {
+    word: 'synergy',
+    cluster: 'Work',
+    definition: 'When different skills combine to create a result greater than the sum of their parts. Two teams collaborating produce more value together than separately.',
+    exercise: {
+      question: 'Which scenario shows true synergy?',
+      options: [
+        { id: 'A', text: 'Two designers working on separate projects' },
+        { id: 'B', text: 'A designer and developer collaborating, creating solutions neither could alone' },
+        { id: 'C', text: 'One person doing all the work while others watch' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Synergy happens when collaboration creates outcomes impossible individually.'
+    },
+    anchor: {
+      prompt: 'When have you experienced synergy in your work or projects?',
+      categories: ['Team Project', 'Collaboration', 'Creative Work', 'Problem Solving']
+    }
+  },
+  
+  {
+    word: 'delegation',
+    cluster: 'Work',
+    definition: 'Assigning responsibility and authority to others to accomplish tasks. Effective delegation empowers teams while maintaining accountability.',
+    exercise: {
+      question: 'What makes delegation effective?',
+      options: [
+        { id: 'A', text: 'Giving tasks without any guidance or follow-up' },
+        { id: 'B', text: 'Doing everything yourself to ensure quality' },
+        { id: 'C', text: 'Assigning clear responsibilities with the authority to make decisions' }
+      ],
+      correctAnswer: 'C',
+      explanation: 'Delegation requires both responsibility AND authority to be effective.'
+    },
+    anchor: {
+      prompt: 'Recall a time you delegated successfully or wish you had delegated.',
+      categories: ['Leadership', 'Team Management', 'Projects', 'Learning']
+    }
+  },
+
+  {
+    word: 'scalability',
+    cluster: 'Work',
+    definition: 'The ability of a system or process to handle growth without losing quality or efficiency. A scalable business can increase revenue without proportionally increasing costs.',
+    exercise: {
+      question: 'Which business model demonstrates true scalability?',
+      options: [
+        { id: 'A', text: 'A restaurant that must hire more staff for each new location' },
+        { id: 'B', text: 'A software app serving one million users with the same infrastructure as ten users' },
+        { id: 'C', text: 'A factory doubling production by doubling all equipment and workers' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Scalability means growth without proportional increases in resources—software exemplifies this.'
+    },
+    anchor: {
+      prompt: 'What activity or skill of yours has become easier as you\'ve done it more?',
+      categories: ['Learning', 'Growth', 'Efficiency', 'Mastery']
+    }
+  },
+
+  {
+    word: 'benchmark',
+    cluster: 'Work',
+    definition: 'A standard or reference point used to measure performance or quality. Benchmarks allow comparison against competitors or past performance to identify areas for improvement.',
+    exercise: {
+      question: 'How would a company use benchmarking effectively?',
+      options: [
+        { id: 'A', text: 'Only measure their own performance year-over-year' },
+        { id: 'B', text: 'Compare their customer satisfaction against industry standards to identify gaps' },
+        { id: 'C', text: 'Set unrealistically high targets without reference points' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Benchmarking gains power from comparison—it reveals where you stand relative to others.'
+    },
+    anchor: {
+      prompt: 'What benchmark or standard do you measure yourself against in your field or hobby?',
+      categories: ['Personal Goals', 'Competition', 'Self-Assessment', 'Progress']
+    }
+  },
+
+  {
+    word: 'expert',
+    cluster: 'Work',
+    definition: 'A person possessing comprehensive knowledge or skill in a specific domain, built through years of focused study and experience. Expertise brings both credibility and the responsibility to guide others.',
+    exercise: {
+      question: 'What distinguishes a true expert from someone merely experienced?',
+      options: [
+        { id: 'A', text: 'They have been doing it the longest' },
+        { id: 'B', text: 'They understand underlying principles deeply enough to handle novel situations creatively' },
+        { id: 'C', text: 'They have won the most awards' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'True expertise means understanding principles so deeply you can adapt to new contexts—not just experience.'
+    },
+    anchor: {
+      prompt: 'Who is an expert you admire? What makes them stand out beyond just knowing facts?',
+      categories: ['Mentorship', 'Mastery', 'Teaching', 'Inspiration']
+    }
+  },
+
+  {
+    word: 'proficiency',
+    cluster: 'Work',
+    definition: 'Competent and skilled performance in a specific task or subject. Proficiency is the practical ability to execute effectively, often developed through deliberate practice and feedback.',
+    exercise: {
+      question: 'Which situation best shows proficiency?',
+      options: [
+        { id: 'A', text: 'Reciting facts about a subject from memory' },
+        { id: 'B', text: 'Performing a complex task consistently well under pressure, knowing when to adapt technique' },
+        { id: 'C', text: 'Understanding theory but struggling with execution' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Proficiency is shown through consistent, effective execution—especially when adapting to challenges.'
+    },
+    anchor: {
+      prompt: 'In what skill or activity have you reached proficiency? How did you know?',
+      categories: ['Skill Development', 'Practice', 'Confidence', 'Achievement']
+    }
+  },
+
+  {
+    word: 'retention',
+    cluster: 'Work',
+    definition: 'The ability to keep or hold onto something—whether memories, employees, or customers. In business, retention measures loyalty; in learning, it measures memory consolidation.',
+    exercise: {
+      question: 'What best indicates strong employee retention?',
+      options: [
+        { id: 'A', text: 'Workers staying because they have no other options' },
+        { id: 'B', text: 'Low turnover combined with employees actively growing and engaged in their roles' },
+        { id: 'C', text: 'High salaries alone' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'True retention means people stay because they value the experience—not just the paycheck.'
+    },
+    anchor: {
+      prompt: 'What makes you stay committed to something—a job, relationship, or project?',
+      categories: ['Loyalty', 'Commitment', 'Belonging', 'Values']
+    }
+  },
+
+  // SCHOOL CLUSTER
+  {
+    word: 'pedagogy',
+    cluster: 'School',
+    definition: 'The method and practice of teaching. It encompasses educational philosophy, instructional strategies, and understanding how people learn.',
+    exercise: {
+      question: 'Which reflects pedagogical thinking?',
+      options: [
+        { id: 'A', text: 'Just reading textbook chapters to students' },
+        { id: 'B', text: 'Designing lessons based on how students actually learn and retain information' },
+        { id: 'C', text: 'Giving the same lecture every year without adaptation' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Pedagogy is about understanding learning processes, not just delivering content.'
+    },
+    anchor: {
+      prompt: 'Who taught you something in a way that really stuck? What made it effective?',
+      categories: ['Education', 'Mentorship', 'Self-Teaching', 'Skill Development']
+    }
+  },
+
+  // DAILY CLUSTER
+  {
+    word: 'nuance',
+    cluster: 'Daily',
+    definition: 'A subtle difference in meaning, expression, or tone. The fine distinctions that add depth and prevent oversimplification.',
+    exercise: {
+      question: 'Which statement shows understanding of nuance?',
+      options: [
+        { id: 'A', text: 'The movie was good' },
+        { id: 'B', text: 'The film balanced humor and melancholy, making you laugh while feeling bittersweet' },
+        { id: 'C', text: 'I liked it' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Nuance captures subtle complexities that simple statements miss.'
+    },
+    anchor: {
+      prompt: 'When did you notice a subtle distinction that changed your understanding?',
+      categories: ['Communication', 'Art', 'Relationships', 'Decision Making']
+    }
+  },
+
+  {
+    word: 'cordial',
+    cluster: 'Daily',
+    definition: 'Warm and friendly without being intimate. Professional politeness that creates comfort while maintaining appropriate boundaries.',
+    exercise: {
+      question: 'When is cordial the right tone?',
+      options: [
+        { id: 'A', text: 'Meeting a colleague\'s parents at a company event' },
+        { id: 'B', text: 'Arguing with customer service about a refund' },
+        { id: 'C', text: 'Texting your best friend about weekend plans' }
+      ],
+      correctAnswer: 'A',
+      explanation: 'Cordial works when you want warmth with professional or respectful distance.'
+    },
+    anchor: {
+      prompt: 'Where do you need to balance friendliness with appropriate distance?',
+      categories: ['Workplace', 'Networking', 'Social Events', 'Customer Service']
+    }
+  },
+
+  {
+    word: 'assertive',
+    cluster: 'Daily',
+    definition: 'Confidently and clearly expressing thoughts, needs, and boundaries without aggression or passivity. Assertiveness balances respect for others with respect for yourself.',
+    exercise: {
+      question: 'Which response is truly assertive?',
+      options: [
+        { id: 'A', text: 'Staying silent to avoid conflict' },
+        { id: 'B', text: 'Calmly stating your boundary: "I can\'t take on this project right now, but I\'m happy to discuss timelines"' },
+        { id: 'C', text: 'Aggressively refusing without explanation' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Assertiveness combines clarity about your position with respect—neither passive nor aggressive.'
+    },
+    anchor: {
+      prompt: 'When was a time you wished you\'d been more assertive? What held you back?',
+      categories: ['Communication', 'Boundaries', 'Courage', 'Self-Respect']
+    }
+  },
+
+  {
+    word: 'empathy',
+    cluster: 'Daily',
+    definition: 'The ability to understand and share the feelings of another person. Empathy goes beyond sympathy—it\'s feeling with someone, not just for them.',
+    exercise: {
+      question: 'Which scenario demonstrates true empathy?',
+      options: [
+        { id: 'A', text: 'Telling someone "I know how you feel" without listening to their specific situation' },
+        { id: 'B', text: 'Listening deeply to understand their unique experience and reflecting back what you\'ve heard' },
+        { id: 'C', text: 'Fixing their problem without asking what they actually need' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Empathy requires listening and understanding the specific, unique nature of someone\'s experience.'
+    },
+    anchor: {
+      prompt: 'Describe a time someone truly understood what you were going through. How did it feel?',
+      categories: ['Relationships', 'Understanding', 'Vulnerability', 'Connection']
+    }
+  },
+
+  // LITERARY CLUSTER
+  {
+    word: 'pithy',
+    cluster: 'Literary',
+    definition: 'Concise and forcefully expressive. Capturing significant meaning in remarkably few words, like a perfect summary.',
+    exercise: {
+      question: 'Which is pithy?',
+      options: [
+        { id: 'A', text: 'Less is more' },
+        { id: 'B', text: 'In many situations, using fewer words can sometimes be more effective than using many words' },
+        { id: 'C', text: 'I think brevity is good' }
+      ],
+      correctAnswer: 'A',
+      explanation: 'Pithy statements pack maximum meaning into minimum words with impact.'
+    },
+    anchor: {
+      prompt: 'What\'s the most pithy piece of advice you\'ve received?',
+      categories: ['Writing', 'Communication', 'Advice', 'Wisdom']
+    }
+  },
+
+  {
+    word: 'forlorn',
+    cluster: 'Literary',
+    definition: 'Pitifully sad and lonely. Conveys abandonment, isolation, and a sense of hopelessness that evokes sympathy.',
+    exercise: {
+      question: 'Which image is forlorn?',
+      options: [
+        { id: 'A', text: 'A busy coffee shop on Sunday morning' },
+        { id: 'B', text: 'An abandoned playground with broken swings creaking in the wind' },
+        { id: 'C', text: 'A crowded train station during rush hour' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Forlorn combines sadness, abandonment, and evocative loneliness.'
+    },
+    anchor: {
+      prompt: 'What place or moment felt forlorn to you?',
+      categories: ['Travel', 'Memory', 'Reading', 'Film']
+    }
+  },
+
+  {
+    word: 'wrath',
+    cluster: 'Literary',
+    definition: 'Extreme anger, especially of a powerful or divine nature. Fury that often leads to retribution or dramatic consequences.',
+    exercise: {
+      question: 'When is wrath the appropriate word?',
+      options: [
+        { id: 'A', text: 'Mildly annoyed by slow wifi' },
+        { id: 'B', text: 'A king ordering punishment for betrayal' },
+        { id: 'C', text: 'Frustrated about missing the bus' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Wrath implies powerful, consequential anger beyond everyday frustration.'
+    },
+    anchor: {
+      prompt: 'In stories or history, whose wrath left a lasting impact?',
+      categories: ['Literature', 'History', 'Mythology', 'Film']
+    }
+  },
+
+  {
+    word: 'wraith',
+    cluster: 'Literary',
+    definition: 'A ghost or specter; the transparent image of a person at the moment of death. Often used metaphorically to describe something thin, insubstantial, or supernatural.',
+    exercise: {
+      question: 'In literature, a wraith typically symbolizes...',
+      options: [
+        { id: 'A', text: 'A wealthy noble' },
+        { id: 'B', text: 'Something that has lost substance—presence without reality, haunting without hope' },
+        { id: 'C', text: 'A warrior in battle' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Wraiths embody the uncanny—present but not alive, visible but untouchable.'
+    },
+    anchor: {
+      prompt: 'What memory or feeling haunts you like a wraith—present but fading?',
+      categories: ['Memory', 'Loss', 'Supernatural', 'Emotion']
+    }
+  },
+
+  {
+    word: 'naught',
+    cluster: 'Literary',
+    definition: 'Nothing; zero. An archaic term emphasizing emptiness or the absence of value, often carrying moral weight in classical literature.',
+    exercise: {
+      question: '"All his wealth amounted to naught." What does this suggest?',
+      options: [
+        { id: 'A', text: 'He had no money' },
+        { id: 'B', text: 'His wealth lacked meaning or was lost, rendering everything meaningless' },
+        { id: 'C', text: 'He was generous' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Naught carries moral weight—it\'s not just absence but the emptiness that follows loss.'
+    },
+    anchor: {
+      prompt: 'When have you felt like your efforts amounted to naught? What did you learn?',
+      categories: ['Failure', 'Meaning', 'Loss', 'Perspective']
+    }
+  },
+
+  {
+    word: 'gleam',
+    cluster: 'Literary',
+    definition: 'A bright flash or glow of light, often brief and striking. Metaphorically, a gleam represents hope, ambition, or a moment of clarity breaking through darkness.',
+    exercise: {
+      question: 'What does "a gleam of hope" suggest that "hope" alone does not?',
+      options: [
+        { id: 'A', text: 'The hope is permanent and certain' },
+        { id: 'B', text: 'The hope is sudden, brilliant but fragile—a light breaking through darkness' },
+        { id: 'C', text: 'The hope is widespread' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'A gleam adds intensity and transience—hope that shines brightly but might fade.'
+    },
+    anchor: {
+      prompt: 'What gleam of possibility or inspiration has guided a decision you\'ve made?',
+      categories: ['Hope', 'Inspiration', 'Light', 'Possibility']
+    }
+  },
+
+  {
+    word: 'yore',
+    cluster: 'Literary',
+    definition: 'Time long past; days of old. Yore evokes nostalgia and the distance between past and present, often romanticizing bygone eras.',
+    exercise: {
+      question: 'Why might a writer use "yore" instead of simply "the past"?',
+      options: [
+        { id: 'A', text: 'To sound more formal' },
+        { id: 'B', text: 'To evoke romance, distance, and a sense that something precious is lost to time' },
+        { id: 'C', text: 'To confuse readers' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Yore romanticizes the past—it carries longing and the bittersweet sense of "those were the days."'
+    },
+    anchor: {
+      prompt: 'What from your childhood or the past do you view through the lens of yore?',
+      categories: ['Nostalgia', 'Memory', 'Childhood', 'Change']
+    }
+  },
+
+  {
+    word: 'swain',
+    cluster: 'Literary',
+    definition: 'A young lover or suitor, especially one from pastoral or romantic literature. Archaic and often ironic, evoking idealized courtship and devotion.',
+    exercise: {
+      question: 'How is "swain" typically used in modern literature?',
+      options: [
+        { id: 'A', text: 'To describe a modern romantic partner seriously' },
+        { id: 'B', text: 'To evoke an old-fashioned or idealized romantic, often with irony or nostalgia' },
+        { id: 'C', text: 'To describe a warrior' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Swain carries the weight of literary tradition—using it now creates irony or romantic nostalgia.'
+    },
+    anchor: {
+      prompt: 'In literature, swains were devoted lovers. Who has been most devoted to you, or you to them?',
+      categories: ['Love', 'Devotion', 'Romance', 'Literature']
+    }
+  },
+
+  {
+    word: 'quoth',
+    cluster: 'Literary',
+    definition: 'Said or spoke; archaic past tense of "quote." Famous from Edgar Allan Poe\'s "The Raven" ("Quoth the raven, \'Nevermore\'"), emphasizing dramatic declaration.',
+    exercise: {
+      question: 'Why is "quoth" so effective in "The Raven"?',
+      options: [
+        { id: 'A', text: 'Because it means the bird is lying' },
+        { id: 'B', text: 'Because its archaic quality makes the raven\'s speech feel ancient, mystical, and inevitable' },
+        { id: 'C', text: 'Because it rhymes well' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Quoth creates an otherworldly tone—making the raven sound oracular and timeless.'
+    },
+    anchor: {
+      prompt: 'What words or phrases do people "quoth" (repeat) in your life that feel prophetic?',
+      categories: ['Literature', 'Wisdom', 'Repetition', 'Prophecy']
+    }
+  },
+
+  {
+    word: 'cleave',
+    cluster: 'Literary',
+    definition: 'To split or divide forcefully; or paradoxically, to cling or adhere closely. This dual meaning creates powerful tension in literature.',
+    exercise: {
+      question: 'Why is "cleave" particularly useful in dramatic writing?',
+      options: [
+        { id: 'A', text: 'Because it\'s easy to spell' },
+        { id: 'B', text: 'Because it carries opposite meanings—both splitting and joining—creating emotional complexity' },
+        { id: 'C', text: 'Because it\'s old-fashioned' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Cleave\'s contradictory meanings mirror emotional conflict—being torn apart while holding on.'
+    },
+    anchor: {
+      prompt: 'To what or whom do you cleave most strongly? What would it mean to be cleaved from it?',
+      categories: ['Attachment', 'Conflict', 'Identity', 'Loss']
+    }
+  },
+
+  {
+    word: 'sward',
+    cluster: 'Literary',
+    definition: 'Green grass or turf; a grassy surface or lawn. Often used in pastoral poetry to invoke natural beauty and peace.',
+    exercise: {
+      question: 'What atmosphere does "sward" create that "grass" does not?',
+      options: [
+        { id: 'A', text: 'Sward is more scientific' },
+        { id: 'B', text: 'Sward evokes pastoral beauty, peace, and a connection to nature and poetic tradition' },
+        { id: 'C', text: 'Sward means artificial grass' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Sward carries literary weight—it\'s pastoral, romantic, and connected to the English countryside.'
+    },
+    anchor: {
+      prompt: 'Where is a natural place—a sward, a meadow, a forest—where you find peace?',
+      categories: ['Nature', 'Peace', 'Sanctuary', 'Home']
+    }
+  },
+
+  {
+    word: 'blithe',
+    cluster: 'Literary',
+    definition: 'Lighthearted and carefree; displaying happiness without concern for consequences. Often used ironically when someone\'s carelessness masks deeper issues.',
+    exercise: {
+      question: 'What\'s the subtle danger in a "blithe" character?',
+      options: [
+        { id: 'A', text: 'They are naturally sad' },
+        { id: 'B', text: 'Their carefree nature may mask irresponsibility or failure to see consequences' },
+        { id: 'C', text: 'They are dishonest' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Blithe joy can be dangerous—sometimes carelessness costs more than we realize.'
+    },
+    anchor: {
+      prompt: 'When have you been blithely unconcerned about something that later mattered?',
+      categories: ['Growth', 'Consequences', 'Innocence', 'Learning']
+    }
+  },
+
+  {
+    word: 'smite',
+    cluster: 'Literary',
+    definition: 'To strike forcefully, especially with divine punishment or retribution. Carries moral weight suggesting justice or curse.',
+    exercise: {
+      question: 'In classical literature, to be "smitten" or "smote" by something suggests...',
+      options: [
+        { id: 'A', text: 'A gentle tap' },
+        { id: 'B', text: 'A sudden, powerful force—often divine judgment or overwhelming emotion—that changes everything' },
+        { id: 'C', text: 'A quiet criticism' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Smite carries moral and dramatic weight—it\'s not just physical but consequential and often divinely sanctioned.'
+    },
+    anchor: {
+      prompt: 'What realization or moment smitten you with its force or truth?',
+      categories: ['Revelation', 'Impact', 'Divine', 'Transformation']
+    }
+  },
+
+  {
+    word: 'fealty',
+    cluster: 'Literary',
+    definition: 'Loyalty and devotion, especially the oath sworn by feudal vassals to their lord. Represents absolute fidelity and the bonds that hold society together.',
+    exercise: {
+      question: 'What does swearing "fealty" imply beyond simple agreement?',
+      options: [
+        { id: 'A', text: 'A casual preference' },
+        { id: 'B', text: 'An unbreakable vow of absolute loyalty and devotion, binding one\'s honor and future' },
+        { id: 'C', text: 'A financial transaction' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Fealty is sacred—it\'s not just loyalty but binding one\'s honor and integrity to another.'
+    },
+    anchor: {
+      prompt: 'To whom or what have you sworn fealty—explicit or implicit? What does that mean?',
+      categories: ['Loyalty', 'Honor', 'Commitment', 'Relationships']
+    }
+  },
+
+  {
+    word: 'wane',
+    cluster: 'Literary',
+    definition: 'To decrease in size, strength, or influence, as the moon wanes. Suggests natural decline, loss of power, or the passage from fullness to diminishment.',
+    exercise: {
+      question: 'Why might a poet choose "wane" to describe declining power rather than "decrease"?',
+      options: [
+        { id: 'A', text: 'Because it\'s shorter' },
+        { id: 'B', text: 'Because it carries inevitability, natural cycles, and the poignancy of fading—not choice but fate' },
+        { id: 'C', text: 'Because it\'s more modern' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Wane feels natural and inevitable—like the moon—rather than chosen or sudden.'
+    },
+    anchor: {
+      prompt: 'What in your life has waned or is waning? How do you feel about it?',
+      categories: ['Change', 'Acceptance', 'Time', 'Impermanence']
+    }
+  },
+
+  {
+    word: 'heathen',
+    cluster: 'Literary',
+    definition: 'A person outside one\'s religious faith; used both literally and metaphorically to describe someone uncivilized or lacking refinement. Often carries ironic or poetic weight.',
+    exercise: {
+      question: 'In modern literary use, calling someone "heathen" often suggests...',
+      options: [
+        { id: 'A', text: 'A literal religious classification' },
+        { id: 'B', text: 'Ironic distance from their values—they\'re uncivilized by *our* standards, revealing our biases' },
+        { id: 'C', text: 'They are dangerous' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Modern use of "heathen" often works ironically, questioning whose standards matter.'
+    },
+    anchor: {
+      prompt: 'When have you felt like a "heathen"—outside accepted norms? What did you learn?',
+      categories: ['Identity', 'Outsider', 'Culture', 'Perspective']
+    }
+  },
+
+  {
+    word: 'wend',
+    cluster: 'Literary',
+    definition: 'To go or travel, especially slowly or by an indirect route. Often used as "wend one\'s way," suggesting a deliberate, thoughtful journey.',
+    exercise: {
+      question: 'What does "wend one\'s way" convey that "go" or "travel" does not?',
+      options: [
+        { id: 'A', text: 'Speed and urgency' },
+        { id: 'B', text: 'A slower, more thoughtful journey—perhaps circuitous, reflective, purposeful despite meandering' },
+        { id: 'C', text: 'Aggression' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Wend suggests a journey with intention and reflection, not mere movement—you\'re wending *your* way.'
+    },
+    anchor: {
+      prompt: 'Where are you wending your way toward in life? What path are you taking?',
+      categories: ['Journey', 'Purpose', 'Path', 'Future']
+    }
+  },
+
+  // CONFLICT CLUSTER
+  {
+    word: 'plight',
+    cluster: 'Conflict',
+    definition: 'A dangerous, difficult, or unfortunate situation. A serious predicament that demands attention and often sympathy.',
+    exercise: {
+      question: 'Which describes a plight?',
+      options: [
+        { id: 'A', text: 'Choosing between two good job offers' },
+        { id: 'B', text: 'Refugees fleeing war with nowhere to go' },
+        { id: 'C', text: 'Deciding what to eat for dinner' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Plight refers to serious, distressing situations, not minor inconveniences.'
+    },
+    anchor: {
+      prompt: 'What plight in the world concerns you most?',
+      categories: ['Social Issues', 'Current Events', 'Personal Experience', 'History']
+    }
+  },
+
+  {
+    word: 'bane',
+    cluster: 'Conflict',
+    definition: 'A source of persistent harm or misery. Something that causes recurring problems or serves as a nemesis.',
+    exercise: {
+      question: 'What could be someone\'s bane?',
+      options: [
+        { id: 'A', text: 'A minor inconvenience that happened once' },
+        { id: 'B', text: 'Chronic procrastination that undermines every project' },
+        { id: 'C', text: 'A rainy day' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'A bane is a persistent, recurring source of difficulty, not a one-time issue.'
+    },
+    anchor: {
+      prompt: 'What has been the bane of your productivity or peace?',
+      categories: ['Work Habits', 'Personal Growth', 'Challenges', 'Obstacles']
+    }
+  },
+
+  // CULTURE CLUSTER
+  {
+    word: 'ken',
+    cluster: 'Culture',
+    definition: 'One\'s range of knowledge or understanding. Describes the boundaries of what someone comprehends or perceives.',
+    exercise: {
+      question: 'How is "ken" used correctly?',
+      options: [
+        { id: 'A', text: 'Quantum physics is beyond my ken' },
+        { id: 'B', text: 'I ken you tomorrow' },
+        { id: 'C', text: 'That\'s a nice ken you have' }
+      ],
+      correctAnswer: 'A',
+      explanation: 'Ken refers to the limits of knowledge or understanding, as in "beyond my ken."'
+    },
+    anchor: {
+      prompt: 'What topic is currently beyond your ken but fascinates you?',
+      categories: ['Learning', 'Science', 'Philosophy', 'Culture']
+    }
+  },
+
+  {
+    word: 'hale',
+    cluster: 'Culture',
+    definition: 'Strong and healthy, especially in old age. Describes robust physical condition that defies typical decline.',
+    exercise: {
+      question: 'Who would be described as hale?',
+      options: [
+        { id: 'A', text: 'A 20-year-old athlete in peak condition' },
+        { id: 'B', text: 'An 80-year-old who hikes mountains and gardens daily' },
+        { id: 'C', text: 'Someone recovering from illness' }
+      ],
+      correctAnswer: 'B',
+      explanation: 'Hale emphasizes robust health, especially when unexpected due to age.'
+    },
+    anchor: {
+      prompt: 'Who do you know that remains remarkably hale?',
+      categories: ['Family', 'Role Models', 'Health', 'Aging']
+    }
+  }
+];

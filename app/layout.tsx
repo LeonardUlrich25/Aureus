@@ -13,21 +13,32 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aureus — Language Mentor",
+  title: "Noema — Language Mentor",
   description: "Minimalist advanced-vocabulary mentor",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body>
+        {/* UK Flag background - exactly as in screenshot */}
+        <div 
+          className="fixed inset-0 -z-20"
+          style={{
+            backgroundImage: 'url(/uk-flag-background.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundAttachment: 'fixed'
+          }}
+        />
+        
+        {/* White overlay - semi-transparent as in screenshot */}
+        <div className="fixed inset-0 bg-white/85 -z-10" />
+        
+        {/* App content */}
+        <div className="relative">
+          {children}
+        </div>
       </body>
     </html>
   );

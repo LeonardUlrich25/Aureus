@@ -34,3 +34,25 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Model integration (Anthropic / Claude Haiku 4.5)
+
+This project includes a small example server route that will proxy requests to an Anthropic model. To use a model such as `claude-haiku-4.5` you must:
+
+1. Obtain access to the model from Anthropic (see `admin_instructions.md`).
+2. Set the required environment variables in your deployment or local `.env.local`:
+
+```env
+ANTHROPIC_API_KEY=sk-...        # keep secret, server-side only
+CLAUDE_MODEL=claude-haiku-4.5  # model id the server will use
+```
+
+3. The server proxy endpoint is available at `POST /api/generate` and expects a JSON body `{ "prompt": "...", "max_tokens": 300 }`.
+
+4. The server route will forward the request to the Anthropic API using `process.env.CLAUDE_MODEL`.
+
+Notes:
+- Do not store API keys in client-side code or in public repositories.
+- If Anthropic uses a different header or endpoint for your account, update `app/api/generate/route.ts` to match the provider instructions.
+
+See `admin_instructions.md` for a template support message and extra details.
