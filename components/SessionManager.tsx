@@ -5,6 +5,7 @@ import { DefinitionScreen } from './session/DefinitionScreen';
 import { ExerciseScreen } from './session/ExerciseScreen';
 import { AnchorScreen } from './session/AnchorScreen';
 import { CompletionScreen } from './session/CompletionScreen';
+import { SessionProgressBar } from './SessionProgressBar';
 
 interface SelectedWord {
   word: string;
@@ -63,7 +64,9 @@ export function SessionManager({ selectedWords }: SessionManagerProps) {
           cluster={currentWord.cluster}
           clusterColor={currentWord.clusterColor || '#9B7EBD'}
           onContinue={handleStepComplete}
-          progress={`${currentWordIndex + 1}/${selectedWords.length}`}
+          currentStep={1}
+          currentWord={currentWordIndex + 1}
+          totalWords={selectedWords.length}
         />
       )}
 
@@ -73,7 +76,9 @@ export function SessionManager({ selectedWords }: SessionManagerProps) {
           cluster={currentWord.cluster}
           clusterColor={currentWord.clusterColor || '#9B7EBD'}
           onCorrectAnswer={handleStepComplete}
-          progress={`${currentWordIndex + 1}/${selectedWords.length}`}
+          currentStep={2}
+          currentWord={currentWordIndex + 1}
+          totalWords={selectedWords.length}
         />
       )}
 
@@ -83,7 +88,9 @@ export function SessionManager({ selectedWords }: SessionManagerProps) {
           cluster={currentWord.cluster}
           clusterColor={currentWord.clusterColor || '#9B7EBD'}
           onComplete={handleStepComplete}
-          progress={`${currentWordIndex + 1}/${selectedWords.length}`}
+          currentStep={3}
+          currentWord={currentWordIndex + 1}
+          totalWords={selectedWords.length}
         />
       )}
     </div>

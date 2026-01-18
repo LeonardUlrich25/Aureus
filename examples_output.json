@@ -1,0 +1,2550 @@
+{
+  "synergy": {
+    "categories": [
+      "Team Project",
+      "Collaboration",
+      "Creative Work",
+      "Problem Solving"
+    ],
+    "examples": {
+      "Team Project": "When synergy makes the team project stronger",
+      "Collaboration": "When synergy brings people together",
+      "Creative Work": "When synergy fuels creative expression",
+      "Problem Solving": "When synergy unlocks a solution"
+    }
+  },
+  "delegation": {
+    "categories": [
+      "Leadership",
+      "Team Management",
+      "Projects",
+      "Learning"
+    ],
+    "examples": {
+      "Leadership": "When delegation defines true leadership",
+      "Team Management": "When delegation shapes how you manage the team",
+      "Projects": "When delegation becomes critical to project success",
+      "Learning": "When delegation deepens your understanding"
+    }
+  },
+  "scalability": {
+    "categories": [
+      "Learning",
+      "Growth",
+      "Efficiency",
+      "Mastery"
+    ],
+    "examples": {
+      "Learning": "When scalability deepens your understanding",
+      "Growth": "When scalability marks meaningful growth",
+      "Efficiency": "When scalability streamlines what matters",
+      "Mastery": "When scalability shows true mastery"
+    }
+  },
+  "benchmark": {
+    "categories": [
+      "Personal Goals",
+      "Competition",
+      "Self-Assessment",
+      "Progress"
+    ],
+    "examples": {
+      "Personal Goals": "When benchmark matters to your personal goal",
+      "Competition": "When benchmark gives you competitive advantage",
+      "Self-Assessment": "When honest benchmark assessment reveals the truth",
+      "Progress": "When benchmark proves your progress"
+    }
+  },
+  "expert": {
+    "categories": [
+      "Professional Skill",
+      "Hobby",
+      "Creative Pursuit",
+      "Life Experience"
+    ],
+    "examples": {
+      "Professional Skill": "When expert matters in Professional Skill",
+      "Hobby": "When expert matters in Hobby",
+      "Creative Pursuit": "When expert matters in Creative Pursuit",
+      "Life Experience": "When expert matters in Life Experience"
+    }
+  },
+  "proficiency": {
+    "categories": [
+      "Language",
+      "Music",
+      "Sports",
+      "Technical Skill"
+    ],
+    "examples": {
+      "Language": "When proficiency matters in Language",
+      "Music": "When proficiency matters in Music",
+      "Sports": "When proficiency matters in Sports",
+      "Technical Skill": "When proficiency matters in Technical Skill"
+    }
+  },
+  "retention": {
+    "categories": [
+      "School Memory",
+      "Life Lesson",
+      "Professional Knowledge",
+      "Personal Story"
+    ],
+    "examples": {
+      "School Memory": "When retention matters in School Memory",
+      "Life Lesson": "When retention matters in Life Lesson",
+      "Professional Knowledge": "When retention matters in Professional Knowledge",
+      "Personal Story": "When retention matters in Personal Story"
+    }
+  },
+  "pedagogy": {
+    "categories": [
+      "Education",
+      "Mentorship",
+      "Self-Teaching",
+      "Skill Development"
+    ],
+    "examples": {
+      "Education": "When pedagogy transforms education",
+      "Mentorship": "When pedagogy shapes mentor-student connection",
+      "Self-Teaching": "When pedagogy guides your self-teaching",
+      "Skill Development": "When pedagogy accelerates skill growth"
+    }
+  },
+  "nuance": {
+    "categories": [
+      "Communication",
+      "Art",
+      "Relationships",
+      "Decision Making"
+    ],
+    "examples": {
+      "Communication": "When nuance enhances communication",
+      "Art": "When nuance emerges in artistic expression",
+      "Relationships": "When nuance deepens relationships",
+      "Decision Making": "When nuance influences decisions"
+    }
+  },
+  "cordial": {
+    "categories": [
+      "Workplace",
+      "Networking",
+      "Social Events",
+      "Customer Service"
+    ],
+    "examples": {
+      "Workplace": "When cordial shapes workplace culture",
+      "Networking": "When cordial strengthens your network",
+      "Social Events": "When cordial makes social moments special",
+      "Customer Service": "When cordial defines customer service excellence"
+    }
+  },
+  "assertive": {
+    "categories": [
+      "Meetings",
+      "Conflict",
+      "Confidence",
+      "Communication"
+    ],
+    "examples": {
+      "Meetings": "When assertive matters in Meetings",
+      "Conflict": "When assertive fuels conflict",
+      "Confidence": "When assertive builds your confidence",
+      "Communication": "When assertive enhances communication"
+    }
+  },
+  "empathy": {
+    "categories": [
+      "Friend",
+      "Family",
+      "Teacher",
+      "Stranger"
+    ],
+    "examples": {
+      "Friend": "When empathy matters in Friend",
+      "Family": "When empathy matters in Family",
+      "Teacher": "When empathy matters in Teacher",
+      "Stranger": "When empathy matters in Stranger"
+    }
+  },
+  "pithy": {
+    "categories": [
+      "Writing",
+      "Communication",
+      "Advice",
+      "Wisdom"
+    ],
+    "examples": {
+      "Writing": "When pithy elevates your writing",
+      "Communication": "When pithy enhances communication",
+      "Advice": "When pithy becomes sage advice",
+      "Wisdom": "When pithy reveals timeless wisdom"
+    }
+  },
+  "forlorn": {
+    "categories": [
+      "Travel",
+      "Memory",
+      "Reading",
+      "Film"
+    ],
+    "examples": {
+      "Travel": "When forlorn shapes travel experiences",
+      "Memory": "When forlorn etches itself into memory",
+      "Reading": "When forlorn captures you in reading",
+      "Film": "When forlorn moves you in film"
+    }
+  },
+  "wrath": {
+    "categories": [
+      "Literature",
+      "History",
+      "Mythology",
+      "Film"
+    ],
+    "examples": {
+      "Literature": "When wrath resonates in literature",
+      "History": "When wrath shapes historical moments",
+      "Mythology": "When wrath echoes through mythology",
+      "Film": "When wrath moves you in film"
+    }
+  },
+  "wraith": {
+    "categories": [
+      "Past Relationship",
+      "Old Home",
+      "Childhood Memory",
+      "Lost Dream"
+    ],
+    "examples": {
+      "Past Relationship": "When wraith matters in Past Relationship",
+      "Old Home": "When wraith matters in Old Home",
+      "Childhood Memory": "When wraith matters in Childhood Memory",
+      "Lost Dream": "When wraith matters in Lost Dream"
+    }
+  },
+  "naught": {
+    "categories": [
+      "Project",
+      "Relationship",
+      "Goal",
+      "Creative Work"
+    ],
+    "examples": {
+      "Project": "When naught matters in Project",
+      "Relationship": "When naught matters in Relationship",
+      "Goal": "When naught matters in Goal",
+      "Creative Work": "When naught fuels creative expression"
+    }
+  },
+  "gleam": {
+    "categories": [
+      "First Meeting",
+      "Conversation",
+      "Family Moment",
+      "Surprise"
+    ],
+    "examples": {
+      "First Meeting": "When gleam matters in First Meeting",
+      "Conversation": "When gleam matters in Conversation",
+      "Family Moment": "When gleam matters in Family Moment",
+      "Surprise": "When gleam matters in Surprise"
+    }
+  },
+  "yore": {
+    "categories": [
+      "Family History",
+      "Historical Era",
+      "Mythology",
+      "Old Customs"
+    ],
+    "examples": {
+      "Family History": "When yore matters in Family History",
+      "Historical Era": "When yore matters in Historical Era",
+      "Mythology": "When yore echoes through mythology",
+      "Old Customs": "When yore matters in Old Customs"
+    }
+  },
+  "swain": {
+    "categories": [
+      "Courtship",
+      "Love Letters",
+      "Traditions",
+      "Gestures"
+    ],
+    "examples": {
+      "Courtship": "When swain matters in Courtship",
+      "Love Letters": "When swain matters in Love Letters",
+      "Traditions": "When swain matters in Traditions",
+      "Gestures": "When swain matters in Gestures"
+    }
+  },
+  "quoth": {
+    "categories": [
+      "Book Quote",
+      "Advice",
+      "Warning",
+      "Wisdom"
+    ],
+    "examples": {
+      "Book Quote": "When quoth matters in Book Quote",
+      "Advice": "When quoth becomes sage advice",
+      "Warning": "When quoth matters in Warning",
+      "Wisdom": "When quoth reveals timeless wisdom"
+    }
+  },
+  "cleave": {
+    "categories": [
+      "Family",
+      "Partnership",
+      "Friendship",
+      "Creative Collaboration"
+    ],
+    "examples": {
+      "Family": "When cleave matters in Family",
+      "Partnership": "When cleave matters in Partnership",
+      "Friendship": "When cleave matters in Friendship",
+      "Creative Collaboration": "When cleave matters in Creative Collaboration"
+    }
+  },
+  "sward": {
+    "categories": [
+      "Childhood Place",
+      "Travel Memory",
+      "Park",
+      "Natural Setting"
+    ],
+    "examples": {
+      "Childhood Place": "When sward matters in Childhood Place",
+      "Travel Memory": "When sward matters in Travel Memory",
+      "Park": "When sward matters in Park",
+      "Natural Setting": "When sward matters in Natural Setting"
+    }
+  },
+  "blithe": {
+    "categories": [
+      "Youth",
+      "Relationship",
+      "Warning Ignored",
+      "Responsibility"
+    ],
+    "examples": {
+      "Youth": "When blithe matters in Youth",
+      "Relationship": "When blithe matters in Relationship",
+      "Warning Ignored": "When blithe matters in Warning Ignored",
+      "Responsibility": "When blithe matters in Responsibility"
+    }
+  },
+  "smite": {
+    "categories": [
+      "Major Setback",
+      "Health",
+      "Career",
+      "Relationship"
+    ],
+    "examples": {
+      "Major Setback": "When smite matters in Major Setback",
+      "Health": "When smite matters in Health",
+      "Career": "When smite matters in Career",
+      "Relationship": "When smite matters in Relationship"
+    }
+  },
+  "fealty": {
+    "categories": [
+      "Family",
+      "Principles",
+      "Organization",
+      "Cause"
+    ],
+    "examples": {
+      "Family": "When fealty matters in Family",
+      "Principles": "When fealty matters in Principles",
+      "Organization": "When fealty matters in Organization",
+      "Cause": "When fealty matters in Cause"
+    }
+  },
+  "wane": {
+    "categories": [
+      "Hobby",
+      "Friendship",
+      "Career Interest",
+      "Belief"
+    ],
+    "examples": {
+      "Hobby": "When wane matters in Hobby",
+      "Friendship": "When wane matters in Friendship",
+      "Career Interest": "When wane matters in Career Interest",
+      "Belief": "When wane matters in Belief"
+    }
+  },
+  "heathen": {
+    "categories": [
+      "Religion",
+      "Culture",
+      "Community",
+      "Beliefs"
+    ],
+    "examples": {
+      "Religion": "When heathen matters in Religion",
+      "Culture": "When heathen matters in Culture",
+      "Community": "When heathen matters in Community",
+      "Beliefs": "When heathen matters in Beliefs"
+    }
+  },
+  "wend": {
+    "categories": [
+      "Walk",
+      "Road Trip",
+      "Travel",
+      "Exploration"
+    ],
+    "examples": {
+      "Walk": "When wend matters in Walk",
+      "Road Trip": "When wend matters in Road Trip",
+      "Travel": "When wend shapes travel experiences",
+      "Exploration": "When wend matters in Exploration"
+    }
+  },
+  "plight": {
+    "categories": [
+      "Social Issues",
+      "Current Events",
+      "Personal Experience",
+      "History"
+    ],
+    "examples": {
+      "Social Issues": "When plight matters in Social Issues",
+      "Current Events": "When plight matters in Current Events",
+      "Personal Experience": "When plight matters in Personal Experience",
+      "History": "When plight shapes historical moments"
+    }
+  },
+  "bane": {
+    "categories": [
+      "Work Habits",
+      "Personal Growth",
+      "Challenges",
+      "Obstacles"
+    ],
+    "examples": {
+      "Work Habits": "When bane matters in Work Habits",
+      "Personal Growth": "When bane matters in Personal Growth",
+      "Challenges": "When bane matters in Challenges",
+      "Obstacles": "When bane matters in Obstacles"
+    }
+  },
+  "ken": {
+    "categories": [
+      "Learning",
+      "Science",
+      "Philosophy",
+      "Culture"
+    ],
+    "examples": {
+      "Learning": "When ken deepens your understanding",
+      "Science": "When ken matters in Science",
+      "Philosophy": "When ken matters in Philosophy",
+      "Culture": "When ken matters in Culture"
+    }
+  },
+  "kindly": {
+    "categories": [
+      "Work Email",
+      "Conflict",
+      "Boundaries",
+      "Professional Communication"
+    ],
+    "examples": {
+      "Work Email": "When kindly matters in Work Email",
+      "Conflict": "When kindly fuels conflict",
+      "Boundaries": "When kindly helps establish healthy boundaries",
+      "Professional Communication": "When kindly matters in Professional Communication"
+    }
+  },
+  "regarding": {
+    "categories": [
+      "Client Email",
+      "Team Communication",
+      "Professional Tone",
+      "Formality"
+    ],
+    "examples": {
+      "Client Email": "When regarding matters in Client Email",
+      "Team Communication": "When regarding matters in Team Communication",
+      "Professional Tone": "When regarding matters in Professional Tone",
+      "Formality": "When regarding matters in Formality"
+    }
+  },
+  "concerning": {
+    "categories": [
+      "Performance Review",
+      "Feedback",
+      "Work Anxiety",
+      "Communication"
+    ],
+    "examples": {
+      "Performance Review": "When concerning matters in Performance Review",
+      "Feedback": "When concerning matters in Feedback",
+      "Work Anxiety": "When concerning matters in Work Anxiety",
+      "Communication": "When concerning enhances communication"
+    }
+  },
+  "facilitate": {
+    "categories": [
+      "Project Management",
+      "Leadership",
+      "Coordination",
+      "Teamwork"
+    ],
+    "examples": {
+      "Project Management": "When facilitate matters in Project Management",
+      "Leadership": "When facilitate defines true leadership",
+      "Coordination": "When facilitate matters in Coordination",
+      "Teamwork": "When facilitate matters in Teamwork"
+    }
+  },
+  "assist": {
+    "categories": [
+      "Workplace Relationships",
+      "Tone",
+      "Friendliness",
+      "Professional Distance"
+    ],
+    "examples": {
+      "Workplace Relationships": "When assist matters in Workplace Relationships",
+      "Tone": "When assist matters in Tone",
+      "Friendliness": "When assist matters in Friendliness",
+      "Professional Distance": "When assist matters in Professional Distance"
+    }
+  },
+  "inquire": {
+    "categories": [
+      "Job Search",
+      "Networking",
+      "First Impressions",
+      "Professional Email"
+    ],
+    "examples": {
+      "Job Search": "When inquire matters in Job Search",
+      "Networking": "When inquire strengthens your network",
+      "First Impressions": "When inquire matters in First Impressions",
+      "Professional Email": "When inquire matters in Professional Email"
+    }
+  },
+  "quite": {
+    "categories": [
+      "Cultural Differences",
+      "International Work",
+      "Miscommunication",
+      "Compliments"
+    ],
+    "examples": {
+      "Cultural Differences": "When quite matters in Cultural Differences",
+      "International Work": "When quite matters in International Work",
+      "Miscommunication": "When quite matters in Miscommunication",
+      "Compliments": "When quite matters in Compliments"
+    }
+  },
+  "rather": {
+    "categories": [
+      "Feedback",
+      "Compliments",
+      "Tone",
+      "Encouragement"
+    ],
+    "examples": {
+      "Feedback": "When rather matters in Feedback",
+      "Compliments": "When rather matters in Compliments",
+      "Tone": "When rather matters in Tone",
+      "Encouragement": "When rather matters in Encouragement"
+    }
+  },
+  "somewhat": {
+    "categories": [
+      "Difficult Conversations",
+      "Feedback",
+      "Relationships",
+      "Honesty"
+    ],
+    "examples": {
+      "Difficult Conversations": "When somewhat matters in Difficult Conversations",
+      "Feedback": "When somewhat matters in Feedback",
+      "Relationships": "When somewhat deepens relationships",
+      "Honesty": "When somewhat matters in Honesty"
+    }
+  },
+  "actually": {
+    "categories": [
+      "Meetings",
+      "Misunderstandings",
+      "Conflict",
+      "Communication"
+    ],
+    "examples": {
+      "Meetings": "When actually matters in Meetings",
+      "Misunderstandings": "When actually matters in Misunderstandings",
+      "Conflict": "When actually fuels conflict",
+      "Communication": "When actually enhances communication"
+    }
+  },
+  "honestly": {
+    "categories": [
+      "Difficult Conversations",
+      "Trust",
+      "Vulnerability",
+      "Communication"
+    ],
+    "examples": {
+      "Difficult Conversations": "When honestly matters in Difficult Conversations",
+      "Trust": "When honestly matters in Trust",
+      "Vulnerability": "When honestly invites vulnerability",
+      "Communication": "When honestly enhances communication"
+    }
+  },
+  "appreciate": {
+    "categories": [
+      "Gratitude",
+      "Teamwork",
+      "Relationships",
+      "Support"
+    ],
+    "examples": {
+      "Gratitude": "When appreciate matters in Gratitude",
+      "Teamwork": "When appreciate matters in Teamwork",
+      "Relationships": "When appreciate deepens relationships",
+      "Support": "When appreciate matters in Support"
+    }
+  },
+  "understand": {
+    "categories": [
+      "Empathy",
+      "Listening",
+      "Emotional Support",
+      "Friendship"
+    ],
+    "examples": {
+      "Empathy": "When understand matters in Empathy",
+      "Listening": "When understand matters in Listening",
+      "Emotional Support": "When understand matters in Emotional Support",
+      "Friendship": "When understand matters in Friendship"
+    }
+  },
+  "concern": {
+    "categories": [
+      "Feedback",
+      "Care",
+      "Criticism",
+      "Relationships"
+    ],
+    "examples": {
+      "Feedback": "When concern matters in Feedback",
+      "Care": "When concern matters in Care",
+      "Criticism": "When concern matters in Criticism",
+      "Relationships": "When concern deepens relationships"
+    }
+  },
+  "support": {
+    "categories": [
+      "Commitment",
+      "Action",
+      "Advocacy",
+      "Teamwork"
+    ],
+    "examples": {
+      "Commitment": "When support strengthens commitment",
+      "Action": "When support matters in Action",
+      "Advocacy": "When support matters in Advocacy",
+      "Teamwork": "When support matters in Teamwork"
+    }
+  },
+  "respect": {
+    "categories": [
+      "Boundaries",
+      "Disagreement",
+      "Relationships",
+      "Acceptance"
+    ],
+    "examples": {
+      "Boundaries": "When respect helps establish healthy boundaries",
+      "Disagreement": "When respect matters in Disagreement",
+      "Relationships": "When respect deepens relationships",
+      "Acceptance": "When respect matters in Acceptance"
+    }
+  },
+  "furthermore": {
+    "categories": [
+      "Presentations",
+      "Meetings",
+      "Public Speaking",
+      "Communication"
+    ],
+    "examples": {
+      "Presentations": "When furthermore matters in Presentations",
+      "Meetings": "When furthermore matters in Meetings",
+      "Public Speaking": "When furthermore matters in Public Speaking",
+      "Communication": "When furthermore enhances communication"
+    }
+  },
+  "utilize": {
+    "categories": [
+      "Writing",
+      "Communication",
+      "Clarity",
+      "Confidence"
+    ],
+    "examples": {
+      "Writing": "When utilize elevates your writing",
+      "Communication": "When utilize enhances communication",
+      "Clarity": "When utilize matters in Clarity",
+      "Confidence": "When utilize builds your confidence"
+    }
+  },
+  "significant": {
+    "categories": [
+      "Presentations",
+      "Reports",
+      "Data",
+      "Communication"
+    ],
+    "examples": {
+      "Presentations": "When significant matters in Presentations",
+      "Reports": "When significant matters in Reports",
+      "Data": "When significant matters in Data",
+      "Communication": "When significant enhances communication"
+    }
+  },
+  "frugal": {
+    "categories": [
+      "Money",
+      "Relationships",
+      "Values",
+      "Judgment"
+    ],
+    "examples": {
+      "Money": "When frugal matters in Money",
+      "Relationships": "When frugal deepens relationships",
+      "Values": "When frugal reflects your deepest values",
+      "Judgment": "When frugal matters in Judgment"
+    }
+  },
+  "unique": {
+    "categories": [
+      "Feedback",
+      "Art",
+      "Creativity",
+      "Communication"
+    ],
+    "examples": {
+      "Feedback": "When unique matters in Feedback",
+      "Art": "When unique emerges in artistic expression",
+      "Creativity": "When unique matters in Creativity",
+      "Communication": "When unique enhances communication"
+    }
+  },
+  "simple": {
+    "categories": [
+      "Design",
+      "Problem Solving",
+      "Creativity",
+      "Work"
+    ],
+    "examples": {
+      "Design": "When simple matters in Design",
+      "Problem Solving": "When simple unlocks a solution",
+      "Creativity": "When simple matters in Creativity",
+      "Work": "When simple matters in Work"
+    }
+  },
+  "critical": {
+    "categories": [
+      "Work Email",
+      "Feedback",
+      "Anxiety",
+      "Miscommunication"
+    ],
+    "examples": {
+      "Work Email": "When critical matters in Work Email",
+      "Feedback": "When critical matters in Feedback",
+      "Anxiety": "When critical matters in Anxiety",
+      "Miscommunication": "When critical matters in Miscommunication"
+    }
+  },
+  "discuss": {
+    "categories": [
+      "Meetings",
+      "Conflict",
+      "Decision Making",
+      "Communication"
+    ],
+    "examples": {
+      "Meetings": "When discuss matters in Meetings",
+      "Conflict": "When discuss fuels conflict",
+      "Decision Making": "When discuss influences decisions",
+      "Communication": "When discuss enhances communication"
+    }
+  },
+  "suggest": {
+    "categories": [
+      "Meetings",
+      "Leadership",
+      "Confidence",
+      "Decision Making"
+    ],
+    "examples": {
+      "Meetings": "When suggest matters in Meetings",
+      "Leadership": "When suggest defines true leadership",
+      "Confidence": "When suggest builds your confidence",
+      "Decision Making": "When suggest influences decisions"
+    }
+  },
+  "issue": {
+    "categories": [
+      "Crisis Management",
+      "Client Communication",
+      "Spin",
+      "Professional"
+    ],
+    "examples": {
+      "Crisis Management": "When issue matters in Crisis Management",
+      "Client Communication": "When issue matters in Client Communication",
+      "Spin": "When issue matters in Spin",
+      "Professional": "When issue matters in Professional"
+    }
+  },
+  "leverage": {
+    "categories": [
+      "Strategy",
+      "Business",
+      "Jargon",
+      "Communication"
+    ],
+    "examples": {
+      "Strategy": "When leverage matters in Strategy",
+      "Business": "When leverage matters in Business",
+      "Jargon": "When leverage matters in Jargon",
+      "Communication": "When leverage enhances communication"
+    }
+  },
+  "actual": {
+    "categories": [
+      "Language Learning",
+      "False Friends",
+      "Communication",
+      "Identity"
+    ],
+    "examples": {
+      "Language Learning": "When actual matters in Language Learning",
+      "False Friends": "When actual matters in False Friends",
+      "Communication": "When actual enhances communication",
+      "Identity": "When actual shapes identity"
+    }
+  },
+  "eventually": {
+    "categories": [
+      "Language Learning",
+      "Mistakes",
+      "Growth",
+      "Communication"
+    ],
+    "examples": {
+      "Language Learning": "When eventually matters in Language Learning",
+      "Mistakes": "When eventually matters in Mistakes",
+      "Growth": "When eventually marks meaningful growth",
+      "Communication": "When eventually enhances communication"
+    }
+  },
+  "sensible": {
+    "categories": [
+      "Language Learning",
+      "Embarrassment",
+      "False Friends",
+      "Communication"
+    ],
+    "examples": {
+      "Language Learning": "When sensible matters in Language Learning",
+      "Embarrassment": "When sensible matters in Embarrassment",
+      "False Friends": "When sensible matters in False Friends",
+      "Communication": "When sensible enhances communication"
+    }
+  },
+  "salient": {
+    "categories": [
+      "Reading",
+      "Writing",
+      "Memory",
+      "Learning"
+    ],
+    "examples": {
+      "Reading": "When salient captures you in reading",
+      "Writing": "When salient elevates your writing",
+      "Memory": "When salient etches itself into memory",
+      "Learning": "When salient deepens your understanding"
+    }
+  },
+  "specious": {
+    "categories": [
+      "Critical Thinking",
+      "Reasoning",
+      "Deception",
+      "Skepticism"
+    ],
+    "examples": {
+      "Critical Thinking": "When specious matters in Critical Thinking",
+      "Reasoning": "When specious matters in Reasoning",
+      "Deception": "When specious matters in Deception",
+      "Skepticism": "When specious matters in Skepticism"
+    }
+  },
+  "tenuous": {
+    "categories": [
+      "Relationships",
+      "Work",
+      "Learning",
+      "Change"
+    ],
+    "examples": {
+      "Relationships": "When tenuous deepens relationships",
+      "Work": "When tenuous matters in Work",
+      "Learning": "When tenuous deepens your understanding",
+      "Change": "When tenuous signals change"
+    }
+  },
+  "empirical": {
+    "categories": [
+      "Learning",
+      "Testing",
+      "Science",
+      "Growth"
+    ],
+    "examples": {
+      "Learning": "When empirical deepens your understanding",
+      "Testing": "When empirical matters in Testing",
+      "Science": "When empirical matters in Science",
+      "Growth": "When empirical marks meaningful growth"
+    }
+  },
+  "extrapolate": {
+    "categories": [
+      "Prediction",
+      "Problem Solving",
+      "Planning",
+      "Inference"
+    ],
+    "examples": {
+      "Prediction": "When extrapolate matters in Prediction",
+      "Problem Solving": "When extrapolate unlocks a solution",
+      "Planning": "When extrapolate matters in Planning",
+      "Inference": "When extrapolate matters in Inference"
+    }
+  },
+  "paradigm": {
+    "categories": [
+      "Perspective",
+      "Learning",
+      "Growth",
+      "Belief"
+    ],
+    "examples": {
+      "Perspective": "When paradigm shifts your perspective",
+      "Learning": "When paradigm deepens your understanding",
+      "Growth": "When paradigm marks meaningful growth",
+      "Belief": "When paradigm matters in Belief"
+    }
+  },
+  "insouciant": {
+    "categories": [
+      "Confidence",
+      "Freedom",
+      "Attitude",
+      "Literature"
+    ],
+    "examples": {
+      "Confidence": "When insouciant builds your confidence",
+      "Freedom": "When insouciant matters in Freedom",
+      "Attitude": "When insouciant matters in Attitude",
+      "Literature": "When insouciant resonates in literature"
+    }
+  },
+  "lugubrious": {
+    "categories": [
+      "Literature",
+      "Emotion",
+      "Atmosphere",
+      "Memory"
+    ],
+    "examples": {
+      "Literature": "When lugubrious resonates in literature",
+      "Emotion": "When lugubrious matters in Emotion",
+      "Atmosphere": "When lugubrious matters in Atmosphere",
+      "Memory": "When lugubrious etches itself into memory"
+    }
+  },
+  "ineffable": {
+    "categories": [
+      "Spirituality",
+      "Art",
+      "Love",
+      "Mystery"
+    ],
+    "examples": {
+      "Spirituality": "When ineffable matters in Spirituality",
+      "Art": "When ineffable emerges in artistic expression",
+      "Love": "When ineffable expresses love",
+      "Mystery": "When ineffable matters in Mystery"
+    }
+  },
+  "obdurate": {
+    "categories": [
+      "Conflict",
+      "Character",
+      "Relationships",
+      "Growth"
+    ],
+    "examples": {
+      "Conflict": "When obdurate fuels conflict",
+      "Character": "When obdurate matters in Character",
+      "Relationships": "When obdurate deepens relationships",
+      "Growth": "When obdurate marks meaningful growth"
+    }
+  },
+  "lassitude": {
+    "categories": [
+      "Fatigue",
+      "Emotion",
+      "Resilience",
+      "Health"
+    ],
+    "examples": {
+      "Fatigue": "When lassitude matters in Fatigue",
+      "Emotion": "When lassitude matters in Emotion",
+      "Resilience": "When lassitude matters in Resilience",
+      "Health": "When lassitude matters in Health"
+    }
+  },
+  "anachronistic": {
+    "categories": [
+      "History",
+      "Literature",
+      "Film",
+      "Culture"
+    ],
+    "examples": {
+      "History": "When anachronistic shapes historical moments",
+      "Literature": "When anachronistic resonates in literature",
+      "Film": "When anachronistic moves you in film",
+      "Culture": "When anachronistic matters in Culture"
+    }
+  },
+  "derivative": {
+    "categories": [
+      "Art",
+      "Creativity",
+      "Criticism",
+      "Culture"
+    ],
+    "examples": {
+      "Art": "When derivative emerges in artistic expression",
+      "Creativity": "When derivative matters in Creativity",
+      "Criticism": "When derivative matters in Criticism",
+      "Culture": "When derivative matters in Culture"
+    }
+  },
+  "didactic": {
+    "categories": [
+      "Teaching",
+      "Art",
+      "Literature",
+      "Learning"
+    ],
+    "examples": {
+      "Teaching": "When you teach others about didactic",
+      "Art": "When didactic emerges in artistic expression",
+      "Literature": "When didactic resonates in literature",
+      "Learning": "When didactic deepens your understanding"
+    }
+  },
+  "parochial": {
+    "categories": [
+      "Culture",
+      "Travel",
+      "Perspective",
+      "Bias"
+    ],
+    "examples": {
+      "Culture": "When parochial matters in Culture",
+      "Travel": "When parochial shapes travel experiences",
+      "Perspective": "When parochial shifts your perspective",
+      "Bias": "When parochial matters in Bias"
+    }
+  },
+  "quotidian": {
+    "categories": [
+      "Routine",
+      "Meaning",
+      "Culture",
+      "Mindfulness"
+    ],
+    "examples": {
+      "Routine": "When quotidian matters in Routine",
+      "Meaning": "When quotidian reveals deeper meaning",
+      "Culture": "When quotidian matters in Culture",
+      "Mindfulness": "When quotidian matters in Mindfulness"
+    }
+  },
+  "ambivalent": {
+    "categories": [
+      "Emotion",
+      "Decision Making",
+      "Relationships",
+      "Growth"
+    ],
+    "examples": {
+      "Emotion": "When ambivalent matters in Emotion",
+      "Decision Making": "When ambivalent influences decisions",
+      "Relationships": "When ambivalent deepens relationships",
+      "Growth": "When ambivalent marks meaningful growth"
+    }
+  },
+  "nonplussed": {
+    "categories": [
+      "Surprise",
+      "Emotion",
+      "Reaction",
+      "Language"
+    ],
+    "examples": {
+      "Surprise": "When nonplussed matters in Surprise",
+      "Emotion": "When nonplussed matters in Emotion",
+      "Reaction": "When nonplussed matters in Reaction",
+      "Language": "When nonplussed matters in Language"
+    }
+  },
+  "ostensible": {
+    "categories": [
+      "Truth",
+      "Deception",
+      "Relationships",
+      "Insight"
+    ],
+    "examples": {
+      "Truth": "When ostensible matters in Truth",
+      "Deception": "When ostensible matters in Deception",
+      "Relationships": "When ostensible deepens relationships",
+      "Insight": "When ostensible matters in Insight"
+    }
+  },
+  "invidious": {
+    "categories": [
+      "Fairness",
+      "Bias",
+      "Social Justice",
+      "Ethics"
+    ],
+    "examples": {
+      "Fairness": "When invidious matters in Fairness",
+      "Bias": "When invidious matters in Bias",
+      "Social Justice": "When invidious matters in Social Justice",
+      "Ethics": "When invidious matters in Ethics"
+    }
+  },
+  "equivocal": {
+    "categories": [
+      "Communication",
+      "Ambiguity",
+      "Honesty",
+      "Language"
+    ],
+    "examples": {
+      "Communication": "When equivocal enhances communication",
+      "Ambiguity": "When equivocal matters in Ambiguity",
+      "Honesty": "When equivocal matters in Honesty",
+      "Language": "When equivocal matters in Language"
+    }
+  },
+  "perfunctory": {
+    "categories": [
+      "Attention",
+      "Respect",
+      "Connection",
+      "Authenticity"
+    ],
+    "examples": {
+      "Attention": "When perfunctory matters in Attention",
+      "Respect": "When perfunctory matters in Respect",
+      "Connection": "When perfunctory creates genuine connection",
+      "Authenticity": "When perfunctory matters in Authenticity"
+    }
+  },
+  "oblique": {
+    "categories": [
+      "Communication",
+      "Directness",
+      "Relationships",
+      "Courage"
+    ],
+    "examples": {
+      "Communication": "When oblique enhances communication",
+      "Directness": "When oblique matters in Directness",
+      "Relationships": "When oblique deepens relationships",
+      "Courage": "When oblique requires courage"
+    }
+  },
+  "incidental": {
+    "categories": [
+      "Chance",
+      "Discovery",
+      "Perspective",
+      "Attention"
+    ],
+    "examples": {
+      "Chance": "When incidental matters in Chance",
+      "Discovery": "When incidental matters in Discovery",
+      "Perspective": "When incidental shifts your perspective",
+      "Attention": "When incidental matters in Attention"
+    }
+  },
+  "consequential": {
+    "categories": [
+      "Impact",
+      "Importance",
+      "Choice",
+      "Life Direction"
+    ],
+    "examples": {
+      "Impact": "When consequential makes real impact",
+      "Importance": "When consequential matters in Importance",
+      "Choice": "When consequential matters in Choice",
+      "Life Direction": "When consequential matters in Life Direction"
+    }
+  },
+  "speculative": {
+    "categories": [
+      "Uncertainty",
+      "Decision Making",
+      "Risk",
+      "Intuition"
+    ],
+    "examples": {
+      "Uncertainty": "When speculative matters in Uncertainty",
+      "Decision Making": "When speculative influences decisions",
+      "Risk": "When speculative matters in Risk",
+      "Intuition": "When speculative matters in Intuition"
+    }
+  },
+  "broach": {
+    "categories": [
+      "Communication",
+      "Courage",
+      "Relationships",
+      "Honesty"
+    ],
+    "examples": {
+      "Communication": "When broach enhances communication",
+      "Courage": "When broach requires courage",
+      "Relationships": "When broach deepens relationships",
+      "Honesty": "When broach matters in Honesty"
+    }
+  },
+  "impugn": {
+    "categories": [
+      "Trust",
+      "Criticism",
+      "Integrity",
+      "Conflict"
+    ],
+    "examples": {
+      "Trust": "When impugn matters in Trust",
+      "Criticism": "When impugn matters in Criticism",
+      "Integrity": "When impugn matters in Integrity",
+      "Conflict": "When impugn fuels conflict"
+    }
+  },
+  "corroborate": {
+    "categories": [
+      "Validation",
+      "Truth",
+      "Evidence",
+      "Support"
+    ],
+    "examples": {
+      "Validation": "When corroborate matters in Validation",
+      "Truth": "When corroborate matters in Truth",
+      "Evidence": "When corroborate matters in Evidence",
+      "Support": "When corroborate matters in Support"
+    }
+  },
+  "repudiate": {
+    "categories": [
+      "Growth",
+      "Change",
+      "Values",
+      "Identity"
+    ],
+    "examples": {
+      "Growth": "When repudiate marks meaningful growth",
+      "Change": "When repudiate signals change",
+      "Values": "When repudiate reflects your deepest values",
+      "Identity": "When repudiate shapes identity"
+    }
+  },
+  "attenuate": {
+    "categories": [
+      "Time",
+      "Emotion",
+      "Healing",
+      "Perspective"
+    ],
+    "examples": {
+      "Time": "When attenuate matters in Time",
+      "Emotion": "When attenuate matters in Emotion",
+      "Healing": "When attenuate matters in Healing",
+      "Perspective": "When attenuate shifts your perspective"
+    }
+  },
+  "circumscribe": {
+    "categories": [
+      "Constraint",
+      "Creativity",
+      "Boundaries",
+      "Adaptation"
+    ],
+    "examples": {
+      "Constraint": "When circumscribe matters in Constraint",
+      "Creativity": "When circumscribe matters in Creativity",
+      "Boundaries": "When circumscribe helps establish healthy boundaries",
+      "Adaptation": "When circumscribe matters in Adaptation"
+    }
+  },
+  "elide": {
+    "categories": [
+      "Communication",
+      "Honesty",
+      "Avoidance",
+      "Tact"
+    ],
+    "examples": {
+      "Communication": "When elide enhances communication",
+      "Honesty": "When elide matters in Honesty",
+      "Avoidance": "When elide matters in Avoidance",
+      "Tact": "When elide matters in Tact"
+    }
+  },
+  "undermine": {
+    "categories": [
+      "Trust",
+      "Power",
+      "Team Dynamics",
+      "Integrity"
+    ],
+    "examples": {
+      "Trust": "When undermine matters in Trust",
+      "Power": "When undermine matters in Power",
+      "Team Dynamics": "When undermine matters in Team Dynamics",
+      "Integrity": "When undermine matters in Integrity"
+    }
+  },
+  "resolve": {
+    "categories": [
+      "Decision Making",
+      "Conflict",
+      "Clarity",
+      "Follow-through"
+    ],
+    "examples": {
+      "Decision Making": "When resolve influences decisions",
+      "Conflict": "When resolve fuels conflict",
+      "Clarity": "When resolve matters in Clarity",
+      "Follow-through": "When resolve matters in Follow-through"
+    }
+  },
+  "highlight": {
+    "categories": [
+      "Communication",
+      "Visibility",
+      "Leadership",
+      "Priorities"
+    ],
+    "examples": {
+      "Communication": "When highlight enhances communication",
+      "Visibility": "When highlight matters in Visibility",
+      "Leadership": "When highlight defines true leadership",
+      "Priorities": "When highlight matters in Priorities"
+    }
+  },
+  "indicate": {
+    "categories": [
+      "Signals",
+      "Awareness",
+      "Strategy",
+      "Evidence"
+    ],
+    "examples": {
+      "Signals": "When indicate matters in Signals",
+      "Awareness": "When indicate matters in Awareness",
+      "Strategy": "When indicate matters in Strategy",
+      "Evidence": "When indicate matters in Evidence"
+    }
+  },
+  "justify": {
+    "categories": [
+      "Accountability",
+      "Reasoning",
+      "Stakeholders",
+      "Values"
+    ],
+    "examples": {
+      "Accountability": "When justify matters in Accountability",
+      "Reasoning": "When justify matters in Reasoning",
+      "Stakeholders": "When justify matters in Stakeholders",
+      "Values": "When justify reflects your deepest values"
+    }
+  },
+  "latent": {
+    "categories": [
+      "Potential",
+      "Growth",
+      "Self-Discovery",
+      "Development"
+    ],
+    "examples": {
+      "Potential": "When latent matters in Potential",
+      "Growth": "When latent marks meaningful growth",
+      "Self-Discovery": "When latent matters in Self-Discovery",
+      "Development": "When latent matters in Development"
+    }
+  },
+  "contingent": {
+    "categories": [
+      "Planning",
+      "Uncertainty",
+      "Decision Making",
+      "Future"
+    ],
+    "examples": {
+      "Planning": "When contingent matters in Planning",
+      "Uncertainty": "When contingent matters in Uncertainty",
+      "Decision Making": "When contingent influences decisions",
+      "Future": "When contingent matters in Future"
+    }
+  },
+  "inchoate": {
+    "categories": [
+      "Creativity",
+      "Growth",
+      "Beginning",
+      "Development"
+    ],
+    "examples": {
+      "Creativity": "When inchoate matters in Creativity",
+      "Growth": "When inchoate marks meaningful growth",
+      "Beginning": "When inchoate matters in Beginning",
+      "Development": "When inchoate matters in Development"
+    }
+  },
+  "intractable": {
+    "categories": [
+      "Limits",
+      "Problem-Solving",
+      "Planning",
+      "Reflection"
+    ],
+    "examples": {
+      "Limits": "When intractable matters in Limits",
+      "Problem-Solving": "When intractable matters in Problem-Solving",
+      "Planning": "When intractable matters in Planning",
+      "Reflection": "When intractable matters in Reflection"
+    }
+  },
+  "exigent": {
+    "categories": [
+      "Urgency",
+      "Crisis",
+      "Decision Making",
+      "Leadership"
+    ],
+    "examples": {
+      "Urgency": "When exigent matters in Urgency",
+      "Crisis": "When exigent matters in Crisis",
+      "Decision Making": "When exigent influences decisions",
+      "Leadership": "When exigent defines true leadership"
+    }
+  },
+  "nebulous": {
+    "categories": [
+      "Communication",
+      "Clarity",
+      "Emotion",
+      "Understanding"
+    ],
+    "examples": {
+      "Communication": "When nebulous enhances communication",
+      "Clarity": "When nebulous matters in Clarity",
+      "Emotion": "When nebulous matters in Emotion",
+      "Understanding": "When nebulous deepens mutual understanding"
+    }
+  },
+  "opaque": {
+    "categories": [
+      "Understanding",
+      "Trust",
+      "Communication",
+      "Clarity"
+    ],
+    "examples": {
+      "Understanding": "When opaque deepens mutual understanding",
+      "Trust": "When opaque matters in Trust",
+      "Communication": "When opaque enhances communication",
+      "Clarity": "When opaque matters in Clarity"
+    }
+  },
+  "trade-off": {
+    "categories": [
+      "Career",
+      "Decision Making",
+      "Priorities",
+      "Strategy"
+    ],
+    "examples": {
+      "Career": "When trade-off matters in Career",
+      "Decision Making": "When trade-off influences decisions",
+      "Priorities": "When trade-off matters in Priorities",
+      "Strategy": "When trade-off matters in Strategy"
+    }
+  },
+  "falsifiable": {
+    "categories": [
+      "Critical Thinking",
+      "Science",
+      "Beliefs",
+      "Learning"
+    ],
+    "examples": {
+      "Critical Thinking": "When falsifiable matters in Critical Thinking",
+      "Science": "When falsifiable matters in Science",
+      "Beliefs": "When falsifiable matters in Beliefs",
+      "Learning": "When falsifiable deepens your understanding"
+    }
+  },
+  "candid": {
+    "categories": [
+      "Communication",
+      "Growth",
+      "Relationships",
+      "Honesty"
+    ],
+    "examples": {
+      "Communication": "When candid enhances communication",
+      "Growth": "When candid marks meaningful growth",
+      "Relationships": "When candid deepens relationships",
+      "Honesty": "When candid matters in Honesty"
+    }
+  },
+  "resilient": {
+    "categories": [
+      "Challenge",
+      "Growth",
+      "Strength",
+      "Adaptation"
+    ],
+    "examples": {
+      "Challenge": "When resilient matters in Challenge",
+      "Growth": "When resilient marks meaningful growth",
+      "Strength": "When resilient matters in Strength",
+      "Adaptation": "When resilient matters in Adaptation"
+    }
+  },
+  "forthright": {
+    "categories": [
+      "Communication",
+      "Honesty",
+      "Courage",
+      "Leadership"
+    ],
+    "examples": {
+      "Communication": "When forthright enhances communication",
+      "Honesty": "When forthright matters in Honesty",
+      "Courage": "When forthright requires courage",
+      "Leadership": "When forthright defines true leadership"
+    }
+  },
+  "discern": {
+    "categories": [
+      "Observation",
+      "Judgment",
+      "Insight",
+      "Understanding"
+    ],
+    "examples": {
+      "Observation": "When discern matters in Observation",
+      "Judgment": "When discern matters in Judgment",
+      "Insight": "When discern matters in Insight",
+      "Understanding": "When discern deepens mutual understanding"
+    }
+  },
+  "Zeitgeist": {
+    "categories": [
+      "Culture",
+      "Society",
+      "History",
+      "Values"
+    ],
+    "examples": {
+      "Culture": "When Zeitgeist matters in Culture",
+      "Society": "When Zeitgeist matters in Society",
+      "History": "When Zeitgeist shapes historical moments",
+      "Values": "When Zeitgeist reflects your deepest values"
+    }
+  },
+  "dogma": {
+    "categories": [
+      "Beliefs",
+      "Authority",
+      "Critical Thinking",
+      "Growth"
+    ],
+    "examples": {
+      "Beliefs": "When dogma matters in Beliefs",
+      "Authority": "When dogma matters in Authority",
+      "Critical Thinking": "When dogma matters in Critical Thinking",
+      "Growth": "When dogma marks meaningful growth"
+    }
+  },
+  "hegemony": {
+    "categories": [
+      "Power",
+      "Culture",
+      "Norms",
+      "Awareness"
+    ],
+    "examples": {
+      "Power": "When hegemony matters in Power",
+      "Culture": "When hegemony matters in Culture",
+      "Norms": "When hegemony matters in Norms",
+      "Awareness": "When hegemony matters in Awareness"
+    }
+  },
+  "elegiac": {
+    "categories": [
+      "Art",
+      "Literature",
+      "Memory",
+      "Emotion"
+    ],
+    "examples": {
+      "Art": "When elegiac emerges in artistic expression",
+      "Literature": "When elegiac resonates in literature",
+      "Memory": "When elegiac etches itself into memory",
+      "Emotion": "When elegiac matters in Emotion"
+    }
+  },
+  "sardonic": {
+    "categories": [
+      "Humor",
+      "Communication",
+      "Tone",
+      "Personality"
+    ],
+    "examples": {
+      "Humor": "When sardonic matters in Humor",
+      "Communication": "When sardonic enhances communication",
+      "Tone": "When sardonic matters in Tone",
+      "Personality": "When sardonic matters in Personality"
+    }
+  },
+  "verdant": {
+    "categories": [
+      "Nature",
+      "Travel",
+      "Memory",
+      "Beauty"
+    ],
+    "examples": {
+      "Nature": "When verdant appears in nature",
+      "Travel": "When verdant shapes travel experiences",
+      "Memory": "When verdant etches itself into memory",
+      "Beauty": "When verdant matters in Beauty"
+    }
+  },
+  "disinterested": {
+    "categories": [
+      "Fairness",
+      "Judgment",
+      "Conflict",
+      "Impartiality"
+    ],
+    "examples": {
+      "Fairness": "When disinterested matters in Fairness",
+      "Judgment": "When disinterested matters in Judgment",
+      "Conflict": "When disinterested fuels conflict",
+      "Impartiality": "When disinterested matters in Impartiality"
+    }
+  },
+  "enormity": {
+    "categories": [
+      "History",
+      "Morality",
+      "Justice",
+      "Understanding"
+    ],
+    "examples": {
+      "History": "When enormity shapes historical moments",
+      "Morality": "When enormity matters in Morality",
+      "Justice": "When enormity matters in Justice",
+      "Understanding": "When enormity deepens mutual understanding"
+    }
+  },
+  "distill": {
+    "categories": [
+      "Analysis",
+      "Clarity",
+      "Communication",
+      "Understanding"
+    ],
+    "examples": {
+      "Analysis": "When distill matters in Analysis",
+      "Clarity": "When distill matters in Clarity",
+      "Communication": "When distill enhances communication",
+      "Understanding": "When distill deepens mutual understanding"
+    }
+  },
+  "conflate": {
+    "categories": [
+      "Precision",
+      "Language",
+      "Critical Thinking",
+      "Clarity"
+    ],
+    "examples": {
+      "Precision": "When conflate matters in Precision",
+      "Language": "When conflate matters in Language",
+      "Critical Thinking": "When conflate matters in Critical Thinking",
+      "Clarity": "When conflate matters in Clarity"
+    }
+  },
+  "preclude": {
+    "categories": [
+      "Decisions",
+      "Limitations",
+      "Adaptation",
+      "Constraints"
+    ],
+    "examples": {
+      "Decisions": "When preclude matters in Decisions",
+      "Limitations": "When preclude matters in Limitations",
+      "Adaptation": "When preclude matters in Adaptation",
+      "Constraints": "When preclude matters in Constraints"
+    }
+  },
+  "ameliorate": {
+    "categories": [
+      "Problem Solving",
+      "Improvement",
+      "Leadership",
+      "Action"
+    ],
+    "examples": {
+      "Problem Solving": "When ameliorate unlocks a solution",
+      "Improvement": "When ameliorate matters in Improvement",
+      "Leadership": "When ameliorate defines true leadership",
+      "Action": "When ameliorate matters in Action"
+    }
+  },
+  "elucidate": {
+    "categories": [
+      "Learning",
+      "Teaching",
+      "Clarity",
+      "Understanding"
+    ],
+    "examples": {
+      "Learning": "When elucidate deepens your understanding",
+      "Teaching": "When you teach others about elucidate",
+      "Clarity": "When elucidate matters in Clarity",
+      "Understanding": "When elucidate deepens mutual understanding"
+    }
+  },
+  "granular": {
+    "categories": [
+      "Problem-Solving",
+      "Precision",
+      "Analysis",
+      "Learning"
+    ],
+    "examples": {
+      "Problem-Solving": "When granular matters in Problem-Solving",
+      "Precision": "When granular matters in Precision",
+      "Analysis": "When granular matters in Analysis",
+      "Learning": "When granular deepens your understanding"
+    }
+  },
+  "stochastic": {
+    "categories": [
+      "Uncertainty",
+      "Patterns",
+      "Observation",
+      "Risk"
+    ],
+    "examples": {
+      "Uncertainty": "When stochastic matters in Uncertainty",
+      "Patterns": "When stochastic matters in Patterns",
+      "Observation": "When stochastic matters in Observation",
+      "Risk": "When stochastic matters in Risk"
+    }
+  },
+  "parsimonious": {
+    "categories": [
+      "Decision-Making",
+      "Design",
+      "Efficiency",
+      "Strategy"
+    ],
+    "examples": {
+      "Decision-Making": "When parsimonious matters in Decision-Making",
+      "Design": "When parsimonious matters in Design",
+      "Efficiency": "When parsimonious streamlines what matters",
+      "Strategy": "When parsimonious matters in Strategy"
+    }
+  },
+  "robust": {
+    "categories": [
+      "Resilience",
+      "Reliability",
+      "Habits",
+      "Performance"
+    ],
+    "examples": {
+      "Resilience": "When robust matters in Resilience",
+      "Reliability": "When robust matters in Reliability",
+      "Habits": "When robust matters in Habits",
+      "Performance": "When robust matters in Performance"
+    }
+  },
+  "artefact": {
+    "categories": [
+      "Bias",
+      "Reflection",
+      "Learning",
+      "Objectivity"
+    ],
+    "examples": {
+      "Bias": "When artefact matters in Bias",
+      "Reflection": "When artefact matters in Reflection",
+      "Learning": "When artefact deepens your understanding",
+      "Objectivity": "When artefact matters in Objectivity"
+    }
+  },
+  "emergent": {
+    "categories": [
+      "Systems",
+      "Teams",
+      "Complexity",
+      "Observation"
+    ],
+    "examples": {
+      "Systems": "When emergent matters in Systems",
+      "Teams": "When emergent matters in Teams",
+      "Complexity": "When emergent matters in Complexity",
+      "Observation": "When emergent matters in Observation"
+    }
+  },
+  "degenerate": {
+    "categories": [
+      "Strategy",
+      "Equivalence",
+      "Insight",
+      "Efficiency"
+    ],
+    "examples": {
+      "Strategy": "When degenerate matters in Strategy",
+      "Equivalence": "When degenerate matters in Equivalence",
+      "Insight": "When degenerate matters in Insight",
+      "Efficiency": "When degenerate streamlines what matters"
+    }
+  },
+  "scalable": {
+    "categories": [
+      "Principles",
+      "Transfer",
+      "Systems",
+      "Leadership"
+    ],
+    "examples": {
+      "Principles": "When scalable matters in Principles",
+      "Transfer": "When scalable matters in Transfer",
+      "Systems": "When scalable matters in Systems",
+      "Leadership": "When scalable defines true leadership"
+    }
+  },
+  "rumination": {
+    "categories": [
+      "Coping",
+      "Awareness",
+      "Habits",
+      "Mental Health"
+    ],
+    "examples": {
+      "Coping": "When rumination matters in Coping",
+      "Awareness": "When rumination matters in Awareness",
+      "Habits": "When rumination matters in Habits",
+      "Mental Health": "When rumination matters in Mental Health"
+    }
+  },
+  "dysphoria": {
+    "categories": [
+      "Mood",
+      "Self-Monitoring",
+      "Wellbeing",
+      "Awareness"
+    ],
+    "examples": {
+      "Mood": "When dysphoria matters in Mood",
+      "Self-Monitoring": "When dysphoria matters in Self-Monitoring",
+      "Wellbeing": "When dysphoria matters in Wellbeing",
+      "Awareness": "When dysphoria matters in Awareness"
+    }
+  },
+  "alexithymia": {
+    "categories": [
+      "Emotional Literacy",
+      "Reflection",
+      "Communication",
+      "Growth"
+    ],
+    "examples": {
+      "Emotional Literacy": "When alexithymia matters in Emotional Literacy",
+      "Reflection": "When alexithymia matters in Reflection",
+      "Communication": "When alexithymia enhances communication",
+      "Growth": "When alexithymia marks meaningful growth"
+    }
+  },
+  "ambivalence": {
+    "categories": [
+      "Decisions",
+      "Values",
+      "Conflict",
+      "Self-Insight"
+    ],
+    "examples": {
+      "Decisions": "When ambivalence matters in Decisions",
+      "Values": "When ambivalence reflects your deepest values",
+      "Conflict": "When ambivalence fuels conflict",
+      "Self-Insight": "When ambivalence matters in Self-Insight"
+    }
+  },
+  "projection": {
+    "categories": [
+      "Self-Awareness",
+      "Bias",
+      "Relationships",
+      "Emotions"
+    ],
+    "examples": {
+      "Self-Awareness": "When projection matters in Self-Awareness",
+      "Bias": "When projection matters in Bias",
+      "Relationships": "When projection deepens relationships",
+      "Emotions": "When projection matters in Emotions"
+    }
+  },
+  "dissociation": {
+    "categories": [
+      "Coping",
+      "Safety",
+      "Presence",
+      "Regulation"
+    ],
+    "examples": {
+      "Coping": "When dissociation matters in Coping",
+      "Safety": "When dissociation matters in Safety",
+      "Presence": "When dissociation matters in Presence",
+      "Regulation": "When dissociation matters in Regulation"
+    }
+  },
+  "anhedonia": {
+    "categories": [
+      "Mood",
+      "Recovery",
+      "Habits",
+      "Self-Care"
+    ],
+    "examples": {
+      "Mood": "When anhedonia matters in Mood",
+      "Recovery": "When anhedonia matters in Recovery",
+      "Habits": "When anhedonia matters in Habits",
+      "Self-Care": "When anhedonia matters in Self-Care"
+    }
+  },
+  "resignation": {
+    "categories": [
+      "Agency",
+      "Motivation",
+      "Change",
+      "Mindset"
+    ],
+    "examples": {
+      "Agency": "When resignation matters in Agency",
+      "Motivation": "When resignation matters in Motivation",
+      "Change": "When resignation signals change",
+      "Mindset": "When resignation matters in Mindset"
+    }
+  },
+  "irritability": {
+    "categories": [
+      "Regulation",
+      "Stress",
+      "Self-Care",
+      "Awareness"
+    ],
+    "examples": {
+      "Regulation": "When irritability matters in Regulation",
+      "Stress": "When irritability matters in Stress",
+      "Self-Care": "When irritability matters in Self-Care",
+      "Awareness": "When irritability matters in Awareness"
+    }
+  },
+  "desensitised": {
+    "categories": [
+      "Boundaries",
+      "Adaptation",
+      "Media",
+      "Wellbeing"
+    ],
+    "examples": {
+      "Boundaries": "When desensitised helps establish healthy boundaries",
+      "Adaptation": "When desensitised matters in Adaptation",
+      "Media": "When desensitised matters in Media",
+      "Wellbeing": "When desensitised matters in Wellbeing"
+    }
+  },
+  "moral hazard": {
+    "categories": [
+      "Risk",
+      "Economics",
+      "Incentives",
+      "Policy"
+    ],
+    "examples": {
+      "Risk": "When moral hazard matters in Risk",
+      "Economics": "When moral hazard matters in Economics",
+      "Incentives": "When moral hazard matters in Incentives",
+      "Policy": "When moral hazard matters in Policy"
+    }
+  },
+  "instrumentalise": {
+    "categories": [
+      "Relationships",
+      "Ethics",
+      "Respect",
+      "Work"
+    ],
+    "examples": {
+      "Relationships": "When instrumentalise deepens relationships",
+      "Ethics": "When instrumentalise matters in Ethics",
+      "Respect": "When instrumentalise matters in Respect",
+      "Work": "When instrumentalise matters in Work"
+    }
+  },
+  "culpable": {
+    "categories": [
+      "Accountability",
+      "Integrity",
+      "Responsibility",
+      "Growth"
+    ],
+    "examples": {
+      "Accountability": "When culpable matters in Accountability",
+      "Integrity": "When culpable matters in Integrity",
+      "Responsibility": "When culpable matters in Responsibility",
+      "Growth": "When culpable marks meaningful growth"
+    }
+  },
+  "exculpatory": {
+    "categories": [
+      "Judgment",
+      "Fairness",
+      "Perspective",
+      "Justice"
+    ],
+    "examples": {
+      "Judgment": "When exculpatory matters in Judgment",
+      "Fairness": "When exculpatory matters in Fairness",
+      "Perspective": "When exculpatory shifts your perspective",
+      "Justice": "When exculpatory matters in Justice"
+    }
+  },
+  "normative": {
+    "categories": [
+      "Values",
+      "Philosophy",
+      "Standards",
+      "Beliefs"
+    ],
+    "examples": {
+      "Values": "When normative reflects your deepest values",
+      "Philosophy": "When normative matters in Philosophy",
+      "Standards": "When normative matters in Standards",
+      "Beliefs": "When normative matters in Beliefs"
+    }
+  },
+  "paternalistic": {
+    "categories": [
+      "Autonomy",
+      "Authority",
+      "Care",
+      "Control"
+    ],
+    "examples": {
+      "Autonomy": "When paternalistic matters in Autonomy",
+      "Authority": "When paternalistic matters in Authority",
+      "Care": "When paternalistic matters in Care",
+      "Control": "When paternalistic matters in Control"
+    }
+  },
+  "expedient": {
+    "categories": [
+      "Decisions",
+      "Compromise",
+      "Integrity",
+      "Pragmatism"
+    ],
+    "examples": {
+      "Decisions": "When expedient matters in Decisions",
+      "Compromise": "When expedient matters in Compromise",
+      "Integrity": "When expedient matters in Integrity",
+      "Pragmatism": "When expedient matters in Pragmatism"
+    }
+  },
+  "principled": {
+    "categories": [
+      "Integrity",
+      "Values",
+      "Character",
+      "Courage"
+    ],
+    "examples": {
+      "Integrity": "When principled matters in Integrity",
+      "Values": "When principled reflects your deepest values",
+      "Character": "When principled matters in Character",
+      "Courage": "When principled requires courage"
+    }
+  },
+  "moralising": {
+    "categories": [
+      "Judgment",
+      "Communication",
+      "Humility",
+      "Perspective"
+    ],
+    "examples": {
+      "Judgment": "When moralising matters in Judgment",
+      "Communication": "When moralising enhances communication",
+      "Humility": "When moralising matters in Humility",
+      "Perspective": "When moralising shifts your perspective"
+    }
+  },
+  "complicity": {
+    "categories": [
+      "Accountability",
+      "Systems",
+      "Responsibility",
+      "Ethics"
+    ],
+    "examples": {
+      "Accountability": "When complicity matters in Accountability",
+      "Systems": "When complicity matters in Systems",
+      "Responsibility": "When complicity matters in Responsibility",
+      "Ethics": "When complicity matters in Ethics"
+    }
+  },
+  "anthropogenic": {
+    "categories": [
+      "Human Impact",
+      "Environment",
+      "Responsibility",
+      "Action"
+    ],
+    "examples": {
+      "Human Impact": "When anthropogenic matters in Human Impact",
+      "Environment": "When anthropogenic matters in Environment",
+      "Responsibility": "When anthropogenic matters in Responsibility",
+      "Action": "When anthropogenic matters in Action"
+    }
+  },
+  "rewilding": {
+    "categories": [
+      "Nature",
+      "Control",
+      "Restoration",
+      "Balance"
+    ],
+    "examples": {
+      "Nature": "When rewilding appears in nature",
+      "Control": "When rewilding matters in Control",
+      "Restoration": "When rewilding matters in Restoration",
+      "Balance": "When rewilding matters in Balance"
+    }
+  },
+  "eutrophication": {
+    "categories": [
+      "Balance",
+      "Excess",
+      "Consequences",
+      "Systems"
+    ],
+    "examples": {
+      "Balance": "When eutrophication matters in Balance",
+      "Excess": "When eutrophication matters in Excess",
+      "Consequences": "When eutrophication carries consequences",
+      "Systems": "When eutrophication matters in Systems"
+    }
+  },
+  "carbon sink": {
+    "categories": [
+      "Balance",
+      "Absorption",
+      "Protection",
+      "Stability"
+    ],
+    "examples": {
+      "Balance": "When carbon sink matters in Balance",
+      "Absorption": "When carbon sink matters in Absorption",
+      "Protection": "When carbon sink matters in Protection",
+      "Stability": "When carbon sink matters in Stability"
+    }
+  },
+  "resilience": {
+    "categories": [
+      "Recovery",
+      "Adaptation",
+      "Strength",
+      "Growth"
+    ],
+    "examples": {
+      "Recovery": "When resilience matters in Recovery",
+      "Adaptation": "When resilience matters in Adaptation",
+      "Strength": "When resilience matters in Strength",
+      "Growth": "When resilience marks meaningful growth"
+    }
+  },
+  "biodiversity": {
+    "categories": [
+      "Variety",
+      "Health",
+      "Connections",
+      "Strength"
+    ],
+    "examples": {
+      "Variety": "When biodiversity matters in Variety",
+      "Health": "When biodiversity matters in Health",
+      "Connections": "When biodiversity matters in Connections",
+      "Strength": "When biodiversity matters in Strength"
+    }
+  },
+  "externality": {
+    "categories": [
+      "Consequences",
+      "Responsibility",
+      "Impact",
+      "Awareness"
+    ],
+    "examples": {
+      "Consequences": "When externality carries consequences",
+      "Responsibility": "When externality matters in Responsibility",
+      "Impact": "When externality makes real impact",
+      "Awareness": "When externality matters in Awareness"
+    }
+  },
+  "depletion": {
+    "categories": [
+      "Sustainability",
+      "Limits",
+      "Energy",
+      "Balance"
+    ],
+    "examples": {
+      "Sustainability": "When depletion matters in Sustainability",
+      "Limits": "When depletion matters in Limits",
+      "Energy": "When depletion matters in Energy",
+      "Balance": "When depletion matters in Balance"
+    }
+  },
+  "desertification": {
+    "categories": [
+      "Degradation",
+      "Neglect",
+      "Warning",
+      "Care"
+    ],
+    "examples": {
+      "Degradation": "When desertification matters in Degradation",
+      "Neglect": "When desertification matters in Neglect",
+      "Warning": "When desertification matters in Warning",
+      "Care": "When desertification matters in Care"
+    }
+  },
+  "flashpoint": {
+    "categories": [
+      "Threshold",
+      "Crisis",
+      "Awareness",
+      "Prevention"
+    ],
+    "examples": {
+      "Threshold": "When flashpoint matters in Threshold",
+      "Crisis": "When flashpoint matters in Crisis",
+      "Awareness": "When flashpoint matters in Awareness",
+      "Prevention": "When flashpoint matters in Prevention"
+    }
+  },
+  "othering": {
+    "categories": [
+      "Exclusion",
+      "Awareness",
+      "Social Dynamics",
+      "Identity"
+    ],
+    "examples": {
+      "Exclusion": "When othering matters in Exclusion",
+      "Awareness": "When othering matters in Awareness",
+      "Social Dynamics": "When othering matters in Social Dynamics",
+      "Identity": "When othering shapes identity"
+    }
+  },
+  "performative": {
+    "categories": [
+      "Authenticity",
+      "Self-Examination",
+      "Sincerity",
+      "Action"
+    ],
+    "examples": {
+      "Authenticity": "When performative matters in Authenticity",
+      "Self-Examination": "When performative matters in Self-Examination",
+      "Sincerity": "When performative matters in Sincerity",
+      "Action": "When performative matters in Action"
+    }
+  },
+  "social capital": {
+    "categories": [
+      "Connections",
+      "Community",
+      "Resources",
+      "Support"
+    ],
+    "examples": {
+      "Connections": "When social capital matters in Connections",
+      "Community": "When social capital matters in Community",
+      "Resources": "When social capital matters in Resources",
+      "Support": "When social capital matters in Support"
+    }
+  },
+  "cohesion": {
+    "categories": [
+      "Unity",
+      "Community",
+      "Bonds",
+      "Belonging"
+    ],
+    "examples": {
+      "Unity": "When cohesion matters in Unity",
+      "Community": "When cohesion matters in Community",
+      "Bonds": "When cohesion matters in Bonds",
+      "Belonging": "When cohesion creates sense of belonging"
+    }
+  },
+  "gatekeeping": {
+    "categories": [
+      "Access",
+      "Exclusion",
+      "Control",
+      "Belonging"
+    ],
+    "examples": {
+      "Access": "When gatekeeping matters in Access",
+      "Exclusion": "When gatekeeping matters in Exclusion",
+      "Control": "When gatekeeping matters in Control",
+      "Belonging": "When gatekeeping creates sense of belonging"
+    }
+  },
+  "legitimacy": {
+    "categories": [
+      "Authority",
+      "Recognition",
+      "Power",
+      "Acceptance"
+    ],
+    "examples": {
+      "Authority": "When legitimacy matters in Authority",
+      "Recognition": "When legitimacy matters in Recognition",
+      "Power": "When legitimacy matters in Power",
+      "Acceptance": "When legitimacy matters in Acceptance"
+    }
+  },
+  "asymmetry": {
+    "categories": [
+      "Imbalance",
+      "Power",
+      "Inequality",
+      "Awareness"
+    ],
+    "examples": {
+      "Imbalance": "When asymmetry matters in Imbalance",
+      "Power": "When asymmetry matters in Power",
+      "Inequality": "When asymmetry matters in Inequality",
+      "Awareness": "When asymmetry matters in Awareness"
+    }
+  },
+  "entitlement": {
+    "categories": [
+      "Privilege",
+      "Self-Examination",
+      "Expectations",
+      "Awareness"
+    ],
+    "examples": {
+      "Privilege": "When entitlement matters in Privilege",
+      "Self-Examination": "When entitlement matters in Self-Examination",
+      "Expectations": "When entitlement matters in Expectations",
+      "Awareness": "When entitlement matters in Awareness"
+    }
+  },
+  "polarisation": {
+    "categories": [
+      "Division",
+      "Extremes",
+      "Conflict",
+      "Society"
+    ],
+    "examples": {
+      "Division": "When polarisation matters in Division",
+      "Extremes": "When polarisation matters in Extremes",
+      "Conflict": "When polarisation fuels conflict",
+      "Society": "When polarisation matters in Society"
+    }
+  },
+  "equivocation": {
+    "categories": [
+      "Honesty",
+      "Communication",
+      "Accountability",
+      "Self-Awareness"
+    ],
+    "examples": {
+      "Honesty": "When equivocation matters in Honesty",
+      "Communication": "When equivocation enhances communication",
+      "Accountability": "When equivocation matters in Accountability",
+      "Self-Awareness": "When equivocation matters in Self-Awareness"
+    }
+  },
+  "dogwhistle": {
+    "categories": [
+      "Language",
+      "Codes",
+      "Awareness",
+      "Interpretation"
+    ],
+    "examples": {
+      "Language": "When dogwhistle matters in Language",
+      "Codes": "When dogwhistle matters in Codes",
+      "Awareness": "When dogwhistle matters in Awareness",
+      "Interpretation": "When dogwhistle matters in Interpretation"
+    }
+  },
+  "loaded": {
+    "categories": [
+      "Language",
+      "Emotion",
+      "Bias",
+      "Awareness"
+    ],
+    "examples": {
+      "Language": "When loaded matters in Language",
+      "Emotion": "When loaded matters in Emotion",
+      "Bias": "When loaded matters in Bias",
+      "Awareness": "When loaded matters in Awareness"
+    }
+  },
+  "prevarication": {
+    "categories": [
+      "Honesty",
+      "Integrity",
+      "Evasion",
+      "Ethics"
+    ],
+    "examples": {
+      "Honesty": "When prevarication matters in Honesty",
+      "Integrity": "When prevarication matters in Integrity",
+      "Evasion": "When prevarication matters in Evasion",
+      "Ethics": "When prevarication matters in Ethics"
+    }
+  },
+  "gaslighting": {
+    "categories": [
+      "Manipulation",
+      "Psychological",
+      "Awareness",
+      "Protection"
+    ],
+    "examples": {
+      "Manipulation": "When gaslighting matters in Manipulation",
+      "Psychological": "When gaslighting matters in Psychological",
+      "Awareness": "When gaslighting matters in Awareness",
+      "Protection": "When gaslighting matters in Protection"
+    }
+  },
+  "logical fallacy": {
+    "categories": [
+      "Critical Thinking",
+      "Logic",
+      "Reasoning",
+      "Skepticism"
+    ],
+    "examples": {
+      "Critical Thinking": "When logical fallacy matters in Critical Thinking",
+      "Logic": "When logical fallacy matters in Logic",
+      "Reasoning": "When logical fallacy matters in Reasoning",
+      "Skepticism": "When logical fallacy matters in Skepticism"
+    }
+  },
+  "false dichotomy": {
+    "categories": [
+      "Logic",
+      "Nuance",
+      "Critical Thinking",
+      "Polarization"
+    ],
+    "examples": {
+      "Logic": "When false dichotomy matters in Logic",
+      "Nuance": "When false dichotomy matters in Nuance",
+      "Critical Thinking": "When false dichotomy matters in Critical Thinking",
+      "Polarization": "When false dichotomy matters in Polarization"
+    }
+  },
+  "hedging": {
+    "categories": [
+      "Communication",
+      "Accountability",
+      "Courage",
+      "Honesty"
+    ],
+    "examples": {
+      "Communication": "When hedging enhances communication",
+      "Accountability": "When hedging matters in Accountability",
+      "Courage": "When hedging requires courage",
+      "Honesty": "When hedging matters in Honesty"
+    }
+  },
+  "obfuscation": {
+    "categories": [
+      "Communication",
+      "Clarity",
+      "Deception",
+      "Awareness"
+    ],
+    "examples": {
+      "Communication": "When obfuscation enhances communication",
+      "Clarity": "When obfuscation matters in Clarity",
+      "Deception": "When obfuscation matters in Deception",
+      "Awareness": "When obfuscation matters in Awareness"
+    }
+  }
+}

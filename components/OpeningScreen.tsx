@@ -189,7 +189,7 @@ export default function OpeningScreen() {
           </div>
 
           {/* Mobile: Vertical freeform constellation layout with absolute positioning */}
-          <div className="block md:hidden pb-24 relative">
+          <div className="block md:hidden pb-32 relative">
             <div className="relative min-h-[900px]">
               
               {/* Cluster 0 (upper) */}
@@ -308,18 +308,28 @@ export default function OpeningScreen() {
             </div>
             
             {/* Mobile-only sticky start bar */}
-            <div className="fixed bottom-4 inset-x-0 md:hidden">
-              <div className="mx-auto max-w-sm px-4">
+            <div className="fixed inset-x-0 bottom-0 md:hidden z-50 flex justify-center items-end bg-gradient-to-t from-stone-50 via-stone-50 to-transparent p-4">
+              <div className="max-w-sm w-full">
                 <button
                   onClick={handleStartSession}
                   disabled={selectedWords.length < 3}
-                  className={`w-full px-6 py-3 rounded-full shadow-lg transition-all duration-300 
-                    ${selectedWords.length >= 3 ? 'bg-stone-800 text-white hover:bg-stone-900 active:scale-95' : 'bg-stone-300 text-stone-600 cursor-not-allowed opacity-80'}`}
+                  type="button"
+                  className={`w-full px-6 py-4 rounded-full shadow-lg transition-all duration-300 font-medium text-base
+                    ${selectedWords.length >= 3 ? 'bg-stone-800 text-white hover:bg-stone-900 active:scale-95 cursor-pointer' : 'bg-stone-300 text-stone-600 cursor-not-allowed opacity-80'}`}
                 >
-                  {selectedWords.length >= 3 ? `Start (${selectedWords.length})` : 'Select 3+ words to start'}
+                  {selectedWords.length >= 3 ? 'Start' : 'Select 3+ words to start'}
                 </button>
               </div>
             </div>
+
+            {/* Mobile word count - hidden when start button appears */}
+            {selectedWords.length < 3 && (
+              <div className="block md:hidden text-center pb-20">
+                <p className="text-sm text-stone-500">
+                  {selectedWords.length} / 3 selected
+                </p>
+              </div>
+            )}
           </div>
         </div>
 
@@ -335,7 +345,7 @@ export default function OpeningScreen() {
                 onClick={handleStartSession}
                 className="px-12 py-4 bg-stone-800 text-white font-medium text-base tracking-wide rounded-full shadow-lg hover:bg-stone-900 hover:shadow-xl transition-all duration-300 active:scale-95"
               >
-                Start ({selectedWords.length})
+                Start
               </button>
             </motion.div>
           )}

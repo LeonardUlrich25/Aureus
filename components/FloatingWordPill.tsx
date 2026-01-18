@@ -22,7 +22,7 @@ export function FloatingWordPill({ word, clusterColor, isSelected, selectionInde
   // Generate unique animation parameters
   const animationStyle = useMemo(() => {
     // Base duration (desktop)
-    let duration = 10 + Math.random() * 4; // 10-14s drift
+    let duration = 20 + Math.random() * 8; // 20-28s drift (halved speed)
     // Reduce drift on mobile to avoid overlap; slightly increase speed on mobile by shortening duration
     let xRange = 5 + Math.random() * 7;
     let yRange = 5 + Math.random() * 7;
@@ -33,11 +33,13 @@ export function FloatingWordPill({ word, clusterColor, isSelected, selectionInde
       const yStart = wordIndex * ySegmentSize;
       yRange = yStart + 2; // Moderate drift within own segment
       
-      // Alternate X direction per word with increased range for visible floating
+      // Create deterministic random direction per word (not based on index alternation)
+      // Use word's character codes to generate a pseudo-random direction
+      const wordHash = word.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
       const xBase = 3 + (wordIndex % 3) * 1.5; // 3-6px range
-      xRange = (wordIndex % 2 === 0 ? 1 : -1) * xBase;
+      xRange = (wordHash % 2 === 0 ? 1 : -1) * xBase;
       
-      duration = 8 + (wordIndex % 4); // Slower speed: 8-11s
+      duration = 16 + (wordIndex % 4) * 2; // Slower speed: 16-22s (halved speed)
     }
     return {
       animation: `float-${word} ${duration}s ease-in-out 0s infinite`,

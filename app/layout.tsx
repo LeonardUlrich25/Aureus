@@ -32,8 +32,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         
-        {/* White overlay - semi-transparent as in screenshot */}
-        <div className="fixed inset-0 bg-white/85 -z-10" />
+        {/* White overlay - semi-transparent as in screenshot; keep below route-specific backgrounds */}
+        <div className="fixed inset-0 bg-white/85 -z-30" />
         
         {/* App content */}
         <div className="relative">

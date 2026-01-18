@@ -206,7 +206,18 @@ export default function SessionPage() {
   const currentInteraction = interactions[currentIndex];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      {/* Mobile-only session background, above body background */}
+      <div
+        className="fixed inset-0 md:hidden pointer-events-none"
+        style={{
+          zIndex: 0,
+          backgroundImage: 'url(/session-background.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
+
       <div className="fixed top-0 left-0 right-0 h-1 bg-gray-200 z-50">
         <div 
           className="h-full bg-gradient-to-r from-blue-500 to-purple-500 transition-all"

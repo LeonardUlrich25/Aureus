@@ -61,8 +61,8 @@ export default function SessionSummary({ words, clusters, onHome }: Props) {
   }, [clusters]);
 
   return (
-    <div className="mobile-fit-screen md:min-h-0 md:h-full flex items-center justify-center md:items-start md:justify-start px-4 md:px-6 py-2 md:py-4 overflow-y-auto md:overflow-hidden">
-      <div className="max-w-3xl w-full bg-white border border-stone-200 rounded-3xl shadow-2xl p-4 md:p-6 space-y-4 md:space-y-4">
+    <div className="mobile-fit-screen md:min-h-0 md:h-full flex items-center justify-start md:items-start md:justify-start px-4 md:px-6 pt-12 pb-2 md:py-4 overflow-y-auto md:overflow-hidden">
+      <div className="max-w-3xl w-full bg-white border border-stone-200 rounded-3xl shadow-2xl p-4 md:p-6 space-y-4 md:space-y-4 mt-2 md:mt-0">
         <div className="mb-6 md:mb-4 text-center flex-shrink-0">
           <h2 className="text-2xl md:text-4xl font-semibold headline-text mb-2 md:mb-3">
             Session Summary
@@ -109,7 +109,7 @@ export default function SessionSummary({ words, clusters, onHome }: Props) {
                   <div className="flex items-center gap-2 md:gap-2">
                     {info && (
                       <div
-                        className="px-2 md:px-2 py-0.5 md:py-0.5 rounded-full text-white text-xs font-medium"
+                        className="px-2 md:px-2 py-0.5 md:py-0.5 rounded-full text-white text-xs font-medium whitespace-nowrap"
                         style={{ background: info.color }}
                       >
                         {info.name}

@@ -217,8 +217,8 @@ export default function Home() {
       Literary: "#7BA882",
       Conflict: "#8B5F5F",
       "Nuance Traps": "#8BA7B8",
-      "Precision Verbs": "#6BA5C4",
-      "Abstract Adjectives": "#9DAA7E",
+      "Precision": "#6BA5C4",
+      "Adjectives": "#9DAA7E",
       Science: "#5B9FD6",
       Psychology: "#7CBAC5",
       Ethics: "#C9A86A",
@@ -254,35 +254,37 @@ export default function Home() {
           <div className="absolute top-6 right-6 z-10">
             <button
               onClick={() => setShowSavedWords(true)}
-              className="group relative inline-flex items-center gap-2 md:px-3 px-2 py-1.5 
-                         md:border-2 md:border-yellow-500 md:rounded-full
+              className="group relative inline-flex items-center justify-center px-0.5 py-0.5 md:px-3 md:py-1.5
+                         bg-yellow-500/70 md:bg-yellow-500/70 border border-white md:border md:border-white rounded-full md:rounded-full
                          transition-all duration-200
-                         focus:outline-none md:hover:bg-yellow-50 md:focus:ring-2 md:focus:ring-yellow-500 md:focus:ring-offset-2"
+                         focus:outline-none md:hover:bg-yellow-600/80 hover:bg-yellow-600/80 md:focus:ring-2 md:focus:ring-yellow-500 md:focus:ring-offset-2"
               aria-label="View saved words"
             >
-              <svg className="w-6 h-6 md:w-4 md:h-4 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 md:w-4 md:h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
               </svg>
-              <span className="text-sm font-medium text-black hidden md:inline">Saved words</span>
+              <span className="text-sm font-medium text-black md:text-white hidden md:inline">Saved words</span>
             </button>
           </div>
         </>
       )}
 
-      <header className="py-4 md:py-6 flex-shrink-0" style={{ position: 'relative', zIndex: 1 }}>
-        <div className="max-w-4xl mx-auto px-4 md:px-6 flex items-center justify-center">
-          <div style={{ textAlign: "center" }}>
-            <h1 className="m-0 font-medium text-xl md:text-2xl" style={{ color: "#2D2D2D", letterSpacing: "0.05em" }}>
-              Neat!
-            </h1>
+      {phase === "pick" && (
+        <header className="py-6 md:py-6 flex-shrink-0" style={{ position: 'relative', zIndex: 1 }}>
+          <div className="max-w-4xl mx-auto px-4 md:px-6 flex items-center justify-center">
+            <div style={{ textAlign: "center" }}>
+              <h1 className="m-0 font-bold text-xl md:text-2xl" style={{ color: "#707070", letterSpacing: "0.05em" }}>
+                Neat!
+              </h1>
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
+      )}
 
       <main className={`max-w-4xl mx-auto px-4 md:px-6 py-4 md:py-8 flex-1 ${["sessionFlow", "summary"].includes(phase) ? "md:overflow-hidden" : "overflow-y-auto"}`} style={{ position: 'relative', zIndex: 1 }}>
         {phase === "pick" && (
           <section>
-            <h2 className="text-base md:text-lg font-medium mx-auto mb-4 md:mb-6" style={{ color: "#2D2D2D", marginTop: 0, textAlign: 'center', letterSpacing: "0.02em" }}>
+            <h2 className="text-base md:text-lg font-bold mx-auto mb-4 md:mb-6" style={{ color: "#707070", marginTop: 0, textAlign: 'center', letterSpacing: "0.02em" }}>
               Select 3+ expressions to refine
             </h2>
             <div className="flex flex-col md:flex-row gap-3 md:gap-6 mt-3 md:mt-6">
@@ -318,7 +320,6 @@ export default function Home() {
                         ethics: "#C9A86A",
                         nature: "#6FA87D",
                         society: "#9B8DC5",
-                        rhetoric: "#D4915D",
                         rhetoric: "#D4915D",
                       };
                       const color = CLUSTER_COLORS[c.id] || "#C0B3E0";
@@ -370,8 +371,11 @@ export default function Home() {
                         "abstract-adjectives": "#9DAA7E",
                         science: "#5B9FD6",
                         psychology: "#7CBAC5",
-                        ethics: "#C9A86A",                        nature: "#6FA87D",
-                        society: "#9B8DC5",                      };
+                        ethics: "#C9A86A",
+                        nature: "#6FA87D",
+                        society: "#9B8DC5",
+                        rhetoric: "#D4915D",
+                      };
                       const color = CLUSTER_COLORS[c.id] || "#C0B3E0";
                       const selIndex = selected.findIndex((s) => s.word === wordObj.word);
                       return (
@@ -393,10 +397,10 @@ export default function Home() {
               })}
             </div>
 
-            <div className={`mt-4 md:mt-8 text-center ${selected.length >= 3 ? '-mt-16 md:mt-8' : 'md:mt-8'}`}>
+            <div className={`mt-4 md:mt-8 text-center ${selected.length >= 3 ? '-mt-16 md:mt-8 hidden md:block' : 'md:mt-8'}`}>
               <div
-                className="text-base md:text-lg font-medium"
-                style={{ color: selected.length >= 3 ? "#5FA897" : "#2D2D2D" }}
+                className="text-base md:text-lg font-bold"
+                style={{ color: selected.length >= 3 ? "#5FA897" : "#707070" }}
               >
                 {selected.length}/3 words
               </div>
@@ -421,7 +425,9 @@ export default function Home() {
 
         {phase === "sessionFlow" && (
           <SessionFlow
-            selectedWordNames={selected.map((s) => s.word)}
+            selectedWordNames={selected
+              .map((s) => s.word)
+              .filter(wordName => wordDatabase.some(w => w.word === wordName))}
             onComplete={() => setPhase("summary")}
           />
         )}
@@ -444,17 +450,21 @@ export default function Home() {
 
       {/* Start button fixed bottom center per design system */}
       {phase === "pick" && selected.length >= 3 && (
-        <div className="fixed left-0 right-0 bottom-4 md:bottom-6 flex justify-center pointer-events-none flex-shrink-0">
+        <div className="fixed inset-x-0 bottom-4 md:bottom-6 flex justify-center pointer-events-none z-50">
           <div className="pointer-events-auto">
             <button
               onClick={startSession}
-              className="text-white text-sm md:text-base font-medium"
+              className="text-white text-sm md:text-base font-medium active:scale-95 transition-transform"
               style={{
                 background: "#5FA897",
                 padding: "12px 32px",
+                minHeight: "44px",
+                display: "flex",
+                alignItems: "center",
                 borderRadius: 16,
                 boxShadow: "0 8px 24px rgba(95,168,151,0.25)",
                 border: "none",
+                cursor: "pointer",
               }}
             >
               Start

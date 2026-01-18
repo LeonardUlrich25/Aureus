@@ -26,7 +26,12 @@ export default function SessionScreen({
   help,
 }: Props) {
   return (
-    <div className="min-h-screen px-6 py-8 md:py-4 flex flex-col" style={{ background: "#F8F7F5" }}>
+    <div className="min-h-screen px-6 py-4 md:py-4 flex flex-col" style={{ 
+      backgroundImage: 'url(/session-background.jpg)',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed'
+    }}>
       <header className="max-w-3xl mx-auto mb-2 md:mb-2 w-full">
           <div className="flex items-center justify-between">
           <div></div>

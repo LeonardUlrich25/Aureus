@@ -3,13 +3,16 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { generateExerciseForWord } from '@/utils/exerciseGenerator';
+import { SessionProgressBar } from '../SessionProgressBar';
 
 interface ExerciseScreenProps {
   word: string;
   cluster: string;
   clusterColor: string;
   onCorrectAnswer: () => void;
-  progress: string;
+  currentStep: 1 | 2 | 3;
+  currentWord: number;
+  totalWords: number;
 }
 
 export function ExerciseScreen({
@@ -17,7 +20,9 @@ export function ExerciseScreen({
   cluster,
   clusterColor,
   onCorrectAnswer,
-  progress
+  currentStep,
+  currentWord,
+  totalWords
 }: ExerciseScreenProps) {
   const exercise = generateExerciseForWord(word, cluster);
 
@@ -48,13 +53,14 @@ export function ExerciseScreen({
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.4 }}
-      className="min-h-screen px-6 py-12 flex flex-col"
+      className="min-h-screen px-6 py-4 md:py-12 flex flex-col"
     >
       <div className="max-w-2xl mx-auto w-full flex-1 flex flex-col">
-        <div className="flex items-center justify-between mb-8">
-          <p className="text-sm text-stone-400 tracking-wide">Step 2 of 3: Exercise</p>
-          <p className="text-sm font-medium text-stone-500">{progress}</p>
-        </div>
+        <SessionProgressBar
+          currentStep={currentStep}
+          currentWord={currentWord}
+          totalWords={totalWords}
+        />
 
         <h1 className="text-3xl md:text-4xl font-medium tracking-tight mb-12" style={{ color: clusterColor }}>{word}</h1>
 

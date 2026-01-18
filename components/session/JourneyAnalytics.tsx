@@ -40,7 +40,7 @@ export default function JourneyAnalytics({ metrics, onContinue }: JourneyAnalyti
   const journeyMessage = getJourneyMessage();
 
   return (
-    <div className="mobile-fit-screen md:min-h-screen bg-stone-50 flex items-center justify-center px-4 md:px-6 py-6 md:py-12 overflow-y-auto">
+    <div className="mobile-fit-screen md:min-h-screen flex items-center justify-center px-4 md:px-6 py-6 md:py-12 overflow-y-auto">
       <div className="max-w-3xl w-full">
         
         {/* Title */}

@@ -8,7 +8,7 @@ interface CompletionScreenProps {
 
 export function CompletionScreen({ completedWords }: CompletionScreenProps) {
   return (
-    <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="min-h-screen bg-stone-50 px-6 py-12 flex items-center justify-center">
+    <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }} className="min-h-screen px-6 py-12 flex items-center justify-center">
       <div className="max-w-md w-full text-center">
         <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.2, type: 'spring', stiffness: 200 }} className="w-24 h-24 mx-auto mb-8 bg-emerald-100 rounded-full flex items-center justify-center">
           <svg className="w-12 h-12 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">

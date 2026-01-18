@@ -26,14 +26,14 @@ export function ResetJourneyButton({ onReset }: ResetJourneyButtonProps) {
     <>
       <button
         onClick={handleClick}
-        className="group relative inline-flex items-center gap-2 md:px-3 px-2 py-1.5 
-                   md:border-2 md:border-red-500 md:rounded-full
+        className="group relative inline-flex items-center justify-center px-0.5 py-0.5 md:px-3 md:py-1.5
+                   bg-red-500/70 md:bg-red-500/70 border border-white md:border md:border-white rounded-full md:rounded-full
                    transition-all duration-200
-                   focus:outline-none md:hover:bg-red-50 md:focus:ring-2 md:focus:ring-red-500 md:focus:ring-offset-2"
+                   focus:outline-none md:hover:bg-red-600/80 hover:bg-red-600/80 md:focus:ring-2 md:focus:ring-red-500 md:focus:ring-offset-2"
         aria-label="Restart learning journey"
       >
         <svg 
-          className="w-6 h-6 md:w-4 md:h-4 text-red-500" 
+          className="w-6 h-6 md:w-4 md:h-4 text-white" 
           fill="none" 
           stroke="currentColor" 
           viewBox="0 0 24 24"
@@ -45,7 +45,7 @@ export function ResetJourneyButton({ onReset }: ResetJourneyButtonProps) {
             d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" 
           />
         </svg>
-        <span className="text-sm font-medium text-black hidden md:inline">Restart journey</span>
+        <span className="text-sm font-medium text-black md:text-white hidden md:inline">Restart journey</span>
       </button>
 
       {/* Confirmation Modal */}

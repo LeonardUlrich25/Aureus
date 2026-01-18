@@ -981,7 +981,7 @@ export const vocabularyClusters: Cluster[] = [
   },
   {
     id: "precision-verbs",
-    name: "Precision Verbs",
+    name: "Precision",
     emoji: "🎯",
     borderColor: "#5B8A9E",
     fillColor: "#6BA5C4",
@@ -1109,7 +1109,7 @@ export const vocabularyClusters: Cluster[] = [
   },
   {
     id: "abstract-adjectives",
-    name: "Abstract Adjectives",
+    name: "Adjectives",
     emoji: "🧮",
     borderColor: "#8B9E7A",
     fillColor: "#9DAA7E",

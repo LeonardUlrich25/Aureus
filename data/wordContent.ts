@@ -11,6 +11,7 @@ export interface WordContent {
   anchor?: {
     prompt: string;
     categories: string[];
+    examples?: Record<string, string>; // category -> example with word embedded
   };
 }
 
@@ -33,7 +34,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you experienced synergy in your work or projects?',
-      categories: ['Team Project', 'Collaboration', 'Creative Work', 'Problem Solving']
+      categories: ['Team Project', 'Collaboration', 'Creative Work', 'Problem Solving'],
+      examples: {
+        'Team Project': 'When a synergy between teammates makes the final result better than anyone expected',
+        'Collaboration': 'When genuine synergy emerges from working together with the right people',
+        'Creative Work': 'When synergy between different creative skills produces something revolutionary',
+        'Problem Solving': 'When synergy across different perspectives solves a problem no single approach could'
+      }
     }
   },
   
@@ -53,7 +60,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'Recall a time you delegated successfully or wish you had delegated.',
-      categories: ['Leadership', 'Team Management', 'Projects', 'Learning']
+      categories: ['Leadership', 'Team Management', 'Projects', 'Learning'],
+      examples: {
+        'Leadership': 'When delegation multiplies your impact by empowering others',
+        'Team Management': 'When effective delegation builds trust and develops your team',
+        'Projects': 'When delegation gets the project done faster and better',
+        'Learning': 'When delegation forces you to trust others and grow as a leader'
+      }
     }
   },
 
@@ -73,7 +86,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What activity or skill of yours has become easier as you\'ve done it more?',
-      categories: ['Learning', 'Growth', 'Efficiency', 'Mastery']
+      categories: ['Learning', 'Growth', 'Efficiency', 'Mastery'],
+      examples: {
+        'Learning': 'When scalability shows how practice transforms struggle into ease',
+        'Growth': 'When scalability of your abilities compounds over time',
+        'Efficiency': 'When scalability means doing more with less effort',
+        'Mastery': 'When true scalability emerges from deliberate practice'
+      }
     }
   },
 
@@ -93,7 +112,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What benchmark or standard do you measure yourself against in your field or hobby?',
-      categories: ['Personal Goals', 'Competition', 'Self-Assessment', 'Progress']
+      categories: ['Personal Goals', 'Competition', 'Self-Assessment', 'Progress'],
+      examples: {
+        'Personal Goals': 'When you use a benchmark to know if you\'re actually getting closer to your goal',
+        'Competition': 'When a benchmark shows you where you stand against your competition',
+        'Self-Assessment': 'When an honest benchmark reveals both your strengths and gaps',
+        'Progress': 'When consistent benchmarking proves your improvement over time'
+      }
     }
   },
 
@@ -865,26 +890,6 @@ export const wordDatabase: WordContent[] = [
   },
 
   {
-    word: 'quoth',
-    cluster: 'Literary',
-    definition: 'Said, used only in first and third person singular before the subject. An archaic past tense of "say," famously used in literature.',
-    exercise: {
-      question: 'Why does "Quoth the Raven, Nevermore" feel more powerful than "The raven said, Nevermore"?',
-      options: [
-        { id: 'A', text: 'Quoth is just an old-fashioned word for said' },
-        { id: 'B', text: 'The archaic form adds solemnity, strangeness, and poetic weight—making it feel prophetic' },
-        { id: 'C', text: 'They feel exactly the same' }
-      ],
-      correctAnswer: 'B',
-      explanation: 'Quoth adds ceremonial gravity—it makes speech feel like pronouncement or prophecy, not casual conversation.'
-    },
-    anchor: {
-      prompt: 'What quote or saying has stuck with you like a prophecy?',
-      categories: ['Book Quote', 'Advice', 'Warning', 'Wisdom']
-    }
-  },
-
-  {
     word: 'cleave',
     cluster: 'Literary',
     definition: 'To split or sever something, or paradoxically, to adhere firmly and closely. A word with two opposite meanings depending on context.',
@@ -946,46 +951,6 @@ export const wordDatabase: WordContent[] = [
 
   // CONFLICT CLUSTER (continued)
   {
-    word: 'smite',
-    cluster: 'Conflict',
-    definition: 'To strike with a firm blow, or to defeat or afflict severely. Often carries biblical or archaic connotations of divine punishment.',
-    exercise: {
-      question: 'Why does "smite" feel heavier than "hit"?',
-      options: [
-        { id: 'A', text: 'They\'re the same—just different words' },
-        { id: 'B', text: 'Smite carries righteous, powerful, often divine force—judgment from above, not just physical contact' },
-        { id: 'C', text: 'Smite is more casual and modern' }
-      ],
-      correctAnswer: 'B',
-      explanation: 'Smite implies power and righteousness—think lightning bolts and divine wrath, not a playground shove.'
-    },
-    anchor: {
-      prompt: 'When did you feel like you were "smitten" by fate or consequences?',
-      categories: ['Major Setback', 'Health', 'Career', 'Relationship']
-    }
-  },
-
-  {
-    word: 'fealty',
-    cluster: 'Conflict',
-    definition: 'A feudal tenant\'s or vassal\'s sworn loyalty to a lord. Formal acknowledgment of loyalty and duty, representing binding obligation and allegiance.',
-    exercise: {
-      question: 'What makes fealty different from regular loyalty?',
-      options: [
-        { id: 'A', text: 'Nothing—they mean the same thing' },
-        { id: 'B', text: 'Fealty is formalized, sworn, and carries consequences for betrayal—not just a feeling but a binding pledge' },
-        { id: 'C', text: 'Fealty only applies to medieval times' }
-      ],
-      correctAnswer: 'B',
-      explanation: 'Fealty is ceremonial and binding—you swear it, and breaking it has serious consequences. It\'s institutional, not just personal.'
-    },
-    anchor: {
-      prompt: 'Who or what commands your deepest loyalty or "fealty"?',
-      categories: ['Family', 'Principles', 'Organization', 'Cause']
-    }
-  },
-
-  {
     word: 'wane',
     cluster: 'Conflict',
     definition: 'To decrease in vigor, power, or extent, especially gradually. Often used to describe the moon\'s phases or declining influence and strength.',
@@ -1006,46 +971,6 @@ export const wordDatabase: WordContent[] = [
   },
 
   // CULTURE CLUSTER (continued)
-  {
-    word: 'heathen',
-    cluster: 'Culture',
-    definition: 'A person who does not belong to a widely held religion, especially Christianity, Judaism, or Islam. Historically used to describe non-believers or pagans.',
-    exercise: {
-      question: 'How has the word "heathen" been used historically?',
-      options: [
-        { id: 'A', text: 'As a respectful term for people of different faiths' },
-        { id: 'B', text: 'As a judgmental label to mark outsiders or "others" as uncivilized or wrong' },
-        { id: 'C', text: 'As a neutral descriptor with no connotations' }
-      ],
-      correctAnswer: 'B',
-      explanation: 'Heathen was often used to dehumanize and justify conquest—marking people outside dominant religions as lesser or savage.'
-    },
-    anchor: {
-      prompt: 'When have you felt labeled as an "outsider" for not fitting in?',
-      categories: ['Religion', 'Culture', 'Community', 'Beliefs']
-    }
-  },
-
-  {
-    word: 'wend',
-    cluster: 'Culture',
-    definition: 'To go in a specified direction, typically slowly or by an indirect route. A literary term for traveling or making one\'s way, often used poetically.',
-    exercise: {
-      question: 'What does "wend your way home" suggest that "go home" doesn\'t?',
-      options: [
-        { id: 'A', text: 'Getting lost and needing directions' },
-        { id: 'B', text: 'A leisurely, wandering journey—savoring the path rather than rushing to the destination' },
-        { id: 'C', text: 'Moving extremely fast' }
-      ],
-      correctAnswer: 'B',
-      explanation: 'Wend implies meandering, taking your time, perhaps an indirect route—it\'s about the journey, not just the destination.'
-    },
-    anchor: {
-      prompt: 'When did you wend somewhere instead of rushing, and what did you notice?',
-      categories: ['Walk', 'Road Trip', 'Travel', 'Exploration']
-    }
-  },
-
   // === REGISTER TRAPS: PROFESSIONAL PRECISION ===
   
   {
@@ -1871,7 +1796,7 @@ export const wordDatabase: WordContent[] = [
       explanation: 'Obdurate means hardened against change—not just firm conviction, but stubborn refusal to yield even to reason.'
     },
     anchor: {
-      prompt: 'When have you encountered obdurate resistance? When have you been obdurate yourself?',
+      prompt: 'When have you encountered obdurate resistance?',
       categories: ['Conflict', 'Character', 'Relationships', 'Growth']
     }
   },
@@ -2197,10 +2122,10 @@ export const wordDatabase: WordContent[] = [
     }
   },
 
-  // PRECISION VERBS CLUSTER
+  // PRECISION CLUSTER
   {
     word: 'broach',
-    cluster: 'Precision Verbs',
+    cluster: 'Precision',
     definition: 'To bring up a topic for discussion, especially one that is difficult or sensitive. To open or introduce a subject.',
     exercise: {
       question: 'Which situation requires you to broach a topic?',
@@ -2220,7 +2145,7 @@ export const wordDatabase: WordContent[] = [
 
   {
     word: 'impugn',
-    cluster: 'Precision Verbs',
+    cluster: 'Precision',
     definition: 'To challenge or attack the validity or integrity of something; to question or dispute skeptically.',
     exercise: {
       question: 'What does it mean to impugn someone\'s motives?',
@@ -2240,7 +2165,7 @@ export const wordDatabase: WordContent[] = [
 
   {
     word: 'corroborate',
-    cluster: 'Precision Verbs',
+    cluster: 'Precision',
     definition: 'To confirm or support with additional evidence; to verify or substantiate a claim or statement.',
     exercise: {
       question: 'Which best shows corroboration?',
@@ -2260,7 +2185,7 @@ export const wordDatabase: WordContent[] = [
 
   {
     word: 'repudiate',
-    cluster: 'Precision Verbs',
+    cluster: 'Precision',
     definition: 'To reject, disown, or refuse to accept or be associated with something. To deny or refuse responsibility.',
     exercise: {
       question: 'Which action is repudiating something?',
@@ -2280,7 +2205,7 @@ export const wordDatabase: WordContent[] = [
 
   {
     word: 'attenuate',
-    cluster: 'Precision Verbs',
+    cluster: 'Precision',
     definition: 'To make thin, weak, or less intense; to reduce in force or effect over time.',
     exercise: {
       question: 'Which is an example of something being attenuated?',
@@ -2300,7 +2225,7 @@ export const wordDatabase: WordContent[] = [
 
   {
     word: 'circumscribe',
-    cluster: 'Precision Verbs',
+    cluster: 'Precision',
     definition: 'To restrict within limits; to confine, bound, or set boundaries for something.',
     exercise: {
       question: 'Which describes being circumscribed?',
@@ -2320,7 +2245,7 @@ export const wordDatabase: WordContent[] = [
 
   {
     word: 'elide',
-    cluster: 'Precision Verbs',
+    cluster: 'Precision',
     definition: 'To omit or leave out; to skip over or pass over in silence, often intentionally.',
     exercise: {
       question: 'What does it mean to elide something in a conversation?',
@@ -2340,7 +2265,7 @@ export const wordDatabase: WordContent[] = [
 
   {
     word: 'undermine',
-    cluster: 'Precision Verbs',
+    cluster: 'Precision',
     definition: 'To weaken or erode the foundation, authority, or effectiveness of something—often gradually or subtly.',
     exercise: {
       question: 'Which behavior most undermines a team decision?',
@@ -2360,7 +2285,7 @@ export const wordDatabase: WordContent[] = [
 
   {
     word: 'resolve',
-    cluster: 'Precision Verbs',
+    cluster: 'Precision',
     definition: 'To settle or find a solution to a problem; also to decide firmly with determination.',
     exercise: {
       question: 'Which action best resolves a conflict?',
@@ -2380,7 +2305,7 @@ export const wordDatabase: WordContent[] = [
 
   {
     word: 'highlight',
-    cluster: 'Precision Verbs',
+    cluster: 'Precision',
     definition: 'To emphasize or draw attention to something so it stands out clearly.',
     exercise: {
       question: 'Which best highlights a critical risk in a report?',
@@ -2400,7 +2325,7 @@ export const wordDatabase: WordContent[] = [
 
   {
     word: 'indicate',
-    cluster: 'Precision Verbs',
+    cluster: 'Precision',
     definition: 'To point out, show, or suggest something; to signal or give evidence of.',
     exercise: {
       question: 'Which best indicates the system is overheating?',
@@ -2420,7 +2345,7 @@ export const wordDatabase: WordContent[] = [
 
   {
     word: 'justify',
-    cluster: 'Precision Verbs',
+    cluster: 'Precision',
     definition: 'To show adequate reason for; to defend as right or reasonable with arguments or evidence.',
     exercise: {
       question: 'What does it mean to justify a decision to stakeholders?',
@@ -2438,10 +2363,10 @@ export const wordDatabase: WordContent[] = [
     }
   },
 
-  // ABSTRACT ADJECTIVES CLUSTER
+  // ADJECTIVES CLUSTER
   {
     word: 'latent',
-    cluster: 'Abstract Adjectives',
+    cluster: 'Adjectives',
     definition: 'Present but not visible or developed; lying dormant and capable of becoming active. Hidden potential waiting to emerge.',
     exercise: {
       question: 'Which best illustrates something latent?',
@@ -2461,7 +2386,7 @@ export const wordDatabase: WordContent[] = [
 
   {
     word: 'contingent',
-    cluster: 'Abstract Adjectives',
+    cluster: 'Adjectives',
     definition: 'Dependent on or conditioned by something else; uncertain until certain conditions are met.',
     exercise: {
       question: 'Which describes a contingent plan?',
@@ -2481,7 +2406,7 @@ export const wordDatabase: WordContent[] = [
 
   {
     word: 'inchoate',
-    cluster: 'Abstract Adjectives',
+    cluster: 'Adjectives',
     definition: 'Just begun or recently started; not yet fully formed, developed, or organized. Barely started and still taking shape.',
     exercise: {
       question: 'Which describes something inchoate?',
@@ -2501,7 +2426,7 @@ export const wordDatabase: WordContent[] = [
 
   {
     word: 'intractable',
-    cluster: 'Abstract Adjectives',
+    cluster: 'Adjectives',
     definition: 'Difficult or impossible to manage, control, or solve; stubbornly resistant to change or treatment.',
     exercise: {
       question: 'Which situation is intractable?',
@@ -2521,7 +2446,7 @@ export const wordDatabase: WordContent[] = [
 
   {
     word: 'exigent',
-    cluster: 'Abstract Adjectives',
+    cluster: 'Adjectives',
     definition: 'Requiring immediate action or attention; demanding, urgent, and pressing.',
     exercise: {
       question: 'Which describes an exigent situation?',
@@ -2541,7 +2466,7 @@ export const wordDatabase: WordContent[] = [
 
   {
     word: 'nebulous',
-    cluster: 'Abstract Adjectives',
+    cluster: 'Adjectives',
     definition: 'Unclear, vague, or ill-defined; not clearly stated or easily understood. Cloudy and lacking clear form.',
     exercise: {
       question: 'Which describes a nebulous idea?',
@@ -2561,7 +2486,7 @@ export const wordDatabase: WordContent[] = [
 
   {
     word: 'opaque',
-    cluster: 'Abstract Adjectives',
+    cluster: 'Adjectives',
     definition: 'Not transparent or translucent. Figuratively: hard to understand or see through; deliberately obscure.',
     exercise: {
       question: 'When would something be described as opaque?',
@@ -2826,7 +2751,7 @@ export const wordDatabase: WordContent[] = [
       explanation: 'Verdant evokes lush, vibrant greenery—it\'s both descriptive and poetically rich.'
     },
     anchor: {
-      prompt: 'Describe the most verdant place you\'ve been. What made it memorable?',
+      prompt: 'Think of the most verdant place you\'ve been. What made it memorable?',
       categories: ['Nature', 'Travel', 'Memory', 'Beauty']
     }
   },
@@ -2876,7 +2801,7 @@ export const wordDatabase: WordContent[] = [
   // DISTILL (Precision Verbs)
   {
     word: 'distill',
-    cluster: 'Precision Verbs',
+    cluster: 'Precision',
     definition: 'To extract the essential meaning or core elements from something complex. To purify or concentrate by removing what is superfluous.',
     exercise: {
       question: 'Which action demonstrates distilling?',
@@ -2897,7 +2822,7 @@ export const wordDatabase: WordContent[] = [
   // CONFLATE (Precision Verbs)
   {
     word: 'conflate',
-    cluster: 'Precision Verbs',
+    cluster: 'Precision',
     definition: 'To combine two or more distinct things into one, often incorrectly merging separate concepts. To blend ideas in a way that obscures important differences.',
     exercise: {
       question: 'Which is an example of conflating?',
@@ -2918,7 +2843,7 @@ export const wordDatabase: WordContent[] = [
   // PRECLUDE (Precision Verbs)
   {
     word: 'preclude',
-    cluster: 'Precision Verbs',
+    cluster: 'Precision',
     definition: 'To prevent something from happening; to make something impossible by taking advance action. To rule out or exclude a possibility beforehand.',
     exercise: {
       question: 'Which sentence uses "preclude" correctly?',
@@ -2939,7 +2864,7 @@ export const wordDatabase: WordContent[] = [
   // AMELIORATE (Precision Verbs)
   {
     word: 'ameliorate',
-    cluster: 'Precision Verbs',
+    cluster: 'Precision',
     definition: 'To make something bad or unsatisfactory better; to improve a difficult situation. To reduce the severity or intensity of a problem.',
     exercise: {
       question: 'Which action ameliorates a problem?',
@@ -2960,7 +2885,7 @@ export const wordDatabase: WordContent[] = [
   // ELUCIDATE (Precision Verbs)
   {
     word: 'elucidate',
-    cluster: 'Precision Verbs',
+    cluster: 'Precision',
     definition: 'To make something clear by explaining it more fully or carefully. To shed light on a complex or obscure subject through detailed exposition.',
     exercise: {
       question: 'Which best demonstrates elucidating?',

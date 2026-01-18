@@ -26,7 +26,7 @@ export function ThreeStepFlow({ interaction, onComplete }: ThreeStepFlowProps) {
   };
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen">
       <div className="fixed top-0 left-0 right-0 z-50">
         <div className="flex">
           {[1, 2, 3].map(step => (
