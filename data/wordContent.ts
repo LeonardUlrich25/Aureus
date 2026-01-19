@@ -36,10 +36,10 @@ export const wordDatabase: WordContent[] = [
       prompt: 'When have you experienced synergy in your work or projects?',
       categories: ['Team Project', 'Collaboration', 'Creative Work', 'Problem Solving'],
       examples: {
-        'Team Project': 'When a synergy between teammates makes the final result better than anyone expected',
-        'Collaboration': 'When genuine synergy emerges from working together with the right people',
-        'Creative Work': 'When synergy between different creative skills produces something revolutionary',
-        'Problem Solving': 'When synergy across different perspectives solves a problem no single approach could'
+        'Team Project': 'When synergy between collaborators exceeds what individual talents could achieve',
+        'Collaboration': 'When you find the right partners and synergy emerges naturally',
+        'Creative Work': 'When creative synergy transforms diverse artistic visions into something revolutionary',
+        'Problem Solving': 'When synergy across disciplines unlocks solutions no single approach could find'
       }
     }
   },
@@ -280,7 +280,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'Describe a time someone truly understood what you were going through. How did it feel?',
-      categories: ['Relationships', 'Understanding', 'Vulnerability', 'Connection']
+      categories: ['Relationships', 'Understanding', 'Vulnerability', 'Connection'],
+      examples: {
+        'Relationships': 'When you discover empathy is what deepens bonds with someone',
+        'Understanding': 'When true understanding requires genuine empathy',
+        'Vulnerability': 'When vulnerability becomes safe through empathy',
+        'Connection': 'When empathy creates a moment of real human connection'
+      }
     }
   },
 
@@ -768,26 +774,6 @@ export const wordDatabase: WordContent[] = [
     }
   },
 
-  {
-    word: 'empathy',
-    cluster: 'Daily',
-    definition: 'The ability to understand and share the feelings of another person. Goes beyond sympathy to involve emotional resonance and perspective-taking.',
-    exercise: {
-      question: 'Which statement shows empathy?',
-      options: [
-        { id: 'A', text: 'That must be really hard; I can imagine how overwhelmed you must feel' },
-        { id: 'B', text: 'Just don\'t think about it and you\'ll feel better' },
-        { id: 'C', text: 'I\'m sorry that happened' }
-      ],
-      correctAnswer: 'A',
-      explanation: 'Empathy involves stepping into someone\'s emotional experience and reflecting their feelings—not just sympathy or advice.'
-    },
-    anchor: {
-      prompt: 'Who showed you empathy when you really needed it?',
-      categories: ['Friend', 'Family', 'Teacher', 'Stranger']
-    }
-  },
-
   // LITERARY CLUSTER (continued)
   {
     word: 'wraith',
@@ -1089,7 +1075,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When has using formal language helped you make a strong first impression?',
-      categories: ['Job Search', 'Networking', 'First Impressions', 'Professional Email']
+      categories: ['Job Search', 'Networking', 'First Impressions', 'Professional Email'],
+      examples: {
+        'Job Search': 'When you inquire about opportunities with respect and professionalism',
+        'Networking': 'When using inquire elevates your outreach above casual asking',
+        'First Impressions': 'When the word inquire signals you understand formality',
+        'Professional Email': 'When you inquire in writing and set the right tone'
+      }
     }
   },
 
@@ -1131,7 +1123,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When has hedged language made your compliment land colder than you intended?',
-      categories: ['Feedback', 'Compliments', 'Tone', 'Encouragement']
+      categories: ['Feedback', 'Compliments', 'Tone', 'Encouragement'],
+      examples: {
+        'Feedback': 'When using rather softens criticism but muddles the message',
+        'Compliments': 'When you say rather good and sound less enthusiastic than intended',
+        'Tone': 'When using rather creates the distance you didn\'t mean to create',
+        'Encouragement': 'When hedging with rather takes the power out of your words'
+      }
     }
   },
 
@@ -1231,7 +1229,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When has someone claimed to understand you, and it felt dismissive rather than supportive?',
-      categories: ['Empathy', 'Listening', 'Emotional Support', 'Friendship']
+      categories: ['Empathy', 'Listening', 'Emotional Support', 'Friendship'],
+      examples: {
+        'Empathy': 'When you understand another\'s pain as deeply as your own',
+        'Listening': 'When truly listening means you understand before you respond',
+        'Emotional Support': 'When understanding becomes a bridge instead of a barrier',
+        'Friendship': 'When friends understand you in ways that matter'
+      }
     }
   },
 
@@ -2440,7 +2444,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What intractable challenge have you faced? How did you live with it?',
-      categories: ['Resilience', 'Acceptance', 'Problem Solving', 'Patience']
+      categories: ['Resilience', 'Acceptance', 'Problem Solving', 'Patience'],
+      examples: {
+        'Resilience': 'When intractable realities demand resilience beyond quick fixes',
+        'Acceptance': 'When you accept it as intractable and let go of control',
+        'Problem Solving': 'When an intractable bottleneck forces you to reframe the approach',
+        'Patience': 'When steady patience outlasts a problem that remains intractable'
+      }
     }
   },
 
@@ -2977,7 +2987,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What personal habit of yours is robust across stressful conditions?',
-      categories: ['Resilience', 'Reliability', 'Habits', 'Performance']
+      categories: ['Resilience', 'Reliability', 'Habits', 'Performance'],
+      examples: {
+        'Resilience': 'When robust systems absorb shocks without losing integrity',
+        'Reliability': 'When your process stays robust across messy inputs',
+        'Habits': 'When a robust habit carries you through chaos',
+        'Performance': 'When even on bad days, your results stay robust'
+      }
     }
   },
   {
@@ -2996,7 +3012,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'Have you ever mistaken a measurement or bias for a real pattern?',
-      categories: ['Bias', 'Reflection', 'Learning', 'Objectivity']
+      categories: ['Bias', 'Reflection', 'Learning', 'Objectivity'],
+      examples: {
+        'Bias': 'When a sampling artefact looks like bias',
+        'Reflection': 'When you call it an artefact and rethink the claim',
+        'Learning': 'When artefacts vanish after you change the method',
+        'Objectivity': 'When objectivity demands that you test for artefacts first'
+      }
     }
   },
   {
@@ -3015,7 +3037,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What group behavior have you seen that doesn’t exist at the individual level?',
-      categories: ['Systems', 'Teams', 'Complexity', 'Observation']
+      categories: ['Systems', 'Teams', 'Complexity', 'Observation'],
+      examples: {
+        'Systems': 'When emergent structure arises from simple local rules',
+        'Teams': 'When a team’s emergent rhythm outperforms any single star',
+        'Complexity': 'When complexity yields emergent patterns no part predicts alone',
+        'Observation': 'When careful observation reveals truly emergent behavior'
+      }
     }
   },
   {
@@ -3057,22 +3085,22 @@ export const wordDatabase: WordContent[] = [
     }
   },
   {
-    word: 'intractable',
+    word: 'scalable',
     cluster: 'Science',
-    definition: 'Very hard or impossible to solve. In computation, intractable problems require impractical time even with perfect hardware.',
+    definition: 'Able to expand or shrink while keeping core relationships. A scalable model holds across different sizes or loads.',
     exercise: {
-      question: 'Why are intractable problems considered unsolvable in practice?',
+      question: 'What makes a model scalable?',
       options: [
-        { id: 'A', text: 'Computers are too weak today' },
-        { id: 'B', text: 'Required time grows so fast that even ideal computers would take ages' },
-        { id: 'C', text: 'They are stated incorrectly' }
+        { id: 'A', text: 'It works only for one specific case' },
+        { id: 'B', text: 'It preserves core relationships across different sizes' },
+        { id: 'C', text: 'It requires manual tweaks for every new size' }
       ],
       correctAnswer: 'B',
-      explanation: 'Intractable means time complexity explodes, making solutions impractical.'
+      explanation: 'Scalability means the structure or relationships hold as you scale up or down.'
     },
     anchor: {
-      prompt: 'What challenge feels intractable to you, and what would make it tractable?',
-      categories: ['Limits', 'Problem-Solving', 'Planning', 'Reflection']
+      prompt: 'When has scaling preserved the core relationships in your work?',
+      categories: ['Systems', 'Design', 'Performance', 'Growth']
     }
   },
   {

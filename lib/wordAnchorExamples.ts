@@ -192,10 +192,10 @@ const wordAnchorExamples: Record<string, Record<string, string>> = {
     'Future': 'When contingent shapes future',
   },
   'cordial': {
-    'Workplace': 'When cordial shapes workplace',
-    'Networking': 'When cordial shapes networking',
-    'Social Events': 'When cordial shapes social events',
-    'Customer Service': 'When cordial shapes customer service',
+    'Workplace': 'When you stay cordial with colleagues despite disagreements',
+    'Networking': 'When cordial professionalism opens doors and builds trust',
+    'Social Events': 'When cordial warmth makes strangers feel welcomed',
+    'Customer Service': 'When staying cordial defuses tension and solves problems',
   },
   'corroborate': {
     'Validation': 'When corroborate shapes validation',
@@ -330,10 +330,10 @@ const wordAnchorExamples: Record<string, Record<string, string>> = {
     'Observation': 'When emergent shapes observation',
   },
   'empathy': {
-    'Friend': 'When empathy shapes friend',
-    'Family': 'When empathy shapes family',
-    'Teacher': 'When empathy shapes teacher',
-    'Stranger': 'When empathy shapes stranger',
+    'Friend': 'When a friend shows empathy by truly listening without judgment',
+    'Family': 'When family empathy bridges wounds that seemed unbridgeable',
+    'Teacher': 'When a teacher\'s empathy makes you feel truly seen and supported',
+    'Stranger': 'When unexpected empathy from a stranger changes your day',
   },
   'empirical': {
     'Learning': 'When empirical evidence from experience teaches you more than theory',
@@ -568,12 +568,6 @@ const wordAnchorExamples: Record<string, Record<string, string>> = {
     'Ethics': 'When instrumentalise shapes ethics',
     'Respect': 'When instrumentalise shapes respect',
     'Work': 'When instrumentalise shapes work',
-  },
-  'intractable': {
-    'Limits': 'When intractable shapes limits',
-    'Problem-Solving': 'When intractable becomes key to solving the problem',
-    'Planning': 'When intractable shapes planning',
-    'Reflection': 'When intractable shapes reflection',
   },
   'invidious': {
     'Fairness': 'When invidious comparisons breed resentment and injustice',
@@ -1014,10 +1008,10 @@ const wordAnchorExamples: Record<string, Record<string, string>> = {
     'Natural Setting': 'When sward shapes natural setting',
   },
   'synergy': {
-    'Team Project': 'When a synergy between teammates makes the final result better than anyone expected',
-    'Collaboration': 'When genuine synergy emerges from working together with the right people',
-    'Creative Work': 'When synergy between different creative skills produces something revolutionary',
-    'Problem Solving': 'When synergy across different perspectives solves a problem no single approach could',
+    'Team Project': 'When synergy between collaborators exceeds what individual talents could achieve',
+    'Collaboration': 'When you find the right partners and synergy emerges naturally',
+    'Creative Work': 'When creative synergy transforms diverse artistic visions into something revolutionary',
+    'Problem Solving': 'When synergy across disciplines unlocks solutions no single approach could find',
   },
   'tenuous': {
     'Relationships': 'When tenuous deepens your relationships',
