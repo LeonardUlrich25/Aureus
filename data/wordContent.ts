@@ -115,7 +115,7 @@ export const wordDatabase: WordContent[] = [
       categories: ['Personal Goals', 'Competition', 'Self-Assessment', 'Progress'],
       examples: {
         'Personal Goals': 'When you use a benchmark to know if you\'re actually getting closer to your goal',
-        'Competition': 'When a benchmark shows you where you stand against your competition',
+        'Competition': 'A benchmark reveals your place in the competition.',
         'Self-Assessment': 'When an honest benchmark reveals both your strengths and gaps',
         'Progress': 'When consistent benchmarking proves your improvement over time'
       }
@@ -142,25 +142,7 @@ export const wordDatabase: WordContent[] = [
     }
   },
 
-  {
-    word: 'proficiency',
-    cluster: 'Work',
-    definition: 'Competent and skilled performance in a specific task or subject. Proficiency is the practical ability to execute effectively, often developed through deliberate practice and feedback.',
-    exercise: {
-      question: 'Which situation best shows proficiency?',
-      options: [
-        { id: 'A', text: 'Reciting facts about a subject from memory' },
-        { id: 'B', text: 'Performing a complex task consistently well under pressure, knowing when to adapt technique' },
-        { id: 'C', text: 'Understanding theory but struggling with execution' }
-      ],
-      correctAnswer: 'B',
-      explanation: 'Proficiency is shown through consistent, effective execution—especially when adapting to challenges.'
-    },
-    anchor: {
-      prompt: 'In what skill or activity have you reached proficiency? How did you know?',
-      categories: ['Skill Development', 'Practice', 'Confidence', 'Achievement']
-    }
-  },
+// Duplicate 'proficiency' entry removed as requested
 
   {
     word: 'retention',
@@ -199,7 +181,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'Who taught you something in a way that really stuck? What made it effective?',
-      categories: ['Education', 'Mentorship', 'Self-Teaching', 'Skill Development']
+      categories: ['Education', 'Mentorship', 'Self-Teaching', 'Skill Development'],
+      examples: {
+        'Education': 'Modern pedagogy emphasizes active learning in the classroom.',
+        'Mentorship': 'A mentor’s pedagogy shapes how knowledge is shared.',
+        'Self-Teaching': 'Effective self-teaching borrows from sound pedagogy.',
+        'Skill Development': 'Skill development benefits from adaptive pedagogy.'
+      }
     }
   },
 
@@ -260,7 +248,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When was a time you wished you\'d been more assertive? What held you back?',
-      categories: ['Communication', 'Boundaries', 'Courage', 'Self-Respect']
+      categories: ['Communication', 'Boundaries', 'Courage', 'Self-Respect'],
+      examples: {
+        'Communication': 'Assertive communication is clear and respectful.',
+        'Boundaries': 'Being assertive helps you set healthy boundaries.',
+        'Courage': 'It takes courage to be assertive in tough situations.',
+        'Self-Respect': 'Assertive people show self-respect by expressing their needs.'
+      }
     }
   },
 
@@ -327,7 +321,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What place or moment felt forlorn to you?',
-      categories: ['Travel', 'Memory', 'Reading', 'Film']
+      categories: ['Travel', 'Memory', 'Reading', 'Film'],
+      examples: {
+        'Travel': 'A forlorn train station at night felt empty and cold.',
+        'Memory': 'A childhood memory can seem forlorn with the passage of time.',
+        'Reading': 'The novel’s hero wandered through a forlorn landscape.',
+        'Film': 'A forlorn scene in the film showed a lone figure in the rain.'
+      }
     }
   },
 
@@ -387,7 +387,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you felt like your efforts amounted to naught? What did you learn?',
-      categories: ['Failure', 'Meaning', 'Loss', 'Perspective']
+      categories: ['Failure', 'Meaning', 'Loss', 'Perspective'],
+      examples: {
+        'Failure': 'After all the work, the project came to naught.',
+        'Meaning': 'Sometimes, what once had meaning now feels naught.',
+        'Loss': 'Loss can turn hopes and plans to naught.',
+        'Perspective': 'From a new perspective, naught can become a fresh start.'
+      }
     }
   },
 
@@ -407,7 +413,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What gleam of possibility or inspiration has guided a decision you\'ve made?',
-      categories: ['Hope', 'Inspiration', 'Light', 'Possibility']
+      categories: ['Hope', 'Inspiration', 'Light', 'Possibility'],
+      examples: {
+        'Hope': 'A gleam of hope can change your outlook in dark times.',
+        'Inspiration': 'Sometimes a creative idea starts as a simple gleam.',
+        'Light': 'A single gleam lit up the entire room.',
+        'Possibility': 'Every new project begins with a gleam of possibility.'
+      }
     }
   },
 
@@ -447,7 +459,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'In literature, swains were devoted lovers. Who has been most devoted to you, or you to them?',
-      categories: ['Love', 'Devotion', 'Romance', 'Literature']
+      categories: ['Love', 'Devotion', 'Romance', 'Literature'],
+      examples: {
+        'Love': 'A true swain shows love through gentle actions.',
+        'Devotion': 'His devotion was that of a classic swain—steadfast and sincere.',
+        'Romance': 'In the story, the swain’s romance was pure and poetic.',
+        'Literature': 'Literature often paints the swain as the idealized lover.'
+      }
     }
   },
 
@@ -547,7 +565,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What realization or moment smitten you with its force or truth?',
-      categories: ['Revelation', 'Impact', 'Divine', 'Transformation']
+      categories: ['Revelation', 'Impact', 'Divine', 'Transformation'],
+      examples: {
+        Revelation: 'A sudden revelation can smite you with clarity.',
+        Impact: 'The news smote the community with unexpected impact.',
+        Divine: 'Legends tell of gods who smite wrongdoers.',
+        Transformation: 'Sometimes, change smites us and we are transformed.'
+      }
     }
   },
 
@@ -587,7 +611,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What in your life has waned or is waning? How do you feel about it?',
-      categories: ['Change', 'Acceptance', 'Time', 'Impermanence']
+      categories: ['Change', 'Acceptance', 'Time', 'Impermanence'],
+      examples: {
+        Change: 'As seasons shift, my enthusiasm can wane and then return anew.',
+        Acceptance: 'I accept that some friendships wane over the years.',
+        Time: 'With time, excitement for old hobbies may wane.',
+        Impermanence: 'Wane reminds me that nothing lasts forever.'
+      }
     }
   },
 
@@ -689,7 +719,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What topic is currently beyond your ken but fascinates you?',
-      categories: ['Learning', 'Science', 'Philosophy', 'Culture']
+      categories: ['Learning', 'Science', 'Philosophy', 'Culture'],
+      examples: {
+        Learning: 'Every new subject expands my ken just a little further.',
+        Science: 'Some scientific theories remain outside my ken, but I enjoy exploring them.',
+        Philosophy: 'Philosophy often pushes the boundaries of my ken.',
+        Culture: 'Traveling exposes me to cultures beyond my ken.'
+      }
     }
   },
   // SCHOOL CLUSTER (continued)
@@ -729,7 +765,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What skill did you move from basic to proficient, and how did that feel?',
-      categories: ['Language', 'Music', 'Sports', 'Technical Skill']
+      categories: ['Language', 'Music', 'Sports', 'Technical Skill'],
+      examples: {
+        'Language': 'Proficiency in a language means thinking and expressing yourself with ease.',
+        'Music': 'Musical proficiency lets you play complex pieces smoothly.',
+        'Sports': 'Proficiency in sports shows in skillful, confident moves.',
+        'Technical Skill': 'Technical proficiency is solving problems with expertise.'
+      }
     }
   },
 
@@ -754,25 +796,7 @@ export const wordDatabase: WordContent[] = [
   },
 
   // DAILY LIFE CLUSTER (continued)
-  {
-    word: 'assertive',
-    cluster: 'Daily',
-    definition: 'Having or showing a confident and forceful personality while respecting others. Balances self-advocacy with consideration, distinct from aggression.',
-    exercise: {
-      question: 'Which response is assertive rather than passive or aggressive?',
-      options: [
-        { id: 'A', text: 'Saying nothing when someone cuts in line, even though you\'re frustrated' },
-        { id: 'B', text: 'Yelling "Hey, I was here first!" at the person' },
-        { id: 'C', text: 'Calmly saying "Excuse me, I was next in line" while making eye contact' }
-      ],
-      correctAnswer: 'C',
-      explanation: 'Assertiveness means clearly stating your needs with confidence while respecting the other person—neither passive nor aggressive.'
-    },
-    anchor: {
-      prompt: 'When was it hard for you to be assertive, and what held you back?',
-      categories: ['Work Situation', 'Relationships', 'Conflict', 'Boundaries']
-    }
-  },
+  // ...existing code...
 
   // LITERARY CLUSTER (continued)
   {
@@ -815,25 +839,7 @@ export const wordDatabase: WordContent[] = [
     }
   },
 
-  {
-    word: 'gleam',
-    cluster: 'Literary',
-    definition: 'A faint or brief light, or a trace of hope or humor in someone\'s expression. Can also mean to shine brightly, especially with reflected light.',
-    exercise: {
-      question: 'What does "a gleam in her eye" suggest?',
-      options: [
-        { id: 'A', text: 'She needs to see an eye doctor' },
-        { id: 'B', text: 'A subtle spark of mischief, hope, or hidden emotion just beneath the surface' },
-        { id: 'C', text: 'She\'s crying' }
-      ],
-      correctAnswer: 'B',
-      explanation: 'A gleam suggests something subtle, momentary, and revealing—an inner emotion breaking through briefly.'
-    },
-    anchor: {
-      prompt: 'When have you seen a gleam of something unexpected in someone\'s expression?',
-      categories: ['First Meeting', 'Conversation', 'Family Moment', 'Surprise']
-    }
-  },
+  // ...existing code...
 
   {
     word: 'yore',
@@ -936,25 +942,6 @@ export const wordDatabase: WordContent[] = [
   },
 
   // CONFLICT CLUSTER (continued)
-  {
-    word: 'wane',
-    cluster: 'Conflict',
-    definition: 'To decrease in vigor, power, or extent, especially gradually. Often used to describe the moon\'s phases or declining influence and strength.',
-    exercise: {
-      question: 'What\'s the difference between "wane" and "disappear"?',
-      options: [
-        { id: 'A', text: 'Wane is instant, disappear is gradual' },
-        { id: 'B', text: 'Wane emphasizes slow, natural decline over time—like fading rather than vanishing' },
-        { id: 'C', text: 'No difference at all' }
-      ],
-      correctAnswer: 'B',
-      explanation: 'Wane captures gradual diminishment—interest wanes, power wanes, the moon wanes. It\'s about the slow fade, not sudden absence.'
-    },
-    anchor: {
-      prompt: 'What interest or passion has waned in your life, and do you miss it?',
-      categories: ['Hobby', 'Friendship', 'Career Interest', 'Belief']
-    }
-  },
 
   // CULTURE CLUSTER (continued)
   // === REGISTER TRAPS: PROFESSIONAL PRECISION ===
@@ -1149,7 +1136,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you had to balance being kind versus being clear in feedback?',
-      categories: ['Difficult Conversations', 'Feedback', 'Relationships', 'Honesty']
+      categories: ['Difficult Conversations', 'Feedback', 'Relationships', 'Honesty'],
+      examples: {
+        'Difficult Conversations': 'Her response was somewhat defensive during our talk.',
+        'Feedback': 'I said the report was somewhat unclear to soften my critique.',
+        'Relationships': 'Being somewhat honest can help preserve a relationship.',
+        'Honesty': 'My honesty was somewhat compromised by my desire to be kind.'
+      }
     }
   },
 
@@ -1275,7 +1268,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you moved from agreeing with an idea to actively supporting it?',
-      categories: ['Commitment', 'Action', 'Advocacy', 'Teamwork']
+      categories: ['Commitment', 'Action', 'Advocacy', 'Teamwork'],
+      examples: {
+        Commitment: 'True commitment means you support your team through challenges.',
+        Action: 'I chose to support the project by taking action, not just agreeing.',
+        Advocacy: 'Advocacy requires you to support causes you believe in.',
+        Teamwork: 'Support from teammates makes collaboration successful.'
+      }
     }
   },
 
@@ -1337,7 +1336,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you simplified your language and felt more credible, not less?',
-      categories: ['Writing', 'Communication', 'Clarity', 'Confidence']
+      categories: ['Writing', 'Communication', 'Clarity', 'Confidence'],
+      examples: {
+        'Writing': 'Writers often utilize complex words when simple ones work better.',
+        'Communication': 'Clear communication rarely needs "utilize" instead of "use".',
+        'Clarity': 'To maximize clarity, utilize direct and simple language.',
+        'Confidence': 'Confident speakers utilize plain words to build trust.'
+      }
     }
   },
 
@@ -1379,7 +1384,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you stood your ground while still respecting others in the room?',
-      categories: ['Meetings', 'Conflict', 'Confidence', 'Communication']
+      categories: ['Meetings', 'Conflict', 'Confidence', 'Communication'],
+      examples: {
+        'Meetings': 'Being assertive in meetings helps your ideas get heard.',
+        'Conflict': 'Assertive responses can resolve conflict without aggression.',
+        'Confidence': 'Assertive people show confidence by expressing their views.',
+        'Communication': 'Clear, assertive communication prevents misunderstandings.'
+      }
     }
   },
 
@@ -1399,7 +1410,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you judged someone\'s spending habits—positively or negatively?',
-      categories: ['Money', 'Relationships', 'Values', 'Judgment']
+      categories: ['Money', 'Relationships', 'Values', 'Judgment'],
+      examples: {
+        'Money': 'A frugal approach to money means spending wisely, not excessively.',
+        'Relationships': 'Frugal habits can cause tension or admiration in relationships.',
+        'Values': 'Being frugal often reflects personal values about waste and need.',
+        'Judgment': 'Calling someone frugal can be praise or a subtle judgment.'
+      }
     }
   },
 
@@ -1439,7 +1456,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When has simplicity been your strength versus when has it been seen as a weakness?',
-      categories: ['Design', 'Problem Solving', 'Creativity', 'Work']
+      categories: ['Design', 'Problem Solving', 'Creativity', 'Work'],
+      examples: {
+        'Design': 'A simple design can be both elegant and effective.',
+        'Problem Solving': 'Simple solutions often solve complex problems best.',
+        'Creativity': 'Creativity can shine in a simple, clear idea.',
+        'Work': 'Simple processes at work reduce errors and stress.'
+      }
     }
   },
 
@@ -1499,7 +1522,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you downplayed your certainty and regretted not speaking more confidently?',
-      categories: ['Meetings', 'Leadership', 'Confidence', 'Decision Making']
+      categories: ['Meetings', 'Leadership', 'Confidence', 'Decision Making'],
+      examples: {
+        Meetings: 'I suggest a new approach during our meetings.',
+        Leadership: 'Good leadership can suggest change without demanding it.',
+        Confidence: 'Low confidence may suggest uncertainty to others.',
+        'Decision Making': 'I suggest we review all options before deciding.'
+      }
     }
   },
 
@@ -1601,7 +1630,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you confused two similar-sounding words and created awkwardness?',
-      categories: ['Language Learning', 'Embarrassment', 'False Friends', 'Communication']
+      categories: ['Language Learning', 'Embarrassment', 'False Friends', 'Communication'],
+      examples: {
+        'Language Learning': 'Learning English, I thought "sensible" meant sensitive.',
+        'Embarrassment': 'I felt embarrassed when my sensible advice was misunderstood.',
+        'False Friends': 'Sensible and sensitive are classic false friends in language.',
+        'Communication': 'A sensible comment can help resolve misunderstandings.'
+      }
     }
   },
 
@@ -1701,7 +1736,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you had to make a prediction based on incomplete information?',
-      categories: ['Prediction', 'Problem Solving', 'Planning', 'Inference']
+      categories: ['Prediction', 'Problem Solving', 'Planning', 'Inference'],
+      examples: {
+        'Prediction': 'To predict the outcome, I had to extrapolate from limited data.',
+        'Problem Solving': 'Sometimes, you must extrapolate a solution from a few clues.',
+        'Planning': 'We extrapolated future needs based on current trends.',
+        'Inference': 'Extrapolating from past events helped me infer what might happen next.'
+      }
     }
   },
 
@@ -1741,7 +1782,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you felt insouciant? When do you wish you could be?',
-      categories: ['Confidence', 'Freedom', 'Attitude', 'Literature']
+      categories: ['Confidence', 'Freedom', 'Attitude', 'Literature'],
+      examples: {
+        'Confidence': 'An insouciant attitude can project effortless confidence.',
+        'Freedom': 'She felt insouciant, free from worry or restraint.',
+        'Attitude': 'His insouciant smile disarmed the critics.',
+        'Literature': 'Many literary heroes are admired for their insouciant charm.'
+      }
     }
   },
 
@@ -1821,7 +1868,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you felt lassitude? What helped you recover?',
-      categories: ['Fatigue', 'Emotion', 'Resilience', 'Health']
+      categories: ['Fatigue', 'Emotion', 'Resilience', 'Health'],
+      examples: {
+        'Fatigue': 'After days of work, lassitude left me unable to focus.',
+        'Emotion': 'A wave of lassitude followed the emotional news.',
+        'Resilience': 'Resilience means finding energy even in lassitude.',
+        'Health': 'Poor health can bring on a sense of lassitude.'
+      }
     }
   },
 
@@ -1841,7 +1894,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What anachronism have you noticed in a book, film, or historical account?',
-      categories: ['History', 'Literature', 'Film', 'Culture']
+      categories: ['History', 'Literature', 'Film', 'Culture'],
+      examples: {
+        History: 'A smartphone in ancient Rome is anachronistic.',
+        Literature: 'The novel’s language felt anachronistic for its setting.',
+        Film: 'Anachronistic costumes can distract viewers in historical films.',
+        Culture: 'Some traditions seem anachronistic in today’s culture.'
+      }
     }
   },
 
@@ -1861,7 +1920,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What work did you find derivative? What made it feel unoriginal?',
-      categories: ['Art', 'Creativity', 'Criticism', 'Culture']
+      categories: ['Art', 'Creativity', 'Criticism', 'Culture'],
+      examples: {
+        Art: 'The painting was dismissed as derivative, echoing styles seen countless times before.',
+        Creativity: 'Her approach felt derivative, lacking the spark of true innovation.',
+        Criticism: 'Critics called the novel derivative because it borrowed too heavily from earlier works.',
+        Culture: 'In pop culture, derivative trends often fade quickly as audiences crave originality.'
+      }
     }
   },
 
@@ -1881,7 +1946,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When has didactic storytelling felt heavy-handed to you? When has it worked well?',
-      categories: ['Teaching', 'Art', 'Literature', 'Learning']
+      categories: ['Teaching', 'Art', 'Literature', 'Learning'],
+      examples: {
+        'Teaching': 'Didactic teaching makes lessons clear but can feel rigid.',
+        'Art': 'Art becomes didactic when it puts the message above the experience.',
+        'Literature': 'Didactic literature spells out its moral for the reader.',
+        'Learning': 'Learning can be stifled if the approach is too didactic.'
+      }
     }
   },
 
@@ -1921,7 +1992,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What quotidian ritual or detail creates comfort or meaning for you?',
-      categories: ['Routine', 'Meaning', 'Culture', 'Mindfulness']
+      categories: ['Routine', 'Meaning', 'Culture', 'Mindfulness'],
+      examples: {
+        Routine: 'Brushing my teeth is a quotidian act that starts and ends my day.',
+        Meaning: 'A quotidian walk with my dog brings unexpected joy and reflection.',
+        Culture: 'In every culture, quotidian customs shape the rhythm of daily life.',
+        Mindfulness: 'By noticing the beauty in quotidian moments, I practice mindfulness each morning.'
+      }
     }
   },
 
@@ -1982,7 +2059,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you discovered the real reason behind someone\'s ostensible excuse?',
-      categories: ['Truth', 'Deception', 'Relationships', 'Insight']
+      categories: ['Truth', 'Deception', 'Relationships', 'Insight'],
+      examples: {
+        Truth: 'The truth was hidden behind an ostensible explanation.',
+        Deception: 'Ostensible motives can be a form of deception.',
+        Relationships: 'In relationships, ostensible reasons may mask deeper feelings.',
+        Insight: 'Insight revealed the ostensible excuse was not the real reason.'
+      }
     }
   },
 
@@ -2002,7 +2085,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What invidious comparison have you heard that felt unjust?',
-      categories: ['Fairness', 'Bias', 'Social Justice', 'Ethics']
+      categories: ['Fairness', 'Bias', 'Social Justice', 'Ethics'],
+      examples: {
+        Fairness: 'Invidious remarks undermine fairness in any group.',
+        Bias: 'Bias is often revealed through invidious comparisons.',
+        'Social Justice': 'Social justice seeks to address invidious discrimination.',
+        Ethics: 'Ethics demand we avoid making invidious judgments.'
+      }
     }
   },
 
@@ -2022,7 +2111,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When has an equivocal answer frustrated you? When have you given one?',
-      categories: ['Communication', 'Ambiguity', 'Honesty', 'Language']
+      categories: ['Communication', 'Ambiguity', 'Honesty', 'Language'],
+      examples: {
+        'Communication': 'Equivocal communication leaves room for multiple interpretations.',
+        'Ambiguity': 'Ambiguity often results from an equivocal statement.',
+        'Honesty': 'An equivocal answer can hide the truth or avoid commitment.',
+        'Language': 'Language is powerful when it’s clear, but equivocal words can confuse.'
+      }
     }
   },
 
@@ -2042,7 +2137,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you given a perfunctory response? When has someone done that to you?',
-      categories: ['Attention', 'Respect', 'Connection', 'Authenticity']
+      categories: ['Attention', 'Respect', 'Connection', 'Authenticity'],
+      examples: {
+        Attention: 'A perfunctory glance shows little real attention.',
+        Respect: 'Perfunctory greetings can feel disrespectful.',
+        Connection: 'A perfunctory reply weakens genuine connection.',
+        Authenticity: 'Authenticity is lost in perfunctory interactions.'
+      }
     }
   },
 
@@ -2082,7 +2183,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What incidental discovery or detail changed your perspective on something?',
-      categories: ['Chance', 'Discovery', 'Perspective', 'Attention']
+      categories: ['Chance', 'Discovery', 'Perspective', 'Attention'],
+      examples: {
+        Chance: 'Incidental meetings can lead to unexpected opportunities.',
+        Discovery: 'An incidental discovery changed the course of my research.',
+        Perspective: 'Incidental details sometimes shift your perspective.',
+        Attention: 'Paying attention to the incidental can reveal hidden patterns.'
+      }
     }
   },
 
@@ -2163,7 +2270,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you felt your motives or integrity impugned? How did it feel?',
-      categories: ['Trust', 'Criticism', 'Integrity', 'Conflict']
+      categories: ['Trust', 'Criticism', 'Integrity', 'Conflict'],
+      examples: {
+        Trust: 'It hurts when others impugn your trustworthiness without cause.',
+        Criticism: 'The review seemed to impugn my work rather than offer helpful feedback.',
+        Integrity: 'She refused to let anyone impugn her integrity during the investigation.',
+        Conflict: 'In heated conflict, people sometimes impugn each other’s motives.'
+      }
     }
   },
 
@@ -2223,7 +2336,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What strong feeling or situation has been attenuated by time?',
-      categories: ['Time', 'Emotion', 'Healing', 'Perspective']
+      categories: ['Time', 'Emotion', 'Healing', 'Perspective'],
+      examples: {
+        'Time': 'The effects of a mistake can attenuate with time.',
+        'Emotion': 'Intense emotions often attenuate as circumstances change.',
+        'Healing': 'Therapy can attenuate the pain of past trauma.',
+        'Perspective': 'Distance helps attenuate the impact of old conflicts.'
+      }
     }
   },
 
@@ -2243,7 +2362,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What circumstance has circumscribed your choices? How did you work within those limits?',
-      categories: ['Constraint', 'Creativity', 'Boundaries', 'Adaptation']
+      categories: ['Constraint', 'Creativity', 'Boundaries', 'Adaptation'],
+      examples: {
+        Constraint: 'Strict rules circumscribe what is possible in this competition.',
+        Creativity: 'Sometimes, being circumscribed by time sparks creative solutions.',
+        Boundaries: 'The project was circumscribed by clear boundaries set at the start.',
+        Adaptation: 'I learned to adapt when my options were circumscribed by circumstance.'
+      }
     }
   },
 
@@ -2303,7 +2428,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What tough issue have you resolved recently? What made the resolution stick?',
-      categories: ['Decision Making', 'Conflict', 'Clarity', 'Follow-through']
+      categories: ['Decision Making', 'Conflict', 'Clarity', 'Follow-through'],
+      examples: {
+        'Decision Making': 'I resolve to act after weighing all the options carefully.',
+        'Conflict': 'We worked together to resolve the disagreement peacefully.',
+        'Clarity': 'A clear plan can resolve confusion before it grows.',
+        'Follow-through': 'Resolve is needed to follow through on tough commitments.'
+      }
     }
   },
 
@@ -2323,7 +2454,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What do you need to highlight for your team right now? Why?',
-      categories: ['Communication', 'Visibility', 'Leadership', 'Priorities']
+      categories: ['Communication', 'Visibility', 'Leadership', 'Priorities'],
+      examples: {
+        Communication: 'I highlight key points to ensure everyone understands the message.',
+        Visibility: 'Highlighting achievements increases visibility for the whole team.',
+        Leadership: 'A good leader knows when to highlight the efforts of others.',
+        Priorities: 'It is important to highlight our top priorities during busy times.'
+      }
     }
   },
 
@@ -2343,7 +2480,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What signals indicate it’s time to change course in your work?',
-      categories: ['Signals', 'Awareness', 'Strategy', 'Evidence']
+      categories: ['Signals', 'Awareness', 'Strategy', 'Evidence'],
+      examples: {
+        Signals: 'A sudden drop in sales may indicate a problem with our product.',
+        Awareness: 'My awareness of stress can indicate when I need a break.',
+        Strategy: 'Changing market trends indicate it’s time to adjust our strategy.',
+        Evidence: 'Clear evidence is needed to indicate a real improvement.'
+      }
     }
   },
 
@@ -2384,7 +2527,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What latent potential do you sense in yourself? What would awaken it?',
-      categories: ['Growth', 'Potential', 'Self-Discovery', 'Dreams']
+      categories: ['Growth', 'Potential', 'Self-Discovery', 'Dreams'],
+      examples: {
+        'Growth': 'Growth can remain latent until new challenges arise.',
+        'Potential': 'You might not notice your potential is latent until the right moment.',
+        'Self-Discovery': 'Through self-discovery, a hidden talent may prove to be latent.',
+        'Dreams': 'Some dreams stay hidden, their latent power waiting to emerge.'
+      }
     }
   },
 
@@ -2404,7 +2553,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What major decision are you making contingent on other factors?',
-      categories: ['Planning', 'Uncertainty', 'Decision Making', 'Future']
+      categories: ['Planning', 'Uncertainty', 'Decision Making', 'Future'],
+      examples: {
+        'Planning': 'Our trip is contingent on the weather forecast.',
+        'Uncertainty': 'There’s uncertainty because the outcome is contingent on funding.',
+        'Decision Making': 'My next step is contingent on the results of this meeting.',
+        'Future': 'The project’s future is contingent on market demand.'
+      }
     }
   },
 
@@ -2424,7 +2579,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What inchoate dream or project are you nurturing? What would help it develop?',
-      categories: ['Creativity', 'Growth', 'Beginning', 'Development']
+      categories: ['Creativity', 'Growth', 'Beginning', 'Development'],
+      examples: {
+        'Creativity': 'An inchoate idea can spark creativity before it’s fully formed.',
+        'Growth': 'Growth often starts in an inchoate stage, fragile and new.',
+        'Beginning': 'Every beginning is inchoate—uncertain and unshaped.',
+        'Development': 'Inchoate plans need nurturing to reach full development.'
+      }
     }
   },
 
@@ -2470,7 +2631,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you faced exigent circumstances? How did you prioritize?',
-      categories: ['Urgency', 'Crisis', 'Decision Making', 'Leadership']
+      categories: ['Urgency', 'Crisis', 'Decision Making', 'Leadership'],
+      examples: {
+        'Urgency': 'Exigent needs require urgent action and focus.',
+        'Crisis': 'In a crisis, exigent problems can’t be ignored.',
+        'Decision Making': 'Exigent situations force quick decision making.',
+        'Leadership': 'Leadership is tested by how one handles exigent demands.'
+      }
     }
   },
 
@@ -2552,7 +2719,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What belief do you hold that could be proven wrong? How would you react if it were?',
-      categories: ['Critical Thinking', 'Science', 'Beliefs', 'Learning']
+      categories: ['Critical Thinking', 'Science', 'Beliefs', 'Learning'],
+      examples: {
+        'Critical Thinking': 'A falsifiable claim can be challenged and tested through evidence.',
+        'Science': 'Scientific theories must be falsifiable to be considered valid.',
+        'Beliefs': 'Not all beliefs are falsifiable, making them hard to disprove.',
+        'Learning': 'Learning what is falsifiable sharpens critical thinking.'
+      }
     }
   },
 
@@ -2636,7 +2809,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you discerned something important that others missed? How did you notice it?',
-      categories: ['Observation', 'Judgment', 'Insight', 'Understanding']
+      categories: ['Observation', 'Judgment', 'Insight', 'Understanding'],
+      examples: {
+        'Observation': 'Careful observation helps you discern subtle changes.',
+        'Judgment': 'It takes sound judgment to discern truth from deception.',
+        'Insight': 'Insightful people discern patterns others overlook.',
+        'Understanding': 'To discern meaning requires deep understanding.'
+      }
     }
   },
 
@@ -2657,7 +2836,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What do you think defines the Zeitgeist of our current era?',
-      categories: ['Culture', 'Society', 'History', 'Values']
+      categories: ['Culture', 'Society', 'History', 'Values'],
+      examples: {
+        'Culture': 'Art and music often reflect the Zeitgeist of their time.',
+        'Society': 'Social movements can shape the Zeitgeist of a generation.',
+        'History': 'Each era’s Zeitgeist is recorded in its history.',
+        'Values': 'Changing values signal a shift in the Zeitgeist.'
+      }
     }
   },
 
@@ -2699,7 +2884,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'Where do you see hegemony—cultural, economic, or ideological—in your daily life?',
-      categories: ['Culture', 'Power', 'Society', 'Influence']
+      categories: ['Culture', 'Power', 'Society', 'Influence'],
+      examples: {
+        Culture: 'Hegemony shapes global culture.',
+        Power: 'Hegemony in politics can silence minority voices.',
+        Society: 'Social norms often reflect the hegemony of dominant groups.',
+        Influence: 'Media influence is a form of hegemony that guides public opinion.'
+      }
     }
   },
 
@@ -2741,7 +2932,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'Who do you know with a sardonic sense of humor? How does it affect their communication?',
-      categories: ['Humor', 'Communication', 'Tone', 'Personality']
+      categories: ['Humor', 'Communication', 'Tone', 'Personality'],
+      examples: {
+        'Humor': 'Sardonic humor uses wit to mask cynicism.',
+        'Communication': 'A sardonic remark can change the mood of a conversation.',
+        'Tone': 'A sardonic tone often sounds mocking or dry.',
+        'Personality': 'A sardonic personality is quick with sharp, dark comments.'
+      }
     }
   },
 
@@ -2783,7 +2980,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you needed a disinterested third party to help resolve a conflict?',
-      categories: ['Fairness', 'Judgment', 'Conflict', 'Impartiality']
+      categories: ['Fairness', 'Judgment', 'Conflict', 'Impartiality'],
+      examples: {
+        'Fairness': 'A disinterested approach ensures fairness for all sides.',
+        'Judgment': 'Disinterested judgment is free from personal bias.',
+        'Conflict': 'In conflict, a disinterested mediator can help both parties.',
+        'Impartiality': 'Impartiality means being truly disinterested in the outcome.'
+      }
     }
   },
 
@@ -2825,7 +3028,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What complex idea or experience have you distilled to its essence? How did you do it?',
-      categories: ['Analysis', 'Clarity', 'Communication', 'Understanding']
+      categories: ['Analysis', 'Clarity', 'Communication', 'Understanding'],
+      examples: {
+        Analysis: 'We tried to distill the data into a few key trends.',
+        Clarity: 'Distill your message for clarity and impact.',
+        Communication: 'Good communication can distill complex topics for any audience.',
+        Understanding: 'I gained understanding by distilling the lesson to its core ideas.'
+      }
     }
   },
 
@@ -2846,7 +3055,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What two concepts do people often conflate? How would you explain the difference?',
-      categories: ['Precision', 'Language', 'Critical Thinking', 'Clarity']
+      categories: ['Precision', 'Language', 'Critical Thinking', 'Clarity'],
+      examples: {
+        'Precision': 'Precision is lost when you conflate separate ideas.',
+        'Language': 'People sometimes conflate words with similar meanings.',
+        'Critical Thinking': 'Critical thinking helps you not conflate facts and opinions.',
+        'Clarity': 'To achieve clarity, avoid conflating unrelated issues.'
+      }
     }
   },
 
@@ -2888,7 +3103,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What difficult situation have you helped ameliorate? What changes made it better?',
-      categories: ['Problem Solving', 'Improvement', 'Leadership', 'Action']
+      categories: ['Problem Solving', 'Improvement', 'Leadership', 'Action'],
+      examples: {
+        'Problem Solving': 'We worked together to ameliorate the effects of the outage.',
+        'Improvement': 'Small changes can ameliorate even persistent issues.',
+        'Leadership': 'A good leader seeks to ameliorate team stress during busy times.',
+        'Action': 'Taking action early helped ameliorate the crisis.'
+      }
     }
   },
 
@@ -2909,7 +3130,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When has someone elucidated a concept that you previously found confusing? How did they do it?',
-      categories: ['Learning', 'Teaching', 'Clarity', 'Understanding']
+      categories: ['Learning', 'Teaching', 'Clarity', 'Understanding'],
+      examples: {
+        Learning: 'A good example can elucidate a difficult topic for learners.',
+        Teaching: 'She used stories to elucidate complex ideas in her teaching.',
+        Clarity: 'Analogies often elucidate abstract concepts, bringing clarity.',
+        Understanding: 'My understanding improved when the teacher elucidated each step.'
+      }
     }
   },
 
@@ -2930,7 +3157,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'Recall a time you needed to dive into granular detail to solve an issue.',
-      categories: ['Problem-Solving', 'Precision', 'Analysis', 'Learning']
+      categories: ['Problem-Solving', 'Precision', 'Analysis', 'Learning'],
+      examples: {
+        'Problem-Solving': 'A granular approach helped me solve the complex problem step by step.',
+        'Precision': 'Granular data allows for precise measurements and conclusions.',
+        'Analysis': 'We performed a granular analysis to uncover hidden trends.',
+        'Learning': 'Learning improves when you break concepts down to a granular level.'
+      }
     }
   },
   {
@@ -2949,7 +3182,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'Where do you see randomness that still forms patterns over time?',
-      categories: ['Uncertainty', 'Patterns', 'Observation', 'Risk']
+      categories: ['Uncertainty', 'Patterns', 'Observation', 'Risk'],
+      examples: {
+        Uncertainty: 'Stochastic events introduce uncertainty into predictions.',
+        Patterns: 'Stochastic processes can reveal hidden patterns over time.',
+        Observation: 'Careful observation helps distinguish stochastic noise from real signals.',
+        Risk: 'Understanding stochastic risk is crucial in finance and science.'
+      }
     }
   },
   {
@@ -2968,7 +3207,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When did a simple explanation outperform a complex one for you?',
-      categories: ['Decision-Making', 'Design', 'Efficiency', 'Strategy']
+      categories: ['Decision-Making', 'Design', 'Efficiency', 'Strategy'],
+      examples: {
+        'Decision-Making': 'I made a parsimonious decision by picking the simplest solution.',
+        'Design': 'The building’s parsimonious design used only what was needed.',
+        'Efficiency': 'A parsimonious workflow cut out all unnecessary steps.',
+        'Strategy': 'We chose a parsimonious strategy with one clear goal.'
+      }
     }
   },
   {
@@ -3046,25 +3291,7 @@ export const wordDatabase: WordContent[] = [
       }
     }
   },
-  {
-    word: 'latent',
-    cluster: 'Science',
-    definition: 'Present but hidden or inactive; capable of emerging. Latent heat is energy absorbed or released without temperature change.',
-    exercise: {
-      question: 'What describes latent heat?',
-      options: [
-        { id: 'A', text: 'Heat you can feel immediately' },
-        { id: 'B', text: 'Energy used in phase change without changing temperature' },
-        { id: 'C', text: 'Heat that never affects matter' }
-      ],
-      correctAnswer: 'B',
-      explanation: 'Latent heat is hidden—doing work changing phase while temperature stays constant.'
-    },
-    anchor: {
-      prompt: 'What latent talent or interest in you could emerge with practice?',
-      categories: ['Potential', 'Growth', 'Self-Discovery', 'Development']
-    }
-  },
+// Duplicate 'latent' entry removed as requested
   {
     word: 'degenerate',
     cluster: 'Science',
@@ -3100,7 +3327,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When has scaling preserved the core relationships in your work?',
-      categories: ['Systems', 'Design', 'Performance', 'Growth']
+      categories: ['Systems', 'Design', 'Performance', 'Growth'],
+      examples: {
+        'Systems': 'A scalable system keeps working as users increase.',
+        'Design': 'Scalable design adapts to many screen sizes.',
+        'Performance': 'Performance stays strong if the solution is scalable.',
+        'Growth': 'A scalable approach supports rapid growth without breaking.'
+      }
     }
   },
   {
@@ -3119,7 +3352,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What principle in your life scales from personal use to team or org level?',
-      categories: ['Principles', 'Transfer', 'Systems', 'Leadership']
+      categories: ['Principles', 'Transfer', 'Systems', 'Leadership'],
+      examples: {
+        'Principles': 'A scalable principle guides both individuals and teams.',
+        'Transfer': 'Scalable solutions transfer easily from one context to another.',
+        'Systems': 'If a system is scalable, it works at any size.',
+        'Leadership': 'Scalable leadership adapts from small groups to large organizations.'
+      }
     }
   },
 
@@ -3216,7 +3455,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you realized you were projecting? What emotion were you externalizing?',
-      categories: ['Self-Awareness', 'Bias', 'Relationships', 'Emotions']
+      categories: ['Self-Awareness', 'Bias', 'Relationships', 'Emotions'],
+      examples: {
+        'Self-Awareness': 'Self-awareness helps me notice when projection is happening.',
+        'Bias': 'Projection can bias our view of others unfairly.',
+        'Relationships': 'In relationships, projection often causes misunderstandings.',
+        'Emotions': 'Strong emotions may lead to projection onto those around us.'
+      }
     }
   },
   {
@@ -3292,7 +3537,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What patterns or needs (sleep, food, breaks) predict your irritability?',
-      categories: ['Regulation', 'Stress', 'Self-Care', 'Awareness']
+      categories: ['Regulation', 'Stress', 'Self-Care', 'Awareness'],
+      examples: {
+        Regulation: 'Good regulation helps reduce irritability throughout the day.',
+        Stress: 'High stress can quickly lead to irritability over small things.',
+        'Self-Care': 'Neglecting self-care often increases my irritability.',
+        Awareness: 'Awareness of my triggers helps me manage irritability.'
+      }
     }
   },
   {
@@ -3332,7 +3583,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'Where do you see moral hazard in everyday life or institutions?',
-      categories: ['Risk', 'Economics', 'Incentives', 'Policy']
+      categories: ['Risk', 'Economics', 'Incentives', 'Policy'],
+      examples: {
+        Risk: 'Moral hazard increases risk when people feel shielded from consequences.',
+        Economics: 'In economics, moral hazard can distort market behavior.',
+        Incentives: 'Poorly designed incentives may create moral hazard.',
+        Policy: 'Policy makers must consider moral hazard when crafting regulations.'
+      }
     }
   },
   {
@@ -3370,7 +3627,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When did you hold yourself culpable for something, even though others might have excused you?',
-      categories: ['Accountability', 'Integrity', 'Responsibility', 'Growth']
+      categories: ['Accountability', 'Integrity', 'Responsibility', 'Growth'],
+      examples: {
+        Accountability: 'I felt culpable and took accountability for my mistake.',
+        Integrity: 'Integrity means admitting when you are culpable.',
+        Responsibility: 'She was found culpable and accepted responsibility.',
+        Growth: 'Growth comes from recognizing when you are culpable and learning from it.'
+      }
     }
   },
   {
@@ -3389,7 +3652,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When has context or new information exculpated someone you initially blamed?',
-      categories: ['Judgment', 'Fairness', 'Perspective', 'Justice']
+      categories: ['Judgment', 'Fairness', 'Perspective', 'Justice'],
+      examples: {
+        'Judgment': 'Exculpatory facts can change your judgment about someone’s actions.',
+        'Fairness': 'A fair process considers exculpatory evidence before blaming.',
+        'Perspective': 'A new perspective may reveal exculpatory reasons for a mistake.',
+        'Justice': 'Justice requires weighing all exculpatory information.'
+      }
     }
   },
   {
@@ -3408,7 +3677,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What normative belief do you hold strongly—something you think should be true?',
-      categories: ['Values', 'Philosophy', 'Standards', 'Beliefs']
+      categories: ['Values', 'Philosophy', 'Standards', 'Beliefs'],
+      examples: {
+        'Values': 'Normative values guide our sense of right and wrong.',
+        'Philosophy': 'Philosophers debate normative questions about how we should act.',
+        'Standards': 'A normative standard sets expectations for behavior.',
+        'Beliefs': 'Many beliefs are normative, expressing what ought to be.'
+      }
     }
   },
   {
@@ -3427,7 +3702,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'Where do you see paternalism in policies, relationships, or institutions?',
-      categories: ['Autonomy', 'Authority', 'Care', 'Control']
+      categories: ['Autonomy', 'Authority', 'Care', 'Control'],
+      examples: {
+        'Autonomy': 'A paternalistic rule can limit personal autonomy for perceived benefit.',
+        'Authority': 'Paternalistic authority often justifies decisions as being for others’ good.',
+        'Care': 'Care can become paternalistic when it overrides someone’s choices.',
+        'Control': 'Paternalistic control restricts freedom under the guise of protection.'
+      }
     }
   },
   {
@@ -3446,7 +3727,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you chosen the expedient route and later questioned it?',
-      categories: ['Decisions', 'Compromise', 'Integrity', 'Pragmatism']
+      categories: ['Decisions', 'Compromise', 'Integrity', 'Pragmatism'],
+      examples: {
+        Decisions: 'Choosing the expedient option can solve problems quickly.',
+        Compromise: 'An expedient compromise may sacrifice long-term goals.',
+        Integrity: 'Integrity sometimes means rejecting expedient solutions.',
+        Pragmatism: 'Expedient actions are often favored by pragmatists.'
+      }
     }
   },
   {
@@ -3503,7 +3790,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'Where might you be complicit in something you don\'t fully endorse?',
-      categories: ['Accountability', 'Systems', 'Responsibility', 'Ethics']
+      categories: ['Accountability', 'Systems', 'Responsibility', 'Ethics'],
+      examples: {
+        Accountability: 'Complicity requires accountability for silent approval.',
+        Systems: 'Unjust systems can foster complicity among their members.',
+        Responsibility: 'Taking responsibility means refusing complicity in harm.',
+        Ethics: 'Ethical choices help us avoid complicity in wrongdoing.'
+      }
     }
   },
 
@@ -3543,7 +3836,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What areas of your life might benefit from "rewilding"—less control, more natural flow?',
-      categories: ['Nature', 'Control', 'Restoration', 'Balance']
+      categories: ['Nature', 'Control', 'Restoration', 'Balance'],
+      examples: {
+        'Nature': 'Restoring lost habitats and species is the goal of rewilding.',
+        'Control': 'Letting go of control can feel like rewilding your routine.',
+        'Restoration': 'Restoration sometimes means rewilding both land and mind.',
+        'Balance': 'A better balance with nature can result from rewilding.'
+      }
     }
   },
   {
@@ -3562,7 +3861,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What in your environment suffers from "too much of a good thing"—oversupply causing harm?',
-      categories: ['Balance', 'Excess', 'Consequences', 'Systems']
+      categories: ['Balance', 'Excess', 'Consequences', 'Systems'],
+      examples: {
+        'Balance': 'Eutrophication disrupts the natural balance of aquatic ecosystems.',
+        'Excess': 'Excess nutrients in water lead to eutrophication.',
+        'Consequences': 'A major consequence of eutrophication is oxygen depletion.',
+        'Systems': 'Eutrophication shows how systems can collapse from oversupply.'
+      }
     }
   },
   {
@@ -3581,7 +3886,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What acts as an emotional "carbon sink" in your life—absorbing negativity before it spreads?',
-      categories: ['Balance', 'Absorption', 'Protection', 'Stability']
+      categories: ['Balance', 'Absorption', 'Protection', 'Stability'],
+      examples: {
+        Balance: 'Forests act as a carbon sink, helping maintain balance in the atmosphere.',
+        Absorption: 'A carbon sink absorbs more CO₂ than it releases.',
+        Protection: 'Carbon sinks provide protection against climate change.',
+        Stability: 'Stable carbon sinks are vital for long-term environmental health.'
+      }
     }
   },
   {
@@ -3619,7 +3930,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'Where does diversity strengthen your life—social circles, ideas, experiences?',
-      categories: ['Variety', 'Health', 'Connections', 'Strength']
+      categories: ['Variety', 'Health', 'Connections', 'Strength'],
+      examples: {
+        'Variety': 'Biodiversity brings variety to every ecosystem.',
+        'Health': 'Ecosystem health depends on rich biodiversity.',
+        'Connections': 'Connections between species are shaped by biodiversity.',
+        'Strength': 'Greater biodiversity gives strength and resilience to nature.'
+      }
     }
   },
   {
@@ -3638,7 +3955,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What externalities do your choices create—unintended effects on others or the environment?',
-      categories: ['Consequences', 'Responsibility', 'Impact', 'Awareness']
+      categories: ['Consequences', 'Responsibility', 'Impact', 'Awareness'],
+      examples: {
+        'Consequences': 'Pollution is a classic negative externality of industry.',
+        'Responsibility': 'Responsible companies work to reduce externalities.',
+        'Impact': 'Externality effects can ripple far beyond the original action.',
+        'Awareness': 'Awareness of externality helps inform better decisions.'
+      }
     }
   },
   {
@@ -3657,7 +3980,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What personal resources are you depleting—energy, attention, relationships, health?',
-      categories: ['Sustainability', 'Limits', 'Energy', 'Balance']
+      categories: ['Sustainability', 'Limits', 'Energy', 'Balance'],
+      examples: {
+        Sustainability: 'Depletion of forests threatens the sustainability of our planet.',
+        Limits: 'Depletion shows the limits of our resources.',
+        Energy: 'After a long week, I feel the depletion of my energy reserves.',
+        Balance: 'To avoid depletion, I strive for balance between work and rest.'
+      }
     }
   },
   {
@@ -3676,7 +4005,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What areas of your life risk "desertification"—becoming barren through neglect or overuse?',
-      categories: ['Degradation', 'Neglect', 'Warning', 'Care']
+      categories: ['Degradation', 'Neglect', 'Warning', 'Care'],
+      examples: {
+        'Degradation': 'Desertification is a warning sign of land degradation.',
+        'Neglect': 'Neglect can lead to desertification in both land and life.',
+        'Warning': 'Desertification serves as a warning to change our habits.',
+        'Care': 'Care and attention can prevent desertification and restore vitality.'
+      }
     }
   },
   {
@@ -3695,7 +4030,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What are the flashpoints in your life—small triggers that could ignite bigger conflicts?',
-      categories: ['Threshold', 'Crisis', 'Awareness', 'Prevention']
+      categories: ['Threshold', 'Crisis', 'Awareness', 'Prevention'],
+      examples: {
+        'Threshold': 'A flashpoint marks the threshold where change becomes inevitable.',
+        'Crisis': 'Every crisis has a flashpoint that sets it off.',
+        'Awareness': 'Awareness of flashpoints can help you avoid escalation.',
+        'Prevention': 'Prevention means addressing issues before they reach a flashpoint.'
+      }
     }
   },
 
@@ -3716,7 +4057,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you witnessed or participated in othering—consciously or unconsciously?',
-      categories: ['Exclusion', 'Awareness', 'Social Dynamics', 'Identity']
+      categories: ['Exclusion', 'Awareness', 'Social Dynamics', 'Identity'],
+      examples: {
+        'Exclusion': 'Othering leads to exclusion and isolation of groups.',
+        'Awareness': 'Awareness of othering helps challenge harmful stereotypes.',
+        'Social Dynamics': 'Othering shapes social dynamics by creating in-groups and out-groups.',
+        'Identity': 'Othering can impact how people see their own identity.'
+      }
     }
   },
   {
@@ -3773,7 +4120,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What hegemonic norms shape your environment—unquestioned assumptions that serve certain groups?',
-      categories: ['Power', 'Culture', 'Norms', 'Awareness']
+      categories: ['Power', 'Culture', 'Norms', 'Awareness'],
+      examples: {
+        Power: 'Hegemony gives power to dominant groups in subtle ways.',
+        Culture: 'Cultural hegemony influences what is seen as normal.',
+        Norms: 'Social norms often reflect the hegemony of a majority.',
+        Awareness: 'Awareness of hegemony helps challenge unfair systems.'
+      }
     }
   },
   {
@@ -3792,7 +4145,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What creates cohesion in your communities—shared values, experiences, or goals?',
-      categories: ['Unity', 'Community', 'Bonds', 'Belonging']
+      categories: ['Unity', 'Community', 'Bonds', 'Belonging'],
+      examples: {
+        'Unity': 'Cohesion brings unity to diverse groups.',
+        'Community': 'A sense of community grows from strong cohesion.',
+        'Bonds': 'Shared experiences create bonds and cohesion.',
+        'Belonging': 'Cohesion gives people a sense of belonging.'
+      }
     }
   },
   {
@@ -3811,7 +4170,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'Where do you encounter or participate in gatekeeping—in hobbies, work, or communities?',
-      categories: ['Access', 'Exclusion', 'Control', 'Belonging']
+      categories: ['Access', 'Exclusion', 'Control', 'Belonging'],
+      examples: {
+        'Access': 'Gatekeeping limits access to certain groups or resources.',
+        'Exclusion': 'Strict boundaries can result from exclusion and gatekeeping.',
+        'Control': 'Communities sometimes use gatekeeping to control who belongs.',
+        'Belonging': 'A sense of belonging may be lost when gatekeeping is too strong.'
+      }
     }
   },
   {
@@ -3830,7 +4195,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What gives legitimacy to the authorities in your life—institutions, leaders, or rules?',
-      categories: ['Authority', 'Recognition', 'Power', 'Acceptance']
+      categories: ['Authority', 'Recognition', 'Power', 'Acceptance'],
+      examples: {
+        'Authority': 'Legitimacy turns power into true authority.',
+        'Recognition': 'Recognition by the people grants legitimacy to leaders.',
+        'Power': 'Power without legitimacy is often challenged.',
+        'Acceptance': 'Legitimacy depends on acceptance by those governed.'
+      }
     }
   },
   {
@@ -3868,7 +4239,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'Where might you carry unexamined entitlement—assumptions about what you deserve?',
-      categories: ['Privilege', 'Self-Examination', 'Expectations', 'Awareness']
+      categories: ['Privilege', 'Self-Examination', 'Expectations', 'Awareness'],
+      examples: {
+        Privilege: 'Entitlement often grows from unexamined privilege.',
+        'Self-Examination': 'Self-examination can reveal hidden entitlement.',
+        Expectations: 'High expectations may signal entitlement rather than merit.',
+        Awareness: 'Awareness helps challenge entitlement in ourselves and others.'
+      }
     }
   },
   {
@@ -3908,7 +4285,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When have you used equivocation—speaking ambiguously to avoid saying what you really mean?',
-      categories: ['Honesty', 'Communication', 'Accountability', 'Self-Awareness']
+      categories: ['Honesty', 'Communication', 'Accountability', 'Self-Awareness'],
+      examples: {
+        'Honesty': 'Equivocation undermines honesty by hiding the truth.',
+        'Communication': 'Clear communication avoids the trap of equivocation.',
+        'Accountability': 'People use equivocation to dodge accountability.',
+        'Self-Awareness': 'Recognizing your own equivocation takes self-awareness.'
+      }
     }
   },
   {
@@ -3927,7 +4310,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'What specious claims do you encounter frequently—arguments that sound good but don\'t hold up?',
-      categories: ['Critical Thinking', 'Reasoning', 'Deception', 'Skepticism']
+      categories: ['Critical Thinking', 'Debate', 'Media', 'Decision Making'],
+      examples: {
+        'Critical Thinking': 'Critical thinking helps you spot specious arguments quickly.',
+        'Debate': 'In debate, specious claims can mislead the audience.',
+        'Media': 'Specious headlines in media often distort the facts.',
+        'Decision Making': 'Avoiding specious reasoning is key to sound decision making.'
+      }
     }
   },
   {
@@ -3984,7 +4373,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'When are you tempted to prevaricate—to mislead without directly lying?',
-      categories: ['Honesty', 'Integrity', 'Evasion', 'Ethics']
+      categories: ['Honesty', 'Integrity', 'Evasion', 'Ethics'],
+      examples: {
+        'Honesty': 'Prevarication undermines honesty by twisting the truth.',
+        'Integrity': 'A person with integrity avoids prevarication in all forms.',
+        'Evasion': 'Prevarication is a subtle form of evasion.',
+        'Ethics': 'Ethical standards reject prevarication as misleading.'
+      }
     }
   },
   {
@@ -4041,7 +4436,13 @@ export const wordDatabase: WordContent[] = [
     },
     anchor: {
       prompt: 'Where do you encounter false dichotomies—"you\'re either with us or against us" type thinking?',
-      categories: ['Logic', 'Nuance', 'Critical Thinking', 'Polarization']
+      categories: ['Logic', 'Nuance', 'Critical Thinking', 'Polarization'],
+      examples: {
+        Logic: 'A false dichotomy ignores logical alternatives.',
+        Nuance: 'Nuance is lost when a false dichotomy is presented.',
+        'Critical Thinking': 'Critical thinking helps expose a false dichotomy in arguments.',
+        Polarization: 'False dichotomy often fuels polarization in debates.'
+      }
     }
   },
   {

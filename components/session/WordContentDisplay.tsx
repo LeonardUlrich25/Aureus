@@ -106,14 +106,14 @@ export default function WordContentDisplay({
               </p>
               <div className="space-y-2">
                 <p className="text-sm muted-text">Relevant categories:</p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-col gap-3">
                   {anchorData.categories.map((category) => (
-                    <span
-                      key={category}
-                      className="px-3 py-1 text-sm glass-pill"
-                    >
-                      {category}
-                    </span>
+                    <div key={category} className="">
+                      <span className="px-3 py-1 text-sm glass-pill mr-2">{category}</span>
+                      {anchorData.examples && anchorData.examples[category] && (
+                        <span className="text-sm italic text-gray-700">{anchorData.examples[category]}</span>
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>
